@@ -173,6 +173,21 @@ public static class TreeMutator
         return true;
     }
 
+    // ── Import validation ─────────────────────────────────────────────────────
+
+    /// <summary>
+    /// Validates a <see cref="BridgeDocument"/> deserialized from an imported file.
+    /// Throws <see cref="InvalidDataException"/> with a descriptive message on failure.
+    /// </summary>
+    public static void ValidateImportedDocument(BridgeDocument? doc)
+    {
+        if (doc is null || doc.Nodes is null)
+            throw new InvalidDataException("Plik JSON jest nieprawidłowy lub pusty.");
+        if (doc.TopLevelCount != doc.Nodes.Count)
+            throw new InvalidDataException(
+                $"Niezgodność: TopLevelCount={doc.TopLevelCount}, liczba węzłów najwyższego poziomu={doc.Nodes.Count}.");
+    }
+
     // ── Private helpers ───────────────────────────────────────────────────────
 
     /// <summary>Returns the <see cref="BidNode"/> that directly contains <paramref name="nodeId"/> as a child.</summary>

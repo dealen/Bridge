@@ -154,13 +154,9 @@ public class TreeEditService
     public async Task ImportAsync(Stream stream, string key)
     {
         BridgeDocument? doc = await JsonSerializer.DeserializeAsync<BridgeDocument>(stream);
-        if (doc is null || doc.Nodes is null)
-            throw new InvalidDataException("Plik JSON jest nieprawidłowy lub pusty.");
-        if (doc.TopLevelCount != doc.Nodes.Count)
-            throw new InvalidDataException(
-                $"Niezgodność: TopLevelCount={doc.TopLevelCount}, liczba węzłów najwyższego poziomu={doc.Nodes.Count}.");
+        TreeMutator.ValidateImportedDocument(doc);
 
-        SetAllExpanded(doc.Nodes);
+        SetAllExpanded(doc!.Nodes);
 
         if (key == SystemKey) _systemDoc = doc;
         else _dwustronnyDoc = doc;

@@ -406,4 +406,47 @@ public sealed class TreeMutatorTests
         Assert.True(newNode.IsLeaf);
         Assert.Empty(newNode.Children);
     }
+
+    // ── ValidateImportedDocument (Phase 8) ────────────────────────────────────
+
+    [Fact]
+    public void ValidateImportedDocument_NullDocument_ThrowsInvalidDataException()
+    {
+        Assert.Throws<InvalidDataException>(() => TreeMutator.ValidateImportedDocument(null));
+    }
+
+    [Fact]
+    public void ValidateImportedDocument_TopLevelCountMismatch_ThrowsInvalidDataException()
+    {
+        var doc = new BridgeDocument
+        {
+            TopLevelCount = 3,
+            Nodes = [Leaf("A"), Leaf("B")]   // count=2, but TopLevelCount=3
+        };
+
+        var ex = Assert.Throws<InvalidDataException>(() => TreeMutator.ValidateImportedDocument(doc));
+        Assert.Contains("TopLevelCount", ex.Message);
+    }
+
+    [Fact]
+    public void ValidateImportedDocument_ValidDocument_DoesNotThrow()
+    {
+        var doc = new BridgeDocument
+        {
+            TopLevelCount = 2,
+            Nodes = [Leaf("A"), Leaf("B")]
+        };
+
+        // Must not throw
+        TreeMutator.ValidateImportedDocument(doc);
+    }
+
+    [Fact]
+    public void ValidateImportedDocument_EmptyNodeList_MatchingTopLevelCount_DoesNotThrow()
+    {
+        var doc = new BridgeDocument { TopLevelCount = 0, Nodes = [] };
+
+        // Must not throw — an empty document is valid
+        TreeMutator.ValidateImportedDocument(doc);
+    }
 }

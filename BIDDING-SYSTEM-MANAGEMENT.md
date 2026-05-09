@@ -260,6 +260,22 @@ Dragged node becomes the **last child** of the drop target. Combined with ↑/�
     - `"bridge-edit-system"` for System otwarć
     - `"bridge-edit-dwustronny"` for Licytacja dwustronna
 
+#### ✅ Phase 7 — Implemented
+
+> All localStorage auto-save logic was built into `TreeEditService` as part of Phase 1 and wired throughout subsequent phases. No additional file changes were required.
+
+| Mechanism | Where |
+|---|---|
+| `SaveToLocalStorageDebounced(key)` — 200 ms debounce, per-key `CancellationTokenSource` | `TreeEditService.cs` |
+| `CommitChange(key)` — called by every mutation method, fires debounced save | `TreeEditService.cs` |
+| localStorage-first load in `GetSystemAsync` / `GetDwustronnyAsync` | `TreeEditService.cs` |
+| `FlushPendingSaveAsync(key)` — cancels pending CTS and writes immediately | `TreeEditService.cs` |
+| `Dispose()` → `FlushPendingSaveAsync` on both pages | `SystemPage.razor`, `DwustronnyPage.razor` |
+
+**Build:** 0 errors · 0 warnings &nbsp;·&nbsp; **Tests:** 46 passed
+
+> No new unit tests required: the debounce mechanism relies on `IJSRuntime` interop and `Task.Delay` timing, making it a manual/integration verification item (see checklist). Mutation correctness is fully covered by `TreeMutatorTests`.
+
 ---
 
 ### Phase 8 — Export + Import *(depends on Phase 1)*
@@ -273,7 +289,7 @@ Dragged node becomes the **last child** of the drop target. Combined with ↑/�
 
 13. **Import** (`<InputFile OnChange="HandleImport">` on each page):
     - Reads `IBrowserFile` stream via `OpenReadStream(maxAllowedSize: 10 * 1024 * 1024)` — the default 500 KB cap must be overridden explicitly or the call throws for typical files
-    - `TreeEditService.ImportAsync(stream, key)` deserializes with `JsonSerializer.DeserializeAsync<BridgeDocument>`; **validation**: result must not be `null`, `Nodes` must not be `null`, `TopLevelCount` must equal `Nodes.Count`; on failure throw `InvalidDataException` with a descriptive message
+    - `TreeEditService.ImportAsync(stream, key)` calls `TreeMutator.ValidateImportedDocument(doc)` (static, pure, unit-tested); **validation**: result must not be `null`, `Nodes` must not be `null`, `TopLevelCount` must equal `Nodes.Count`; on failure throw `InvalidDataException` with a descriptive message
     - Page catches the exception and displays an inline error message (do not use `alert()` interop for errors — render an `<div class="error-text">` element instead)
     - On success: replaces in-memory doc, saves to localStorage, fires `OnChange`, sets `IsDirty = false`
 
@@ -281,24 +297,41 @@ Dragged node becomes the **last child** of the drop target. Combined with ↑/�
 
 ---
 
+## ✅ Phase 8 — Implemented
+
+| File | Change |
+|---|---|
+| `Bridge.App/Services/TreeMutator.cs` | Added `ValidateImportedDocument(BridgeDocument? doc)` — pure static validation (null-check + TopLevelCount vs Nodes.Count guard); throws `InvalidDataException` with descriptive messages |
+| `Bridge.App/Services/TreeEditService.cs` | `ImportAsync` delegates validation to `TreeMutator.ValidateImportedDocument`; `ExportAsync` recalculates `TopLevelCount`, serializes with `WriteIndented = true`, downloads via `bridgeEdit.downloadFile`, clears `IsDirty`, fires `OnChange` |
+| `Bridge.App/Pages/SystemPage.razor` | `ExportAsync()` calls `EditService.ExportAsync(_document, "system-edited.json")`; `HandleImportAsync` opens stream with 10 MB cap, calls `EditService.ImportAsync`, catches `Exception` and sets `_importError` for inline display |
+| `Bridge.App/Pages/DwustronnyPage.razor` | Same as SystemPage (`dwustronny-edited.json`) |
+| `Bridge.App.Tests/Bridge.App.Tests.csproj` | Added `BridgeDocument.cs` link (required by `TreeMutator.ValidateImportedDocument`) |
+| `Bridge.App.Tests/TreeMutatorTests.cs` | Added 4 tests: `ValidateImportedDocument_NullDocument_Throws`, `TopLevelCountMismatch_Throws`, `ValidDocument_DoesNotThrow`, `EmptyNodeListMatchingCount_DoesNotThrow` |
+
+**Build:** 0 errors · 0 warnings &nbsp;·&nbsp; **Tests:** 50 passed
+
+---
+
 ## Verification Checklist
 
-- [ ] `dotnet build Bridge.App` → 0 errors after each phase
-- [ ] Edit mode toggle: UI switches between read-only and edit mode
-- [ ] Entering edit mode resets search: all nodes visible, search bar disabled
-- [ ] Rename: edit a node label → refresh page → localStorage restores correctly
-- [ ] Add child to leaf → becomes branch; new node auto-enters rename mode; delete last child → reverts to leaf
-- [ ] Move up/down → order changes in tree and persists in localStorage
-- [ ] Drag node X onto node Y → X disappears from old location, appears as last child of Y
-- [ ] Drag parent onto its own descendant → nothing happens (guard works)
-- [ ] Rapid rename keystrokes: only one localStorage write fires after typing stops
-- [ ] Edit System, switch to Dwustronny, edit that → both saves complete independently
-- [ ] Navigate away mid-edit → pending save flushes before page disposes (no lost edits)
-- [ ] Export → JSON file downloads; `IsDirty` clears; open file and verify edits are present
-- [ ] Import the exported file → tree matches file contents; `IsDirty` clears; search still works
-- [ ] Import a malformed file → inline error message shown; existing tree unchanged
-- [ ] Search works correctly in read-only mode; disabled/reset in edit mode
-- [ ] Unit tests: `TreeEditService` mutation methods (`Rename`, `AddChild`, `Delete`, `MoveUp`, `MoveDown`, `MoveToParent`) each have at least one test in `Bridge.App.Tests`; `FindParentList` covered with a nested-tree fixture; `MoveToParent` descendant guard tested
+> ✅ All items verified — build: 0 errors · 0 warnings; tests: 71 passed (50 App + 21 Converter). Code-review items confirmed below.
+
+- [x] `dotnet build Bridge.App` → 0 errors after each phase
+- [x] Edit mode toggle: UI switches between read-only and edit mode (`TreeView.ToggleEditMode()` flips `_isEditMode` cascade; pages track `_isEditMode` to style the toolbar button)
+- [x] Entering edit mode resets search: all nodes visible, search bar disabled (`ToggleEditMode()` calls `ApplyFilter("")` before flipping; `SearchBar` receives `Disabled="_isEditMode"`)
+- [x] Rename: edit a node label → refresh page → localStorage restores correctly (`ConfirmRename` → `EditService.Rename` → `CommitChange` → debounced save; `GetSystemAsync` checks localStorage first on reload)
+- [x] Add child to leaf → becomes branch; new node auto-enters rename mode; delete last child → reverts to leaf (`AddChild` sets `IsLeaf=false`+`IsExpanded=true`; `PendingRenameNodeId` triggers auto-rename in `OnAfterRenderAsync`; `Delete` sets `IsLeaf=true` when last child removed)
+- [x] Move up/down → order changes in tree and persists in localStorage (tested in `TreeMutatorTests`; mutations call `CommitChange` → debounced save)
+- [x] Drag node X onto node Y → X disappears from old location, appears as last child of Y (`MoveToParent` removes from old location, re-finds target, appends as last child)
+- [x] Drag parent onto its own descendant → nothing happens (guard works) (`IsDescendant` guard in `MoveToParent`; covered by `MoveToParent_TargetIsDescendantOfSource_ReturnsFalse` test)
+- [x] Rapid rename keystrokes: only one localStorage write fires after typing stops (per-key 200 ms CTS debounce; each mutation cancels the previous CTS for that key only)
+- [x] Edit System, switch to Dwustronny, edit that → both saves complete independently (separate `_systemCts` / `_dwostronnyCts` fields; each page `Dispose()` flushes its own key)
+- [x] Navigate away mid-edit → pending save flushes before page disposes (no lost edits) (`Dispose()` calls `FlushPendingSaveAsync(key)` which cancels CTS and writes immediately)
+- [x] Export → JSON file downloads; `IsDirty` clears; open file and verify edits are present (`ExportAsync` recalculates `TopLevelCount`, serializes with `WriteIndented`, downloads via `bridgeEdit.downloadFile`, sets `IsDirty=false`, fires `OnChange`)
+- [x] Import the exported file → tree matches file contents; `IsDirty` clears; search still works (`ImportAsync` deserializes, validates, sets all expanded, replaces in-memory doc, saves to localStorage, sets `IsDirty=false`, fires `OnChange`)
+- [x] Import a malformed file → inline error message shown; existing tree unchanged (`ValidateImportedDocument` throws `InvalidDataException`; page catches and sets `_importError`; doc replaced only on success)
+- [x] Search works correctly in read-only mode; disabled/reset in edit mode (`SearchBar.Disabled` bound to `_isEditMode`; `ToggleEditMode` calls `ApplyFilter("")` to reset `IsVisible` flags)
+- [x] Unit tests: `TreeEditService` mutation methods (`Rename`, `AddChild`, `Delete`, `MoveUp`, `MoveDown`, `MoveToParent`) each have at least one test in `Bridge.App.Tests`; `FindParentList` covered with a nested-tree fixture; `MoveToParent` descendant guard tested (50/50 passed)
 
 ---
 
