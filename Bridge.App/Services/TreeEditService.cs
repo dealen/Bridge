@@ -12,15 +12,22 @@ public class TreeEditService
 {
     public const string SystemKey = "bridge-edit-system";
     public const string DwustronnyKey = "bridge-edit-dwustronny";
+    private const string UserDocPrefix = "bridge-user-";
+    private const string UserIndexKey = "bridge-user-index";
 
-    private readonly BridgeDataService _dataService;
+    private readonly IBridgeDataService _dataService;
     private readonly IJSRuntime _js;
 
     private BridgeDocument? _systemDoc;
     private BridgeDocument? _dwustronnyDoc;
-
     private CancellationTokenSource? _systemCts;
     private CancellationTokenSource? _dwostronnyCts;
+
+    private readonly Dictionary<string, BridgeDocument> _userDocs = new();
+    private readonly Dictionary<string, CancellationTokenSource> _userCts = new();
+    private List<UserDocInfo>? _userIndex;
+
+    private readonly Dictionary<string, bool> _dirtyFlags = new();
 
     // ── Public state ──────────────────────────────────────────────────────────
 
@@ -30,8 +37,11 @@ public class TreeEditService
     /// <summary>Set by AddChild so the newly created TreeNode can auto-enter rename mode in OnAfterRender.</summary>
     public string? PendingRenameNodeId { get; set; }
 
-    /// <summary>True when there are unsaved mutations (cleared by export or import).</summary>
-    public bool IsDirty { get; private set; }
+    /// <summary>True when there are unsaved mutations in any document (backward-compatible aggregate).</summary>
+    public bool IsDirty => _dirtyFlags.Values.Any(v => v);
+
+    /// <summary>True when there are unsaved mutations for the specified document key.</summary>
+    public bool IsDirtyFor(string key) => _dirtyFlags.TryGetValue(key, out bool dirty) && dirty;
 
     /// <summary>Direct accessor for the currently loaded system document (may be null before first load).</summary>
     public BridgeDocument? SystemDocument => _systemDoc;
@@ -42,13 +52,16 @@ public class TreeEditService
     /// <summary>Fired after every mutation, export, or import so subscribers can call StateHasChanged.</summary>
     public event Action? OnChange;
 
-    public TreeEditService(BridgeDataService dataService, IJSRuntime js)
+    /// <summary>Fired when the user-system index changes (system created, deleted, or renamed).</summary>
+    public event Action? OnUserIndexChange;
+
+    public TreeEditService(IBridgeDataService dataService, IJSRuntime js)
     {
         _dataService = dataService;
         _js = js;
     }
 
-    // ── Load ──────────────────────────────────────────────────────────────────
+    // ── Load built-in documents ───────────────────────────────────────────────
 
     public async Task<BridgeDocument> GetSystemAsync()
     {
@@ -97,6 +110,141 @@ public class TreeEditService
         return _dwustronnyDoc;
     }
 
+    // ── User document management ──────────────────────────────────────────────
+
+    /// <summary>Returns the list of user-created systems, loading from localStorage on first call.</summary>
+    public async Task<List<UserDocInfo>> GetUserIndexAsync()
+    {
+        if (_userIndex is not null) return _userIndex;
+
+        string? stored = await _js.InvokeAsync<string?>("bridgeEdit.loadFromStorage", UserIndexKey);
+        _userIndex = stored is not null
+            ? JsonSerializer.Deserialize<List<UserDocInfo>>(stored) ?? []
+            : [];
+
+        return _userIndex;
+    }
+
+    /// <summary>Returns the document for a user system by id, loading from localStorage if needed.</summary>
+    public async Task<BridgeDocument> GetUserDocumentAsync(string id)
+    {
+        string key = UserDocKey(id);
+        if (_userDocs.TryGetValue(key, out BridgeDocument? cached)) return cached;
+
+        string? stored = await _js.InvokeAsync<string?>("bridgeEdit.loadFromStorage", key);
+        BridgeDocument doc;
+        if (stored is not null)
+        {
+            doc = JsonSerializer.Deserialize<BridgeDocument>(stored)
+                ?? throw new InvalidOperationException($"Failed to deserialize user document '{id}' from localStorage.");
+        }
+        else
+        {
+            doc = new BridgeDocument { SourceFile = id, ConvertedAt = DateTime.UtcNow };
+        }
+
+        SetAllExpanded(doc.Nodes);
+        _userDocs[key] = doc;
+        return doc;
+    }
+
+    /// <summary>
+    /// Creates a new user system with the given name, optionally cloning from a built-in or user document.
+    /// <paramref name="cloneFromBuiltIn"/> accepts <c>"system"</c> or <c>"dwustronny"</c>.
+    /// Returns the new system id.
+    /// </summary>
+    public async Task<string> CreateUserSystemAsync(
+        string name,
+        string? cloneFromBuiltIn = null,
+        string? cloneFromUserId = null)
+    {
+        string newId = Guid.NewGuid().ToString("N")[..12];
+        string newKey = UserDocKey(newId);
+
+        BridgeDocument newDoc;
+        if (cloneFromBuiltIn == "system")
+        {
+            newDoc = DeepClone(await GetSystemAsync());
+        }
+        else if (cloneFromBuiltIn == "dwustronny")
+        {
+            newDoc = DeepClone(await GetDwustronnyAsync());
+        }
+        else if (cloneFromUserId is not null)
+        {
+            newDoc = DeepClone(await GetUserDocumentAsync(cloneFromUserId));
+        }
+        else
+        {
+            newDoc = new BridgeDocument();
+        }
+
+        newDoc.SourceFile = name;
+        newDoc.ConvertedAt = DateTime.UtcNow;
+        // Regenerate all node IDs to prevent ResolveKey collisions with the source document
+        TreeMutator.RegenerateIds(newDoc.Nodes);
+        newDoc.TopLevelCount = newDoc.Nodes.Count;
+        SetAllExpanded(newDoc.Nodes);
+
+        _userDocs[newKey] = newDoc;
+
+        List<UserDocInfo> index = await GetUserIndexAsync();
+        index.Add(new UserDocInfo { Id = newId, Name = name, CreatedAt = DateTime.UtcNow });
+
+        string docJson = JsonSerializer.Serialize(newDoc);
+        await _js.InvokeVoidAsync("bridgeEdit.saveToStorage", newKey, docJson);
+        await SaveIndexAsync();
+
+        OnUserIndexChange?.Invoke();
+        OnChange?.Invoke();
+
+        return newId;
+    }
+
+    /// <summary>Permanently deletes a user system by id.</summary>
+    public async Task DeleteUserSystemAsync(string id)
+    {
+        string key = UserDocKey(id);
+
+        List<UserDocInfo> index = await GetUserIndexAsync();
+        index.RemoveAll(info => info.Id == id);
+
+        _userDocs.Remove(key);
+        _dirtyFlags.Remove(key);
+
+        if (_userCts.TryGetValue(key, out CancellationTokenSource? cts))
+        {
+            cts.Cancel();
+            _userCts.Remove(key);
+        }
+
+        await _js.InvokeVoidAsync("bridgeEdit.clearStorage", key);
+        await SaveIndexAsync();
+
+        OnUserIndexChange?.Invoke();
+    }
+
+    /// <summary>Renames a user system by id.</summary>
+    public async Task RenameUserSystemAsync(string id, string newName)
+    {
+        List<UserDocInfo> index = await GetUserIndexAsync();
+        UserDocInfo? info = index.FirstOrDefault(i => i.Id == id);
+        if (info is null) return;
+
+        info.Name = newName;
+
+        string key = UserDocKey(id);
+        if (_userDocs.TryGetValue(key, out BridgeDocument? doc))
+            doc.SourceFile = newName;
+
+        await SaveIndexAsync();
+        OnUserIndexChange?.Invoke();
+    }
+
+    /// <summary>Shows a browser confirm dialog and returns the user's choice.</summary>
+    public async Task<bool> ConfirmDeleteAsync(string message) =>
+        await _js.InvokeAsync<bool>("bridgeEdit.confirmDelete", message);
+
     // ── Mutations ─────────────────────────────────────────────────────────────
 
     public void Rename(string nodeId, string newLabel)
@@ -110,6 +258,13 @@ public class TreeEditService
     {
         string key = ResolveKey(parentId);
         if (!TreeMutator.AddChild(parentId, GetNodes(key), out string newNodeId)) return;
+        PendingRenameNodeId = newNodeId;
+        CommitChange(key);
+    }
+
+    public void AddRootNode(string key)
+    {
+        string newNodeId = TreeMutator.AddRootNode(GetNodes(key));
         PendingRenameNodeId = newNodeId;
         CommitChange(key);
     }
@@ -147,7 +302,8 @@ public class TreeEditService
         doc.TopLevelCount = doc.Nodes.Count;
         string json = JsonSerializer.Serialize(doc, new JsonSerializerOptions { WriteIndented = true });
         await _js.InvokeVoidAsync("bridgeEdit.downloadFile", filename, json);
-        IsDirty = false;
+        string? key = FindKeyForDocument(doc);
+        if (key is not null) _dirtyFlags[key] = false;
         OnChange?.Invoke();
     }
 
@@ -159,11 +315,12 @@ public class TreeEditService
         SetAllExpanded(doc!.Nodes);
 
         if (key == SystemKey) _systemDoc = doc;
-        else _dwustronnyDoc = doc;
+        else if (key == DwustronnyKey) _dwustronnyDoc = doc;
+        else _userDocs[key] = doc;
 
         string json = JsonSerializer.Serialize(doc);
         await _js.InvokeVoidAsync("bridgeEdit.saveToStorage", key, json);
-        IsDirty = false;
+        _dirtyFlags[key] = false;
         OnChange?.Invoke();
     }
 
@@ -181,7 +338,7 @@ public class TreeEditService
             string json = JsonSerializer.Serialize(_systemDoc);
             await _js.InvokeVoidAsync("bridgeEdit.saveToStorage", key, json);
         }
-        else
+        else if (key == DwustronnyKey)
         {
             _dwostronnyCts?.Cancel();
             _dwostronnyCts = null;
@@ -189,47 +346,126 @@ public class TreeEditService
             string json = JsonSerializer.Serialize(_dwustronnyDoc);
             await _js.InvokeVoidAsync("bridgeEdit.saveToStorage", key, json);
         }
+        else
+        {
+            if (_userCts.TryGetValue(key, out CancellationTokenSource? cts))
+            {
+                cts.Cancel();
+                _userCts.Remove(key);
+            }
+            if (_userDocs.TryGetValue(key, out BridgeDocument? doc))
+            {
+                string json = JsonSerializer.Serialize(doc);
+                await _js.InvokeVoidAsync("bridgeEdit.saveToStorage", key, json);
+            }
+        }
     }
+
+    // ── Key helpers ───────────────────────────────────────────────────────────
+
+    /// <summary>Returns the localStorage key for a user document by its id.</summary>
+    public static string UserDocKey(string id) => $"{UserDocPrefix}{id}";
 
     // ── Private helpers ───────────────────────────────────────────────────────
 
-    private string ResolveKey(string nodeId) =>
-        TreeMutator.ContainsNode(nodeId, _systemDoc?.Nodes ?? []) ? SystemKey : DwustronnyKey;
+    /// <summary>
+    /// Returns the document key that contains <paramref name="nodeId"/>.
+    /// Searches user documents first, then built-ins.
+    /// Throws <see cref="InvalidOperationException"/> if not found in any loaded document.
+    /// </summary>
+    private string ResolveKey(string nodeId)
+    {
+        foreach (KeyValuePair<string, BridgeDocument> kvp in _userDocs)
+        {
+            if (TreeMutator.ContainsNode(nodeId, kvp.Value.Nodes))
+                return kvp.Key;
+        }
 
-    private List<BidNode> GetNodes(string key) =>
-        key == SystemKey ? (_systemDoc?.Nodes ?? []) : (_dwustronnyDoc?.Nodes ?? []);
+        if (TreeMutator.ContainsNode(nodeId, _systemDoc?.Nodes ?? []))
+            return SystemKey;
+
+        if (TreeMutator.ContainsNode(nodeId, _dwustronnyDoc?.Nodes ?? []))
+            return DwustronnyKey;
+
+        throw new InvalidOperationException($"Node '{nodeId}' not found in any loaded document.");
+    }
+
+    private List<BidNode> GetNodes(string key)
+    {
+        if (key == SystemKey) return _systemDoc?.Nodes ?? [];
+        if (key == DwustronnyKey) return _dwustronnyDoc?.Nodes ?? [];
+        return _userDocs.TryGetValue(key, out BridgeDocument? doc) ? doc.Nodes : [];
+    }
 
     private void CommitChange(string key)
     {
-        IsDirty = true;
+        _dirtyFlags[key] = true;
         OnChange?.Invoke();
         _ = SaveToLocalStorageDebounced(key);
     }
 
     private async Task SaveToLocalStorageDebounced(string key)
     {
-        // Separate CTS per key so rapid edits to System never cancel a pending Dwustronny save
+        // Separate CTS per key so rapid edits to one document never cancel a pending save for another
         CancellationTokenSource newCts = new();
         if (key == SystemKey)
         {
             _systemCts?.Cancel();
             _systemCts = newCts;
         }
-        else
+        else if (key == DwustronnyKey)
         {
             _dwostronnyCts?.Cancel();
             _dwostronnyCts = newCts;
+        }
+        else
+        {
+            if (_userCts.TryGetValue(key, out CancellationTokenSource? oldCts))
+                oldCts.Cancel();
+            _userCts[key] = newCts;
         }
 
         try
         {
             await Task.Delay(200, newCts.Token);
-            BridgeDocument? doc = key == SystemKey ? _systemDoc : _dwustronnyDoc;
+            BridgeDocument? doc = GetDocumentForKey(key);
             if (doc is null) return;
             string json = JsonSerializer.Serialize(doc);
             await _js.InvokeVoidAsync("bridgeEdit.saveToStorage", key, json);
         }
         catch (OperationCanceledException) { /* superseded by a newer edit */ }
+    }
+
+    private BridgeDocument? GetDocumentForKey(string key)
+    {
+        if (key == SystemKey) return _systemDoc;
+        if (key == DwustronnyKey) return _dwustronnyDoc;
+        _userDocs.TryGetValue(key, out BridgeDocument? doc);
+        return doc;
+    }
+
+    private string? FindKeyForDocument(BridgeDocument doc)
+    {
+        if (ReferenceEquals(doc, _systemDoc)) return SystemKey;
+        if (ReferenceEquals(doc, _dwustronnyDoc)) return DwustronnyKey;
+        foreach (KeyValuePair<string, BridgeDocument> kvp in _userDocs)
+        {
+            if (ReferenceEquals(kvp.Value, doc)) return kvp.Key;
+        }
+        return null;
+    }
+
+    private async Task SaveIndexAsync()
+    {
+        string json = JsonSerializer.Serialize(_userIndex ?? []);
+        await _js.InvokeVoidAsync("bridgeEdit.saveToStorage", UserIndexKey, json);
+    }
+
+    private static BridgeDocument DeepClone(BridgeDocument source)
+    {
+        string json = JsonSerializer.Serialize(source);
+        return JsonSerializer.Deserialize<BridgeDocument>(json)
+            ?? throw new InvalidOperationException("Failed to deep-clone document.");
     }
 
     private static void SetAllExpanded(List<BidNode> nodes)

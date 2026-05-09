@@ -1,4 +1,7 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@implements IDisposable
+@inject TreeEditService EditService
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="system">System Licytacyjny</a>
         <button title="Przełącz menu nawigacji" class="navbar-toggler" @onclick="ToggleNavMenu">
@@ -19,13 +22,49 @@
                 Licytacja dwustronna
             </NavLink>
         </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="moje-systemy" Match="NavLinkMatch.All">
+                Moje systemy
+            </NavLink>
+        </div>
+        @foreach (UserDocInfo info in _userIndex)
+        {
+            <div class="nav-item px-3 nav-subsection">
+                <NavLink class="nav-link" href="@($"moje-systemy/{info.Id}")">
+                    @info.Name
+                </NavLink>
+            </div>
+        }
     </nav>
 </div>
 
 @code {
     private bool collapseNavMenu = true;
+    private List<UserDocInfo> _userIndex = [];
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        EditService.OnUserIndexChange += HandleIndexChange;
+        _userIndex = await EditService.GetUserIndexAsync();
+    }
+
+    public void Dispose()
+    {
+        EditService.OnUserIndexChange -= HandleIndexChange;
+    }
+
+    private void HandleIndexChange()
+    {
+        _ = RefreshAsync();
+    }
+
+    private async Task RefreshAsync()
+    {
+        _userIndex = await EditService.GetUserIndexAsync();
+        StateHasChanged();
+    }
 
     private void ToggleNavMenu()
     {

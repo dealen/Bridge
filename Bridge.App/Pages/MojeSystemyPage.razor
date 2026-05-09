@@ -1,0 +1,213 @@
+@page "/moje-systemy"
+@implements IDisposable
+@inject TreeEditService EditService
+@inject NavigationManager Nav
+
+<PageTitle>Moje systemy</PageTitle>
+
+<h2 class="page-heading">Moje systemy</h2>
+
+@if (_errorMessage is not null)
+{
+    <p class="error-text">Błąd: @_errorMessage</p>
+}
+
+<div class="user-systems-list">
+    @foreach (UserDocInfo info in _userIndex)
+    {
+        <div class="user-system-item">
+            @if (_renamingId == info.Id)
+            {
+                <input class="user-system-rename-input"
+                       value="@_renameBuffer"
+                       @oninput="e => _renameBuffer = e.Value?.ToString() ?? string.Empty"
+                       maxlength="60"
+                       @onkeydown="e => HandleRenameKeyDown(e, info.Id)" />
+                <button class="btn-tree-action" @onclick="() => CommitRenameAsync(info.Id)">Zapisz</button>
+                <button class="btn-tree-action" @onclick="CancelRename">Anuluj</button>
+            }
+            else
+            {
+                <span class="user-system-name" @onclick="() => StartRename(info)">@info.Name</span>
+                <span class="user-system-date">@info.CreatedAt.ToLocalTime().ToString("dd.MM.yyyy")</span>
+                <a class="btn-tree-action" href="moje-systemy/@info.Id">Otwórz</a>
+                <button class="btn-tree-action btn-tree-action--danger" @onclick="() => DeleteAsync(info.Id)">Usuń</button>
+            }
+        </div>
+    }
+
+    @if (_userIndex.Count == 0)
+    {
+        <p class="loading-text">Brak systemów. Utwórz pierwszy!</p>
+    }
+</div>
+
+<div class="user-system-create-section">
+    @if (!_showCreateForm)
+    {
+        <button class="btn-tree-action" @onclick="() => _showCreateForm = true">&#43; Utwórz nowy system</button>
+    }
+    else
+    {
+        <div class="user-system-create-form">
+            <h3>Nowy system</h3>
+
+            <label>
+                Nazwa:
+                <input class="user-system-name-input"
+                       @bind="_newName"
+                       maxlength="60"
+                       placeholder="np. Mój system" />
+            </label>
+
+            <label>
+                Zawartość:
+                <select @bind="_cloneSource">
+                    <option value="">Od nowa (puste drzewo)</option>
+                    <option value="builtin:system">Skopiuj: System otwarć</option>
+                    <option value="builtin:dwustronny">Skopiuj: Licytacja dwustronna</option>
+                    @foreach (UserDocInfo info in _userIndex)
+                    {
+                        <option value="@($"user:{info.Id}")">Skopiuj: @info.Name</option>
+                    }
+                </select>
+            </label>
+
+            @if (_createError is not null)
+            {
+                <p class="error-text">@_createError</p>
+            }
+
+            <div class="user-system-create-actions">
+                <button class="btn-tree-action" @onclick="CreateAsync" disabled="@_isCreating">
+                    @(_isCreating ? "Tworzenie..." : "Utwórz")
+                </button>
+                <button class="btn-tree-action" @onclick="CancelCreate">Anuluj</button>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private List<UserDocInfo> _userIndex = [];
+    private string? _errorMessage;
+
+    // Create form state
+    private bool _showCreateForm;
+    private string _newName = string.Empty;
+    private string _cloneSource = string.Empty;
+    private string? _createError;
+    private bool _isCreating;
+
+    // Inline rename state
+    private string? _renamingId;
+    private string _renameBuffer = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        EditService.OnUserIndexChange += HandleIndexChange;
+        try
+        {
+            _userIndex = await EditService.GetUserIndexAsync();
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = ex.Message;
+        }
+    }
+
+    public void Dispose()
+    {
+        EditService.OnUserIndexChange -= HandleIndexChange;
+    }
+
+    private void HandleIndexChange()
+    {
+        _ = RefreshIndexAsync();
+    }
+
+    private async Task RefreshIndexAsync()
+    {
+        _userIndex = await EditService.GetUserIndexAsync();
+        StateHasChanged();
+    }
+
+    private async Task CreateAsync()
+    {
+        _createError = null;
+
+        if (string.IsNullOrWhiteSpace(_newName))
+        {
+            _createError = "Podaj nazwę systemu.";
+            return;
+        }
+
+        _isCreating = true;
+        try
+        {
+            string? cloneFromBuiltIn = null;
+            string? cloneFromUserId = null;
+
+            if (_cloneSource.StartsWith("builtin:"))
+                cloneFromBuiltIn = _cloneSource["builtin:".Length..];
+            else if (_cloneSource.StartsWith("user:"))
+                cloneFromUserId = _cloneSource["user:".Length..];
+
+            string newId = await EditService.CreateUserSystemAsync(_newName.Trim(), cloneFromBuiltIn, cloneFromUserId);
+            Nav.NavigateTo($"moje-systemy/{newId}");
+        }
+        catch (Exception ex)
+        {
+            _createError = ex.Message;
+            _isCreating = false;
+            StateHasChanged();
+        }
+    }
+
+    private void CancelCreate()
+    {
+        _showCreateForm = false;
+        _newName = string.Empty;
+        _cloneSource = string.Empty;
+        _createError = null;
+    }
+
+    private async Task DeleteAsync(string id)
+    {
+        bool confirmed = await EditService.ConfirmDeleteAsync("Czy na pewno chcesz usunąć ten system?");
+        if (!confirmed) return;
+        await EditService.DeleteUserSystemAsync(id);
+        _userIndex = await EditService.GetUserIndexAsync();
+        StateHasChanged();
+    }
+
+    private void StartRename(UserDocInfo info)
+    {
+        _renamingId = info.Id;
+        _renameBuffer = info.Name;
+    }
+
+    private void CancelRename()
+    {
+        _renamingId = null;
+        _renameBuffer = string.Empty;
+    }
+
+    private async Task CommitRenameAsync(string id)
+    {
+        string trimmed = _renameBuffer.Trim();
+        if (!string.IsNullOrEmpty(trimmed))
+            await EditService.RenameUserSystemAsync(id, trimmed);
+
+        _renamingId = null;
+        _renameBuffer = string.Empty;
+        _userIndex = await EditService.GetUserIndexAsync();
+        StateHasChanged();
+    }
+
+    private async Task HandleRenameKeyDown(KeyboardEventArgs e, string id)
+    {
+        if (e.Key == "Enter") await CommitRenameAsync(id);
+        else if (e.Key == "Escape") CancelRename();
+    }
+}

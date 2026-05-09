@@ -13,19 +13,9 @@ primary
 lastDtbSucceeded
 
 [properties]
-AssemblyName=Bridge.App
-CommandLineArgsForDesignTimeEvaluation=-langversion:13.0 -define:TRACE
-CompilerGeneratedFilesOutputPath=
-MaxSupportedLangVersion=13.0
-ProjectAssetsFile=<PATH>obj/project.assets.json
-RootNamespace=Bridge.App
-RunAnalyzers=
-RunAnalyzersDuringLiveAnalysis=
-SolutionPath=<PATH>../Bridge.slnx
-TargetFrameworkIdentifier=.NETCoreApp
-TargetPath=<PATH>bin/Debug/net9.0/Bridge.App.dll
-TargetRefPath=<PATH>obj/Debug/net9.0/ref/Bridge.App.dll
-TemporaryDependencyNodeTargetIdentifier=net9.0
+TargetPath=<PATH>bin/Debug/net9.0-windows/Bridge.App.dll
+TargetRefPath=<PATH>obj/Debug/net9.0-windows/ref/Bridge.App.dll
+TemporaryDependencyNodeTargetIdentifier=net9.0-windows
 
 [commandLineArguments]
 /noconfig
@@ -37,7 +27,7 @@ TemporaryDependencyNodeTargetIdentifier=net9.0
 /platform:AnyCPU
 /errorreport:prompt
 /warn:9
-/define:TRACE;DEBUG;NET;NET9_0;NETCOREAPP;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP1_0_OR_GREATER;NETCOREAPP1_1_OR_GREATER;NETCOREAPP2_0_OR_GREATER;NETCOREAPP2_1_OR_GREATER;NETCOREAPP2_2_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER
+/define:TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP1_0_OR_GREATER;NETCOREAPP1_1_OR_GREATER;NETCOREAPP2_0_OR_GREATER;NETCOREAPP2_1_OR_GREATER;NETCOREAPP2_2_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 /highentropyva+
 /nullable:enable
 /features:"InterceptorsNamespaces=;Microsoft.AspNetCore.Http.Generated"
@@ -45,8 +35,8 @@ TemporaryDependencyNodeTargetIdentifier=net9.0
 /debug:portable
 /filealign:512
 /optimize-
-/out:obj/Debug/net9.0/Bridge.App.dll
-/refout:obj/Debug/net9.0/refint/Bridge.App.dll
+/out:obj/Debug/net9.0-windows/Bridge.App.dll
+/refout:obj/Debug/net9.0-windows/refint/Bridge.App.dll
 /target:exe
 /warnaserror-
 /utf8output
@@ -55,11 +45,21 @@ TemporaryDependencyNodeTargetIdentifier=net9.0
 /warnaserror+:NU1605,SYSLIB0011
 
 [sourceFiles]
-obj/Debug/net9.0/
+Models/
+ BidNode.cs
+ BridgeDocument.cs
+ UserDocInfo.cs
+obj/Debug/net9.0-windows/
  .NETCoreApp,Version=v9.0.AssemblyAttributes.cs
  Bridge.App.AssemblyInfo.cs
  Bridge.App.GlobalUsings.g.cs
 Program.cs
+Services/
+ BridgeDataService.cs
+ IBridgeDataService.cs
+ TreeEditService.cs
+ TreeFilterHelper.cs
+ TreeMutator.cs
 
 [metadataReferences]
 <DOTNET>/packs/Microsoft.NETCore.App.Ref/9.0.15/ref/net9.0/
@@ -276,26 +276,42 @@ Program.cs
 
 [analyzerConfigFiles]
 <DOTNET>/sdk/10.0.203/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_9_default.globalconfig
-obj/Debug/net9.0/Bridge.App.GeneratedMSBuildEditorConfig.editorconfig
+obj/Debug/net9.0-windows/Bridge.App.GeneratedMSBuildEditorConfig.editorconfig
 
 [additionalFiles]
 App.razor
+Components/
+ SearchBar.razor
+ TreeNode.razor
+ TreeView.razor
 Layout/
  MainLayout.razor
  NavMenu.razor
 Pages/
  Counter.razor
+ DwustronnyPage.razor
  Home.razor
+ MojeSystemyPage.razor
+ SystemPage.razor
+ UserSystemPage.razor
  Weather.razor
 _Imports.razor
 
 [dynamicFiles]
 App.razor
+Components/
+ SearchBar.razor
+ TreeNode.razor
+ TreeView.razor
 Layout/
  MainLayout.razor
  NavMenu.razor
 Pages/
  Counter.razor
+ DwustronnyPage.razor
  Home.razor
+ MojeSystemyPage.razor
+ SystemPage.razor
+ UserSystemPage.razor
  Weather.razor
 _Imports.razor

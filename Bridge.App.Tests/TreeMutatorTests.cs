@@ -449,4 +449,79 @@ public sealed class TreeMutatorTests
         // Must not throw — an empty document is valid
         TreeMutator.ValidateImportedDocument(doc);
     }
+
+    // ── RegenerateIds ──────────────────────────────────────────────────────────
+
+    [Fact]
+    public void RegenerateIds_EmptyList_DoesNotThrow()
+    {
+        var nodes = new List<BidNode>();
+        TreeMutator.RegenerateIds(nodes); // should not throw
+    }
+
+    [Fact]
+    public void RegenerateIds_AllIdsReplaced()
+    {
+        var nodes = new List<BidNode>
+        {
+            Branch("A", Leaf("A1"), Leaf("A2")),
+            Branch("B", Branch("B1", Leaf("B1a"))),
+        };
+
+        var originalIds = CollectAllIds(nodes).ToHashSet();
+        TreeMutator.RegenerateIds(nodes);
+        var newIds = CollectAllIds(nodes).ToHashSet();
+
+        // None of the new IDs should match any original ID
+        Assert.Empty(newIds.Intersect(originalIds));
+    }
+
+    [Fact]
+    public void RegenerateIds_NoDuplicateIds()
+    {
+        var nodes = new List<BidNode>();
+        for (int i = 0; i < 20; i++)
+            nodes.Add(Branch($"node{i}", Leaf($"leaf{i}")));
+
+        TreeMutator.RegenerateIds(nodes);
+
+        var allIds = CollectAllIds(nodes).ToList();
+        Assert.Equal(allIds.Count, allIds.Distinct().Count());
+    }
+
+    [Fact]
+    public void RegenerateIds_StructurePreserved()
+    {
+        BidNode leaf = Leaf("L");
+        BidNode branch = Branch("B", leaf);
+        var nodes = new List<BidNode> { branch };
+
+        TreeMutator.RegenerateIds(nodes);
+
+        // Tree structure: one top-level branch with one child
+        Assert.Single(nodes);
+        Assert.Single(nodes[0].Children);
+    }
+
+    [Fact]
+    public void RegenerateIds_IdsAreEightCharsHex()
+    {
+        var nodes = new List<BidNode> { Leaf("old") };
+        TreeMutator.RegenerateIds(nodes);
+        string newId = nodes[0].Id;
+        Assert.Equal(8, newId.Length);
+        Assert.All(newId, c => Assert.True(char.IsAsciiHexDigit(c)));
+    }
+
+    // ── Helpers (extra) ────────────────────────────────────────────────────────
+
+    private static IEnumerable<string> CollectAllIds(List<BidNode> nodes)
+    {
+        foreach (BidNode node in nodes)
+        {
+            yield return node.Id;
+            foreach (string childId in CollectAllIds(node.Children))
+                yield return childId;
+        }
+    }
 }

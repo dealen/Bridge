@@ -1,10 +1,11 @@
-@page "/system"
+@page "/moje-systemy/{Id}"
 @implements IDisposable
 @inject TreeEditService EditService
+@inject NavigationManager Nav
 
-<PageTitle>System otwarć</PageTitle>
+<PageTitle>@(_document?.SourceFile ?? "Mój system")</PageTitle>
 
-<h2 class="page-heading">System otwarć</h2>
+<h2 class="page-heading">@(_document?.SourceFile ?? "Mój system")</h2>
 
 @if (_document is null && _errorMessage is null)
 {
@@ -25,7 +26,7 @@ else
                     @onclick="ToggleEditMode">Tryb edycji</button>
             @if (_isEditMode)
             {
-                <button class="btn-tree-action" @onclick="() => EditService.AddRootNode(TreeEditService.SystemKey)">Dodaj sekcję</button>
+                <button class="btn-tree-action" @onclick="() => EditService.AddRootNode(DocKey)">Dodaj sekcję</button>
                 <button class="btn-tree-action" @onclick="() => _treeView?.ExpandAll()">Rozwiń wszystko</button>
                 <button class="btn-tree-action" @onclick="() => _treeView?.CollapseAll()">Zwiń wszystko</button>
                 <button class="btn-tree-action" @onclick="ExportAsync">Eksportuj JSON</button>
@@ -40,7 +41,7 @@ else
                 <button class="btn-tree-action" @onclick="() => _treeView?.CollapseAll()">Zwiń wszystko</button>
             }
         </div>
-        @if (_isEditMode && EditService.IsDirty)
+        @if (_isEditMode && EditService.IsDirtyFor(DocKey))
         {
             <span class="dirty-indicator">&#9679; Niezapisane zmiany</span>
         }
@@ -55,6 +56,11 @@ else
 }
 
 @code {
+    [Parameter]
+    public string Id { get; set; } = string.Empty;
+
+    private string DocKey => TreeEditService.UserDocKey(Id);
+
     private BridgeDocument? _document;
     private string? _errorMessage;
     private string? _importError;
@@ -67,7 +73,7 @@ else
         EditService.OnChange += HandleChange;
         try
         {
-            _document = await EditService.GetSystemAsync();
+            _document = await EditService.GetUserDocumentAsync(Id);
         }
         catch (Exception ex)
         {
@@ -78,12 +84,13 @@ else
     public void Dispose()
     {
         EditService.OnChange -= HandleChange;
-        _ = EditService.FlushPendingSaveAsync(TreeEditService.SystemKey);
+        _ = EditService.FlushPendingSaveAsync(DocKey);
     }
 
     private void HandleChange()
     {
-        _document = EditService.SystemDocument ?? _document;
+        // Mutations modify _document.Nodes in place; imports update _document directly in HandleImportAsync.
+        // Calling StateHasChanged() synchronously avoids an async re-render race with TreeNode lifecycle.
         StateHasChanged();
     }
 
@@ -103,7 +110,8 @@ else
     private async Task ExportAsync()
     {
         if (_document is null) return;
-        await EditService.ExportAsync(_document, "system-edited.json");
+        string safeName = string.Concat((_document.SourceFile ?? "system").Where(c => !Path.GetInvalidFileNameChars().Contains(c)));
+        await EditService.ExportAsync(_document, $"{safeName}-{Id}.json");
     }
 
     private async Task HandleImportAsync(InputFileChangeEventArgs e)
@@ -112,8 +120,8 @@ else
         try
         {
             await using Stream stream = e.File.OpenReadStream(maxAllowedSize: 10 * 1024 * 1024);
-            await EditService.ImportAsync(stream, TreeEditService.SystemKey);
-            _document = EditService.SystemDocument;
+            await EditService.ImportAsync(stream, DocKey);
+            _document = await EditService.GetUserDocumentAsync(Id);
         }
         catch (Exception ex)
         {

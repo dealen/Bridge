@@ -10,6 +10,8 @@
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="Microsoft.JSInterop" Version="9.0.0" />
+    <PackageReference Include="NSubstitute" Version="5.3.0" />
     <PackageReference Include="xunit" Version="2.9.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
   </ItemGroup>
@@ -22,8 +24,11 @@
   <ItemGroup>
     <Compile Include="..\Bridge.App\Models\BidNode.cs" Link="Models\BidNode.cs" />
     <Compile Include="..\Bridge.App\Models\BridgeDocument.cs" Link="Models\BridgeDocument.cs" />
+    <Compile Include="..\Bridge.App\Models\UserDocInfo.cs" Link="Models\UserDocInfo.cs" />
+    <Compile Include="..\Bridge.App\Services\IBridgeDataService.cs" Link="Services\IBridgeDataService.cs" />
     <Compile Include="..\Bridge.App\Services\TreeFilterHelper.cs" Link="Services\TreeFilterHelper.cs" />
     <Compile Include="..\Bridge.App\Services\TreeMutator.cs" Link="Services\TreeMutator.cs" />
+    <Compile Include="..\Bridge.App\Services\TreeEditService.cs" Link="Services\TreeEditService.cs" />
   </ItemGroup>
 
 </Project>

@@ -3,7 +3,7 @@ using Bridge.App.Models;
 
 namespace Bridge.App.Services;
 
-public class BridgeDataService
+public class BridgeDataService : IBridgeDataService
 {
     private readonly HttpClient _httpClient;
     private BridgeDocument? _systemDocument;

@@ -104,7 +104,10 @@
         if (_shouldFocusRenameInput)
         {
             _shouldFocusRenameInput = false;
-            await _renameInputRef.FocusAsync();
+            // Guard against the ref not yet being configured (can happen when a parent re-render
+            // races with the component's own StateHasChanged after entering rename mode).
+            if (_renameInputRef.Id is not null)
+                await _renameInputRef.FocusAsync();
         }
     }
 

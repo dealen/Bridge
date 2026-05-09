@@ -64,6 +64,17 @@ public static class TreeMutator
     }
 
     /// <summary>
+    /// Appends a new top-level node to <paramref name="nodes"/>.
+    /// Sets <paramref name="newNodeId"/> to the new node's ID.
+    /// </summary>
+    public static string AddRootNode(List<BidNode> nodes)
+    {
+        string newNodeId = Guid.NewGuid().ToString("N")[..8];
+        nodes.Add(new BidNode { Id = newNodeId, Label = "Nowa sekcja", IsLeaf = true });
+        return newNodeId;
+    }
+
+    /// <summary>
     /// Appends a new leaf child under <paramref name="parentId"/>.
     /// On success sets <paramref name="newNodeId"/> to the new node's ID and returns <c>true</c>.
     /// </summary>
@@ -171,6 +182,23 @@ public static class TreeMutator
         targetNode.IsExpanded = true;
         targetNode.Children.Add(sourceNode);
         return true;
+    }
+
+    // ── Id management ─────────────────────────────────────────────────────────
+
+    /// <summary>
+    /// Recursively replaces every <see cref="BidNode.Id"/> with a fresh unique identifier.
+    /// Call this after cloning any source tree to prevent <c>ResolveKey</c> from matching
+    /// nodes against the original document.
+    /// </summary>
+    public static void RegenerateIds(List<BidNode> nodes)
+    {
+        foreach (BidNode node in nodes)
+        {
+            node.Id = Guid.NewGuid().ToString("N")[..8];
+            if (node.Children.Count > 0)
+                RegenerateIds(node.Children);
+        }
     }
 
     // ── Import validation ─────────────────────────────────────────────────────

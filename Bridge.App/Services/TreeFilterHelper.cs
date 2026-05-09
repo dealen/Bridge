@@ -50,14 +50,32 @@ public static class TreeFilterHelper
                 descendantMatches = true;
         }
 
-        node.IsVisible = selfMatches || descendantMatches;
-
         if (selfMatches)
+        {
             matchCount++;
-
-        if (descendantMatches)
+            node.IsVisible = true;
             node.IsExpanded = true;
+            ShowAllDescendants(node.Children);
+        }
+        else
+        {
+            node.IsVisible = descendantMatches;
+            if (descendantMatches)
+                node.IsExpanded = true;
+        }
 
         return node.IsVisible;
+    }
+
+    /// <summary>Makes all descendants visible and expanded.</summary>
+    private static void ShowAllDescendants(List<BidNode> nodes)
+    {
+        foreach (BidNode node in nodes)
+        {
+            node.IsVisible = true;
+            node.IsExpanded = true;
+            if (node.Children.Count > 0)
+                ShowAllDescendants(node.Children);
+        }
     }
 }
