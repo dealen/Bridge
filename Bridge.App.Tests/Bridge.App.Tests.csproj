@@ -22,6 +22,7 @@
   <ItemGroup>
     <Compile Include="..\Bridge.App\Models\BidNode.cs" Link="Models\BidNode.cs" />
     <Compile Include="..\Bridge.App\Services\TreeFilterHelper.cs" Link="Services\TreeFilterHelper.cs" />
+    <Compile Include="..\Bridge.App\Services\TreeMutator.cs" Link="Services\TreeMutator.cs" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 @page "/system"
-@inject Bridge.App.Services.BridgeDataService DataService
+@implements IDisposable
+@inject TreeEditService EditService
 
 <PageTitle>System otwarć</PageTitle>
 
@@ -18,12 +19,36 @@ else
     <p class="doc-meta">Sekcji najwyższego poziomu: @_document!.TopLevelCount</p>
 
     <div class="page-toolbar">
-        <SearchBar OnSearch="HandleSearch" MatchCount="_matchCount" />
+        <SearchBar OnSearch="HandleSearch" MatchCount="_matchCount" Disabled="_isEditMode" />
         <div class="toolbar-buttons">
-            <button class="btn-tree-action" @onclick="() => _treeView?.ExpandAll()">Rozwiń wszystko</button>
-            <button class="btn-tree-action" @onclick="() => _treeView?.CollapseAll()">Zwiń wszystko</button>
+            <button class="btn-tree-action @(_isEditMode ? "btn-tree-action--active" : "")"
+                    @onclick="ToggleEditMode">Tryb edycji</button>
+            @if (_isEditMode)
+            {
+                <button class="btn-tree-action" @onclick="() => _treeView?.ExpandAll()">Rozwiń wszystko</button>
+                <button class="btn-tree-action" @onclick="() => _treeView?.CollapseAll()">Zwiń wszystko</button>
+                <button class="btn-tree-action" @onclick="ExportAsync">Eksportuj JSON</button>
+                <label class="btn-tree-action btn-tree-action--import">
+                    Importuj JSON
+                    <InputFile OnChange="HandleImportAsync" accept=".json" style="display:none" />
+                </label>
+            }
+            else
+            {
+                <button class="btn-tree-action" @onclick="() => _treeView?.ExpandAll()">Rozwiń wszystko</button>
+                <button class="btn-tree-action" @onclick="() => _treeView?.CollapseAll()">Zwiń wszystko</button>
+            }
         </div>
+        @if (_isEditMode && EditService.IsDirty)
+        {
+            <span class="dirty-indicator">&#9679; Niezapisane zmiany</span>
+        }
     </div>
+
+    @if (_importError is not null)
+    {
+        <p class="error-text">Błąd importu: @_importError</p>
+    }
 
     <TreeView Nodes="_document!.Nodes" @ref="_treeView" />
 }
@@ -31,14 +56,17 @@ else
 @code {
     private BridgeDocument? _document;
     private string? _errorMessage;
+    private string? _importError;
     private TreeView? _treeView;
     private int _matchCount;
+    private bool _isEditMode;
 
     protected override async Task OnInitializedAsync()
     {
+        EditService.OnChange += HandleChange;
         try
         {
-            _document = await DataService.GetSystemAsync();
+            _document = await EditService.GetSystemAsync();
         }
         catch (Exception ex)
         {
@@ -46,10 +74,50 @@ else
         }
     }
 
+    public void Dispose()
+    {
+        EditService.OnChange -= HandleChange;
+        _ = EditService.FlushPendingSaveAsync(TreeEditService.SystemKey);
+    }
+
+    private void HandleChange()
+    {
+        _document = EditService.SystemDocument ?? _document;
+        StateHasChanged();
+    }
+
+    private void ToggleEditMode()
+    {
+        _isEditMode = !_isEditMode;
+        _treeView?.ToggleEditMode();
+    }
+
     private void HandleSearch(string searchQuery)
     {
         if (_treeView is not null)
             _matchCount = _treeView.ApplyFilter(searchQuery);
         StateHasChanged();
+    }
+
+    private async Task ExportAsync()
+    {
+        if (_document is null) return;
+        await EditService.ExportAsync(_document, "system-edited.json");
+    }
+
+    private async Task HandleImportAsync(InputFileChangeEventArgs e)
+    {
+        _importError = null;
+        try
+        {
+            await using Stream stream = e.File.OpenReadStream(maxAllowedSize: 10 * 1024 * 1024);
+            await EditService.ImportAsync(stream, TreeEditService.SystemKey);
+            _document = EditService.SystemDocument;
+        }
+        catch (Exception ex)
+        {
+            _importError = ex.Message;
+            StateHasChanged();
+        }
     }
 }

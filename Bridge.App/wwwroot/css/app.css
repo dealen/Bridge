@@ -312,3 +312,87 @@ mark.search-highlight {
     border-radius: 2px;
     padding: 0 1px;
 }
+
+/* ── Edit mode ───────────────────────────────────────────── */
+
+.btn-tree-action--active {
+    background: #1a3a5c;
+    color: #fff;
+    border-color: #1a3a5c;
+}
+
+.btn-tree-action--active:hover {
+    background: #0f2540;
+    border-color: #0f2540;
+    color: #fff;
+}
+
+.btn-tree-action--import {
+    cursor: pointer;
+}
+
+.dirty-indicator {
+    font-size: 0.82rem;
+    color: #b05000;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.search-input:disabled {
+    background: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+    border-color: #ddd;
+}
+
+/* ── Tree node edit actions (Phase 3 & 4) ────────────────── */
+
+.tree-rename-input {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    color: #1a1a1a;
+    border: 1px solid #5590cc;
+    border-radius: 3px;
+    padding: 0 0.3rem;
+    outline: none;
+    width: 16rem;
+    box-shadow: 0 0 0 2px rgba(85, 144, 204, 0.2);
+}
+
+.tree-edit-actions {
+    display: inline-flex;
+    gap: 0.15rem;
+    margin-left: 0.3rem;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+.tree-node-row:hover .tree-edit-actions {
+    opacity: 1;
+}
+
+.btn-node-action {
+    background: none;
+    border: 1px solid #bcd;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    line-height: 1;
+    padding: 0.1rem 0.3rem;
+    color: #1a3a5c;
+    cursor: pointer;
+}
+
+.btn-node-action:hover {
+    background: #ddeeff;
+    border-color: #7aabdd;
+}
+
+.btn-node-delete {
+    color: #b03000;
+    border-color: #e0b0a0;
+}
+
+.btn-node-delete:hover {
+    background: #fde8e0;
+    border-color: #c06040;
+}

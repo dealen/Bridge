@@ -2,12 +2,14 @@
 @using Bridge.App.Services
 
 <CascadingValue Value="_searchQuery" Name="SearchQuery">
-    <ul class="tree-root">
-        @foreach (BidNode topLevelNode in Nodes)
-        {
-            <TreeNode @key="topLevelNode.Id" Node="topLevelNode" />
-        }
-    </ul>
+    <CascadingValue Value="_isEditMode" Name="IsEditMode">
+        <ul class="tree-root">
+            @foreach (BidNode topLevelNode in Nodes)
+            {
+                <TreeNode @key="topLevelNode.Id" Node="topLevelNode" ParentChildren="Nodes" />
+            }
+        </ul>
+    </CascadingValue>
 </CascadingValue>
 
 @code {
@@ -15,6 +17,20 @@
     public List<BidNode> Nodes { get; set; } = [];
 
     private string _searchQuery = "";
+    private bool _isEditMode;
+
+    public bool IsEditMode => _isEditMode;
+
+    public void ToggleEditMode()
+    {
+        if (!_isEditMode)
+        {
+            // Reset search state before entering edit mode
+            ApplyFilter("");
+        }
+        _isEditMode = !_isEditMode;
+        StateHasChanged();
+    }
 
     public void ExpandAll()
     {

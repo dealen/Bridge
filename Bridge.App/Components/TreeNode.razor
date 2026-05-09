@@ -1,9 +1,11 @@
 @using Bridge.App.Models
+@inject Bridge.App.Services.TreeEditService EditService
+@inject Microsoft.JSInterop.IJSRuntime JS
 
 @if (Node.IsVisible)
 {
     <li @key="Node.Id" class="tree-node @(Node.IsLeaf ? "tree-node--leaf" : "tree-node--branch")">
-        <div class="tree-node-row" @onclick="ToggleExpanded">
+        <div class="tree-node-row" @onclick="HandleRowClick">
             @if (!Node.IsLeaf)
             {
                 <button class="tree-toggle" aria-expanded="@Node.IsExpanded.ToString().ToLower()" tabindex="-1">
@@ -14,7 +16,32 @@
             {
                 <span class="tree-toggle-placeholder"></span>
             }
-            <span class="tree-label">@((MarkupString)GetColoredLabel(Node.Label, SearchQuery))</span>
+
+            @if (IsEditMode && _isRenaming)
+            {
+                <input class="tree-rename-input"
+                       type="text"
+                       value="@_editBuffer"
+                       @oninput="e => _editBuffer = e.Value?.ToString() ?? string.Empty"
+                       @onkeydown="HandleRenameKey"
+                       @onblur="ConfirmRename"
+                       @onclick:stopPropagation="true"
+                       @ref="_renameInputRef" />
+            }
+            else if (IsEditMode)
+            {
+                <span class="tree-label" @onclick="HandleLabelClick" @onclick:stopPropagation="true">
+                    @((MarkupString)GetColoredLabel(Node.Label, SearchQuery))
+                </span>
+                <div class="tree-edit-actions" @onclick:stopPropagation="true">
+                    <button class="btn-node-action" title="Dodaj węzeł podrzędny" @onclick="HandleAddChild">+</button>
+                    <button class="btn-node-action btn-node-delete" title="Usuń węzeł" @onclick="HandleDelete">✕</button>
+                </div>
+            }
+            else
+            {
+                <span class="tree-label">@((MarkupString)GetColoredLabel(Node.Label, SearchQuery))</span>
+            }
         </div>
 
         @if (!Node.IsLeaf && Node.IsExpanded && Node.Children.Count > 0)
@@ -22,7 +49,7 @@
             <ul class="tree-children">
                 @foreach (BidNode childNode in Node.Children)
                 {
-                    <TreeNode @key="childNode.Id" Node="childNode" />
+                    <TreeNode @key="childNode.Id" Node="childNode" ParentChildren="Node.Children" />
                 }
             </ul>
         }
@@ -33,8 +60,107 @@
     [Parameter, EditorRequired]
     public BidNode Node { get; set; } = default!;
 
+    /// <summary>
+    /// The sibling list that contains this node. Null for top-level nodes rendered directly by TreeView
+    /// (TreeView passes its root Nodes list instead). Used in edit mode for move-up/down.
+    /// </summary>
+    [Parameter]
+    public List<BidNode>? ParentChildren { get; set; }
+
     [CascadingParameter(Name = "SearchQuery")]
     public string SearchQuery { get; set; } = "";
+
+    [CascadingParameter(Name = "IsEditMode")]
+    public bool IsEditMode { get; set; }
+
+    // ── Rename state ──────────────────────────────────────────────────────────
+
+    private bool _isRenaming;
+    private string _editBuffer = string.Empty;
+    private ElementReference _renameInputRef;
+    private bool _shouldFocusRenameInput;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // Auto-enter rename mode for a newly created child node.
+        if (EditService.PendingRenameNodeId == Node.Id)
+        {
+            EditService.PendingRenameNodeId = null;
+            EnterRenameMode();
+            StateHasChanged();
+            return;
+        }
+
+        if (_shouldFocusRenameInput)
+        {
+            _shouldFocusRenameInput = false;
+            await _renameInputRef.FocusAsync();
+        }
+    }
+
+    private void EnterRenameMode()
+    {
+        _editBuffer = Node.Label;
+        _isRenaming = true;
+        _shouldFocusRenameInput = true;
+    }
+
+    private void HandleLabelClick()
+    {
+        if (!IsEditMode) return;
+        EnterRenameMode();
+    }
+
+    private void HandleRenameKey(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+            ConfirmRename();
+        else if (e.Key == "Escape")
+            CancelRename();
+    }
+
+    private void ConfirmRename()
+    {
+        if (!_isRenaming) return;
+        _isRenaming = false;
+        string trimmed = _editBuffer.Trim();
+        if (!string.IsNullOrEmpty(trimmed) && trimmed != Node.Label)
+            EditService.Rename(Node.Id, trimmed);
+    }
+
+    private void CancelRename()
+    {
+        _isRenaming = false;
+        _editBuffer = Node.Label;
+    }
+
+    // ── Add / Delete ──────────────────────────────────────────────────────────
+
+    private void HandleAddChild()
+    {
+        EditService.AddChild(Node.Id);
+    }
+
+    private async Task HandleDelete()
+    {
+        if (Node.Children.Count > 0)
+        {
+            bool confirmed = await JS.InvokeAsync<bool>(
+                "bridgeEdit.confirmDelete",
+                $"Usunąć węzeł \"{Node.Label}\" i wszystkie jego węzły podrzędne ({Node.Children.Count})?");
+            if (!confirmed) return;
+        }
+        EditService.Delete(Node.Id);
+    }
+
+    // ── Row click ─────────────────────────────────────────────────────────────
+
+    private void HandleRowClick()
+    {
+        if (_isRenaming) return;  // blur will confirm the rename
+        if (!Node.IsLeaf)
+            Node.IsExpanded = !Node.IsExpanded;
+    }
 
     private void ToggleExpanded()
     {

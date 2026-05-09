@@ -26,6 +26,30 @@
         <a href="." class="reload">Reload</a>
         <span class="dismiss">🗙</span>
     </div>
+    <script>
+        window.bridgeEdit = {
+            downloadFile(filename, content) {
+                const a = document.createElement('a');
+                a.href = 'data:application/json;charset=utf-8,' + encodeURIComponent(content);
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            },
+            saveToStorage(key, val) {
+                localStorage.setItem(key, val);
+            },
+            loadFromStorage(key) {
+                return localStorage.getItem(key);
+            },
+            clearStorage(key) {
+                localStorage.removeItem(key);
+            },
+            confirmDelete(message) {
+                return window.confirm(message);
+            }
+        };
+    </script>
     <script src="_framework/blazor.webassembly.js"></script>
 </body>
 
