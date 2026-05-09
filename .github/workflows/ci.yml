@@ -74,6 +74,10 @@ jobs:
         shell: pwsh
         run: New-Item -ItemType File -Path publish/wwwroot/.nojekyll -Force
 
+      - name: Add 404.html SPA fallback
+        shell: pwsh
+        run: Copy-Item publish/wwwroot/index.html publish/wwwroot/404.html
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
