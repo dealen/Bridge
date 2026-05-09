@@ -167,6 +167,19 @@ Bridge.sln
 
 ---
 
+**Phase 3 Status: ✅ DONE**
+
+**Files created:**
+- `Bridge.App/Models/BidNode.cs` — mirrors Converter model; adds `[JsonIgnore] bool IsExpanded` runtime property
+- `Bridge.App/Models/BridgeDocument.cs` — document wrapper POCO
+- `Bridge.App/Services/BridgeDataService.cs` — singleton service; lazy-loads each JSON once via `HttpClient.GetFromJsonAsync`; recursively sets `IsExpanded = true` on all nodes after load
+
+**Program.cs change:** `BridgeDataService` registered as singleton with its own `HttpClient` instance (avoids scoped-in-singleton lifetime issue).
+
+**Verification:** `dotnet build Bridge.App/Bridge.App.csproj` → 0 errors, 0 warnings.
+
+---
+
 ### Phase 4 — Tree Components *(depends on Phase 3; steps 10–12 parallel)*
 
 10. `TreeNode.razor`: toggle button (▶/▼) + label; if branch and `IsExpanded`, recurse into children; use `@key="Node.Id"`.
@@ -175,11 +188,37 @@ Bridge.sln
 
 ---
 
+**Phase 4 Status: ✅ DONE**
+
+**Files created:**
+- `Bridge.App/Components/TreeNode.razor` — recursive component; click-to-toggle `▶/▼` for branch nodes; leaf nodes show indent placeholder; `@key="Node.Id"` on every `<li>` and recursive `<TreeNode>`; label rendered via `GetColoredLabel()` — splits text into `<span class="suit-red">` (♥♦) and `<span class="suit-black">` (♠♣) segments using `MarkupString`, with `WebUtility.HtmlEncode` per character for safety.
+- `Bridge.App/Components/TreeView.razor` — renders top-level `<ul class="tree-root">` via `TreeNode`; exposes `ExpandAll()` and `CollapseAll()` public methods (set flag recursively then call `StateHasChanged()`).
+- `_Imports.razor` — added `@using Bridge.App.Components` and `@using Bridge.App.Models` so components are available globally.
+- `wwwroot/css/app.css` — added tree CSS section: `.tree-root`/`.tree-children` (list-style none, `padding-left: 1.4rem` with left border for indentation), `.tree-node-row` (flex, hover highlight `#f0f4ff` for branches, `#f8f8f8` for leaves), `.tree-toggle` (bare button, `0.65rem`, fixed `1.1rem` width), `.tree-label` (0.92rem, bold for branches), `.suit-red` (`#cc0000` bold), `.suit-black` (`#111` bold).
+
+**Verification:** `dotnet build Bridge.App/Bridge.App.csproj` → **0 errors, 0 warnings**.
+
+---
+
 ### Phase 5 — Pages & Navigation *(depends on Phase 4)*
 
 13. `NavMenu.razor` (or `Index.razor`): two-tab layout — **System** | **Dwustronny**; active tab indicator.
 14. `SystemPage.razor`: calls service, passes nodes to `TreeView`; shows loading spinner while fetching. *(parallel with 15)*
 15. `DwustronnyPage.razor`: same pattern.
+
+---
+
+**Phase 5 Status: ✅ DONE**
+
+**Files changed/created:**
+- `Bridge.App/Layout/NavMenu.razor` — replaced scaffold links with two nav items: "System otwarć" (`/system`) and "Licytacja dwustronna" (`/dwustronny`); brand text updated to "System Licytacyjny"; `NavLink` provides active-tab highlighting automatically.
+- `Bridge.App/Layout/MainLayout.razor` — removed the "About" top-row link to clean up the chrome.
+- `Bridge.App/Pages/Home.razor` — replaced scaffold content with `NavigationManager.NavigateTo("/system")` redirect so `/` always lands on the System page.
+- `Bridge.App/Pages/SystemPage.razor` — new page at `/system`; shows "Ładowanie danych..." while `BridgeDataService.GetSystemAsync()` runs; on success renders `<TreeView>` with the loaded nodes and a metadata line (top-level section count); on failure shows error message.
+- `Bridge.App/Pages/DwustronnyPage.razor` — identical pattern at `/dwustronny` using `GetDwustronnyAsync()`.
+- `Bridge.App/wwwroot/css/app.css` — added `.page-heading`, `.doc-meta`, `.loading-text`, `.error-text` styles.
+
+**Verification:** `dotnet build Bridge.App/Bridge.App.csproj` → **0 errors, 0 warnings**.
 
 ---
 

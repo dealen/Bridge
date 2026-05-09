@@ -1,0 +1,35 @@
+@using Bridge.App.Models
+
+<ul class="tree-root">
+    @foreach (BidNode topLevelNode in Nodes)
+    {
+        <TreeNode @key="topLevelNode.Id" Node="topLevelNode" />
+    }
+</ul>
+
+@code {
+    [Parameter, EditorRequired]
+    public List<BidNode> Nodes { get; set; } = [];
+
+    public void ExpandAll()
+    {
+        SetExpandedRecursive(Nodes, expanded: true);
+        StateHasChanged();
+    }
+
+    public void CollapseAll()
+    {
+        SetExpandedRecursive(Nodes, expanded: false);
+        StateHasChanged();
+    }
+
+    private static void SetExpandedRecursive(List<BidNode> nodes, bool expanded)
+    {
+        foreach (BidNode node in nodes)
+        {
+            node.IsExpanded = expanded;
+            if (node.Children.Count > 0)
+                SetExpandedRecursive(node.Children, expanded);
+        }
+    }
+}

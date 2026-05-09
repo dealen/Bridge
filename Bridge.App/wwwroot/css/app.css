@@ -112,3 +112,111 @@ code {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+/* ── Bridge tree ──────────────────────────────────────────── */
+
+.tree-root,
+.tree-children {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tree-children {
+    padding-left: 1.4rem;
+    border-left: 1px solid #ddd;
+    margin-left: 0.55rem;
+}
+
+.tree-node {
+    margin: 0;
+    padding: 0;
+}
+
+.tree-node-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    padding: 0.15rem 0.25rem;
+    border-radius: 4px;
+    cursor: default;
+    user-select: none;
+}
+
+.tree-node--branch > .tree-node-row {
+    cursor: pointer;
+}
+
+.tree-node--branch > .tree-node-row:hover {
+    background-color: #f0f4ff;
+}
+
+.tree-node--leaf > .tree-node-row:hover {
+    background-color: #f8f8f8;
+}
+
+.tree-toggle {
+    background: none;
+    border: none;
+    padding: 0 0.2rem;
+    font-size: 0.65rem;
+    color: #555;
+    cursor: pointer;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 1.1rem;
+    text-align: center;
+}
+
+.tree-toggle-placeholder {
+    display: inline-block;
+    width: 1.1rem;
+    flex-shrink: 0;
+}
+
+.tree-label {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    color: #1a1a1a;
+}
+
+.tree-node--branch > .tree-node-row > .tree-label {
+    font-weight: 500;
+}
+
+.suit-red {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+.suit-black {
+    color: #111;
+    font-weight: bold;
+}
+
+/* ── Page elements ───────────────────────────────────────── */
+
+.page-heading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1a3a5c;
+    margin-bottom: 0.25rem;
+}
+
+.doc-meta {
+    font-size: 0.82rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+}
+
+.loading-text {
+    font-size: 0.95rem;
+    color: #555;
+    padding: 1rem 0;
+}
+
+.error-text {
+    font-size: 0.95rem;
+    color: #cc0000;
+    padding: 1rem 0;
+}

@@ -1,0 +1,75 @@
+@using Bridge.App.Models
+
+<li @key="Node.Id" class="tree-node @(Node.IsLeaf ? "tree-node--leaf" : "tree-node--branch")">
+    <div class="tree-node-row" @onclick="ToggleExpanded">
+        @if (!Node.IsLeaf)
+        {
+            <button class="tree-toggle" aria-expanded="@Node.IsExpanded.ToString().ToLower()" tabindex="-1">
+                @(Node.IsExpanded ? "▼" : "▶")
+            </button>
+        }
+        else
+        {
+            <span class="tree-toggle-placeholder"></span>
+        }
+        <span class="tree-label">@((MarkupString)GetColoredLabel(Node.Label))</span>
+    </div>
+
+    @if (!Node.IsLeaf && Node.IsExpanded && Node.Children.Count > 0)
+    {
+        <ul class="tree-children">
+            @foreach (BidNode childNode in Node.Children)
+            {
+                <TreeNode @key="childNode.Id" Node="childNode" />
+            }
+        </ul>
+    }
+</li>
+
+@code {
+    [Parameter, EditorRequired]
+    public BidNode Node { get; set; } = default!;
+
+    private void ToggleExpanded()
+    {
+        if (!Node.IsLeaf)
+            Node.IsExpanded = !Node.IsExpanded;
+    }
+
+    private static string GetColoredLabel(string label)
+    {
+        if (string.IsNullOrEmpty(label))
+            return string.Empty;
+
+        var htmlBuilder = new System.Text.StringBuilder();
+        string? currentSpanClass = null;
+
+        foreach (char character in label)
+        {
+            string? requiredSpanClass = character switch
+            {
+                '♥' or '♦' => "suit-red",
+                '♠' or '♣' => "suit-black",
+                _ => null
+            };
+
+            if (requiredSpanClass != currentSpanClass)
+            {
+                if (currentSpanClass is not null)
+                    htmlBuilder.Append("</span>");
+
+                if (requiredSpanClass is not null)
+                    htmlBuilder.Append($"<span class=\"{requiredSpanClass}\">");
+
+                currentSpanClass = requiredSpanClass;
+            }
+
+            htmlBuilder.Append(System.Net.WebUtility.HtmlEncode(character.ToString()));
+        }
+
+        if (currentSpanClass is not null)
+            htmlBuilder.Append("</span>");
+
+        return htmlBuilder.ToString();
+    }
+}

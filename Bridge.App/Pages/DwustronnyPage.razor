@@ -1,0 +1,38 @@
+@page "/dwustronny"
+@inject Bridge.App.Services.BridgeDataService DataService
+
+<PageTitle>Licytacja dwustronna</PageTitle>
+
+<h2 class="page-heading">Licytacja dwustronna</h2>
+
+@if (_document is null && _errorMessage is null)
+{
+    <p class="loading-text">Ładowanie danych...</p>
+}
+else if (_errorMessage is not null)
+{
+    <p class="error-text">Błąd ładowania: @_errorMessage</p>
+}
+else
+{
+    <p class="doc-meta">Sekcji najwyższego poziomu: @_document!.TopLevelCount</p>
+    <TreeView Nodes="_document!.Nodes" @ref="_treeView" />
+}
+
+@code {
+    private BridgeDocument? _document;
+    private string? _errorMessage;
+    private TreeView? _treeView;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _document = await DataService.GetDwustronnyAsync();
+        }
+        catch (Exception ex)
+        {
+            _errorMessage = ex.Message;
+        }
+    }
+}
