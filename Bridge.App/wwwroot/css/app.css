@@ -396,3 +396,14 @@ mark.search-highlight {
     background: #fde8e0;
     border-color: #c06040;
 }
+
+/* Drag-to-reparent */
+.tree-node-row[draggable="true"] {
+    cursor: grab;
+}
+
+.tree-node-row.drag-over {
+    background: #d6eaff;
+    outline: 2px dashed #5590cc;
+    border-radius: 3px;
+}

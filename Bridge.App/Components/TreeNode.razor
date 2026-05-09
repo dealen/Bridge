@@ -5,7 +5,15 @@
 @if (Node.IsVisible)
 {
     <li @key="Node.Id" class="tree-node @(Node.IsLeaf ? "tree-node--leaf" : "tree-node--branch")">
-        <div class="tree-node-row" @onclick="HandleRowClick">
+        <div class="tree-node-row @(IsEditMode && _isDragOver ? "drag-over" : "")"
+             @onclick="HandleRowClick"
+             draggable="@(IsEditMode ? "true" : "false")"
+             @ondragstart="HandleDragStart"
+             @ondragover:preventDefault
+             @ondrop="HandleDrop"
+             @ondragend="HandleDragEnd"
+             @ondragenter="HandleDragEnter"
+             @ondragleave="HandleDragLeave">
             @if (!Node.IsLeaf)
             {
                 <button class="tree-toggle" aria-expanded="@Node.IsExpanded.ToString().ToLower()" tabindex="-1">
@@ -34,6 +42,8 @@
                     @((MarkupString)GetColoredLabel(Node.Label, SearchQuery))
                 </span>
                 <div class="tree-edit-actions" @onclick:stopPropagation="true">
+                    <button class="btn-node-action" title="Przesuń w górę" disabled="@IsFirstSibling" @onclick="HandleMoveUp">↑</button>
+                    <button class="btn-node-action" title="Przesuń w dół" disabled="@IsLastSibling" @onclick="HandleMoveDown">↓</button>
                     <button class="btn-node-action" title="Dodaj węzeł podrzędny" @onclick="HandleAddChild">+</button>
                     <button class="btn-node-action btn-node-delete" title="Usuń węzeł" @onclick="HandleDelete">✕</button>
                 </div>
@@ -132,6 +142,49 @@
     {
         _isRenaming = false;
         _editBuffer = Node.Label;
+    }
+
+    // ── Move up / Move down ────────────────────────────────────────────────────
+
+    private bool IsFirstSibling => ParentChildren is null || ParentChildren.Count == 0 || ParentChildren[0].Id == Node.Id;
+    private bool IsLastSibling  => ParentChildren is null || ParentChildren.Count == 0 || ParentChildren[^1].Id == Node.Id;
+
+    private void HandleMoveUp()   => EditService.MoveUp(Node.Id, ParentChildren!);
+    private void HandleMoveDown() => EditService.MoveDown(Node.Id, ParentChildren!);
+
+    // ── Drag-to-reparent ──────────────────────────────────────────────────────
+
+    private bool _isDragOver;
+
+    private void HandleDragStart(DragEventArgs e)
+    {
+        EditService.DragSourceId = Node.Id;
+    }
+
+    private void HandleDragEnd(DragEventArgs e)
+    {
+        EditService.DragSourceId = null;
+        _isDragOver = false;
+    }
+
+    private void HandleDragEnter(DragEventArgs e)
+    {
+        if (IsEditMode) _isDragOver = true;
+    }
+
+    private void HandleDragLeave(DragEventArgs e)
+    {
+        _isDragOver = false;
+    }
+
+    private void HandleDrop(DragEventArgs e)
+    {
+        _isDragOver = false;
+        if (!IsEditMode) return;
+        string? sourceId = EditService.DragSourceId;
+        EditService.DragSourceId = null;
+        if (sourceId is null || sourceId == Node.Id) return;
+        EditService.MoveToParent(sourceId, Node.Id);
     }
 
     // ── Add / Delete ──────────────────────────────────────────────────────────

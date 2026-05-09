@@ -191,6 +191,14 @@ Dragged node becomes the **last child** of the drop target. Combined with ↑/�
    - `TreeEditService.MoveUp(Node.Id, ParentChildren)` / `MoveDown` — swaps adjacent elements in the provided list
    - ↑ disabled when node is first sibling; ↓ disabled when last
 
+#### ✅ Phase 5 — Implemented
+
+| File | Change |
+|---|---|
+| `Bridge.App/Components/TreeNode.razor` | Added `IsFirstSibling` / `IsLastSibling` computed properties; `HandleMoveUp()` / `HandleMoveDown()` methods; ↑ / ↓ buttons prepended to the edit-action bar, disabled when node is first/last sibling |
+
+**Build:** 0 errors · 0 warnings &nbsp;·&nbsp; **Tests:** 46 passed (MoveUp/MoveDown already covered)
+
 ---
 
 ### Phase 6 — Drag-to-reparent *(depends on Phase 5)*
@@ -206,6 +214,15 @@ Dragged node becomes the **last child** of the drop target. Combined with ↑/�
      - Append source as last child of target; set `target.IsLeaf = false`, `target.IsExpanded = true`
    - `@ondragend` → clear `TreeEditService.DragSourceId`
    - Drop target highlighted via CSS `dragover` class
+
+#### ✅ Phase 6 — Implemented
+
+| File | Change |
+|---|---|
+| `Bridge.App/Components/TreeNode.razor` | `draggable="@(IsEditMode ? "true" : "false")"` on row; `@ondragstart` / `@ondragend` / `@ondragenter` / `@ondragleave` / `@ondrop` / `@ondragover:preventDefault` handlers; `_isDragOver` field for visual feedback; `HandleDragStart` sets `EditService.DragSourceId`; `HandleDrop` reads it, clears it, and calls `EditService.MoveToParent` |
+| `Bridge.App/wwwroot/css/app.css` | Added `.tree-node-row[draggable="true"]` grab cursor and `.tree-node-row.drag-over` dashed-outline highlight |
+
+**Build:** 0 errors · 0 warnings &nbsp;·&nbsp; **Tests:** 46 passed (MoveToParent + descendant guard already covered)
 
 ---
 
