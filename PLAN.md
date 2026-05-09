@@ -139,6 +139,7 @@ Bridge.sln
 - Suit symbols: `"1♣ - 12+ bal, 15+ clubs or 18 any"`, `"1♦ - 5+ diamonds"`, `"1♥ - 5+ hearts"` ✓
 - Known sequences: `"kontry otwierającego"`, `"Po 2♦ - Multi"` present ✓
 - Level breakdown (system.json): L1=11, L2=111, L3=253, L4=277, L5=99, L6=55, L7=15
+- **Tests:** `Bridge.Converter.Tests` (xUnit, net9.0) added to solution — 21 tests covering `SvgResolver`, `AriaTreeParser`, and end-to-end conversion of both HTML files. All passing.
 
 **Output JSON shape:**
 ```json
