@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Bridge.App/Bridge.App.csproj" />
+  <Project Path="Bridge.Converter/Bridge.Converter.csproj" />
+</Solution>
