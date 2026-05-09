@@ -1,0 +1,5094 @@
+{
+  "sourceFile": "System_ania.html",
+  "convertedAt": "2026-05-09T10:30:18.3194465Z",
+  "topLevelCount": 11,
+  "nodes": [
+    {
+      "id": "1",
+      "label": "1\u2663 - 12\u002B bal, 15\u002B clubs or 18 any",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "1.1",
+          "label": "1\u2666 - 0-6 any, 5-11 minor(s) or 16\u002BBAL",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "1.1.1",
+              "label": "1\u2665 - 3\u002B hearts",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.1.1.1",
+                  "label": "1\u2660 - 4\u002B spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.1.2",
+                  "label": "1NT - (4)5-6 HCP, without\n                                            4M",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.1.3",
+                  "label": "2\u2663 - 5\u002B Clubs, 4-9 HCP",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.1.4",
+                  "label": "2\u2666 - 5\u002B Diamonds, 4-9 HCP",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.1.5",
+                  "label": "2\u2665 - 4\u002B Hearts, 4-6 HCP",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.1.6",
+                  "label": "2\u2660 - (54)\u002B minors, 9-11HCP",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.1.7",
+                  "label": "2NT - 16\u002B HCP, balanced",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.1.8",
+                  "label": "3\u2663 - 6\u002B clubs, weak colour",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.1.9",
+                  "label": "3\u2666 - 6\u002B diamonds, weak colour",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.1.10",
+                  "label": "3\u2665 - 5\u002B hearts, inv. based on shape",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.1.11",
+                  "label": "3\u2660 - 13-15 HCP, play 3NT from your hand",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.1.2",
+              "label": "1\u2660 - 3\u002B spades, spades longer than hearts",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.1.2.1",
+                  "label": "1NT - (4)5-6 HCP",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.2.2",
+                  "label": "2\u2663 - 5\u002B Clubs, 4-9 HCP",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.2.3",
+                  "label": "2\u2666 - 5\u002B Diamonds, 4-9 HCP",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.2.4",
+                  "label": "2\u2665 - 5\u002B Hearts, 4-6 HCP",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.2.5",
+                  "label": "2\u2660 - 4\u002B spades, 4-6 HCP",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.2.6",
+                  "label": "2NT - 16\u002BHCP, balanced",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.2.7",
+                  "label": "3\u2663 - 6\u002B clubs, invitational with weak colour",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.2.8",
+                  "label": "3\u2666 - 6\u002B diamonds, invitational with weak colour",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.2.9",
+                  "label": "3\u2665 - 13-15 HCP, play 3NT from your hand",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.2.10",
+                  "label": "3\u2660 - 5\u002B spades, inv. based on shape",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.1.3",
+              "label": "1NT - 18-20 Balanced",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.1.3.1",
+                  "label": "The same as after 1NT\n                                            opening",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.1.4",
+              "label": "2\u2663 - 5\u002B Clubs",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.1.4.1",
+                  "label": "pass - nothing special, 2\u2663 is non forcing",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.4.2",
+                  "label": "2\u2666 - GF, artificial",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.4.3",
+                  "label": "other - natural, NF",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.1.5",
+              "label": "2\u2666 - GF",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.1.5.1",
+                  "label": "2\u2665 - 0-3 HCP",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.5.2",
+                  "label": "2\u2660 - transfer to 2NT, generally all hand without good 6\u002B colour",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.5.3",
+                  "label": "2NT -",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.1.5.4",
+                  "label": "other - nat, good 6\u002B\n                                            colour",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.1.6",
+              "label": "2\u2665 - 6\u002B good hearts, sligtly under acol",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.1.7",
+              "label": "2\u2660 - 6\u002B good spades, sligtly under acol",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.1.8",
+              "label": "2NT - 23-24HCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.1.9",
+              "label": "3\u2663 - 6\u002B clubs, almost GF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.1.10",
+              "label": "3\u2666 - 6\u002Bdiamonds, 18\u002BHCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.1.11",
+              "label": "3\u2665 - 5 hearts\u002B, 5\u002Bm",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.1.12",
+              "label": "3\u2660 - 5 spades\u002B, 5\u002Bm",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.1.13",
+              "label": "3NT - to play on long colour",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.1.14",
+              "label": "4\u2663 - 55 minors",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.1.15",
+              "label": "4\u2666 - 55 majors",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "1.2",
+          "label": "1\u2665 - 4\u002B hearts, 7\u002BHCP",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "1.2.1",
+              "label": "1\u2660 - 4 spades, if with 5 clubs then 15-17 HCP",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.2.1.1",
+                  "label": "1NT - 7-10(11) HCP",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.1.2",
+                  "label": "2\u2663 - invitational two-way checkack",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.2.1.2.1",
+                      "label": "2\u2666 - automatic with 12-14",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "1.2.1.2.1.1",
+                          "label": "2\u2665 - 5\u002B hearts",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.2.1.2.1.2",
+                          "label": "2\u2660 - 4 spades",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.2.1.2.1.3",
+                          "label": "2NT - Balanced\n                                                            hand",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.2.1.2.1.4",
+                          "label": "3\u2663 - 5\u002B Clubs, unbalanced",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.2.1.2.1.5",
+                          "label": "3\u2666 - 5\u002B Diamonds, unbalanced",
+                          "isLeaf": true,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "1.2.1.2.2",
+                      "label": "!!!2\u2665 - 3 hearts, 5 spades, GF",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "1.2.1.2.3",
+                      "label": "2\u2660 - 5\u002B spades, GF other than 5332",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "1.2.1.2.4",
+                      "label": "2NT - 5332\n                                                    spades",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "1.2.1.2.5",
+                      "label": "!!!3\u2663 - 5\u002B clubs",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "1.2.1.2.6",
+                      "label": "!!!3\u2663 - 5\u002B diamonds, 5\u002Bspades, GF",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "1.2.1.3",
+                  "label": "2\u2666 - GF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.1.4",
+                  "label": "2\u2665 - 5\u002B Hearts, NF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.1.5",
+                  "label": "2\u2660 - 4\u002B spades, NF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.1.6",
+                  "label": "2NT - 6\u002B clubs SO or any\n                                            55 GF",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.2.1.6.1",
+                      "label": "3\u2663 - automatic",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "1.2.1.6.1.1",
+                          "label": "3\u2666 - 5\u002B diamonds, 5\u002B hearts, GF",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.2.1.6.1.2",
+                          "label": "3\u2665 - 5\u002B clubs, 5\u002B hearts, GF",
+                          "isLeaf": false,
+                          "children": [
+                            {
+                              "id": "1.2.1.6.1.2.1",
+                              "label": "3NT -\n                                                                    choose of contract",
+                              "isLeaf": true,
+                              "children": []
+                            },
+                            {
+                              "id": "1.2.1.6.1.2.2",
+                              "label": "4\u2663 - set the clubs as trump",
+                              "isLeaf": true,
+                              "children": []
+                            },
+                            {
+                              "id": "1.2.1.6.1.2.3",
+                              "label": "other\n                                                                    - set the hearts as trump, cuebid",
+                              "isLeaf": true,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "1.2.1.7",
+                  "label": "3\u2663 - 5\u002B clubs, 5\u002B hearts, GF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.1.8",
+                  "label": "3\u2666 - 5\u002B diamonds, 5\u002B hearts, GF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.1.9",
+                  "label": "3\u2665 - inv. based on shape",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.1.10",
+                  "label": "3\u2660 - inv. based on shape",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.2.2",
+              "label": "1NT - 12-14 wo 4M",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.2.2.1",
+                  "label": "2\u2663 - invitational two-way checkback (other hands than 55!)",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.2.2.1.1",
+                      "label": "2\u2666 - automatic with 12-14",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "1.2.2.1.1.1",
+                          "label": "2\u2665 - 5\u002B hearts",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.2.2.1.1.2",
+                          "label": "!!!2\u2660 - ?",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.2.2.1.1.3",
+                          "label": "2NT - Balanced\n                                                            hand",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.2.2.1.1.4",
+                          "label": "3\u2663 - 5\u002B Clubs, unbalanced",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.2.2.1.1.5",
+                          "label": "3\u2666 - 5\u002B Diamonds, unbalanced",
+                          "isLeaf": true,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "1.2.2.2",
+                  "label": "2\u2666 - GF, without 55 hands",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.2.3",
+                  "label": "2\u2665 - 5\u002B Hearts, NF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.2.4",
+                  "label": "2\u2660 - 4\u002B spades,5\u002B Hearts, GF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.2.5",
+                  "label": "2NT - 6\u002B clubs SO or any\n                                            55 GF",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.2.2.5.1",
+                      "label": "3\u2663 - automatic",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "1.2.2.5.1.1",
+                          "label": "3\u2666 - 5\u002B diamonds, 5\u002B hearts, GF",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.2.2.5.1.2",
+                          "label": "3\u2665 - 5\u002B clubs, 5\u002B hearts, GF",
+                          "isLeaf": false,
+                          "children": [
+                            {
+                              "id": "1.2.2.5.1.2.1",
+                              "label": "3NT -\n                                                                    choose of contract",
+                              "isLeaf": true,
+                              "children": []
+                            },
+                            {
+                              "id": "1.2.2.5.1.2.2",
+                              "label": "4\u2663 - set the clubs as trump",
+                              "isLeaf": true,
+                              "children": []
+                            },
+                            {
+                              "id": "1.2.2.5.1.2.3",
+                              "label": "other\n                                                                    - set the hearts as trump, cuebid",
+                              "isLeaf": true,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "1.2.2.6",
+                  "label": "3\u2663 - 5\u002B clubs, 5\u002B hearts, invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.2.7",
+                  "label": "3\u2666 - 5\u002B diamonds, 5\u002B hearts, invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.2.8",
+                  "label": "3\u2665 - inv. based on shape",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.2.9",
+                  "label": "3\u2660 - inv. based on shape",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.2.3",
+              "label": "2\u2663 - 5\u002B clubs, 15\u002B HCP F1, if with 4 spades then 18\u002BHCP",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.2.3.1",
+                  "label": "2\u2666 - GF, artificial",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.3.2",
+                  "label": "other - natural, NF",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.2.4",
+              "label": "2\u2666 - odwrotka",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.2.4.1",
+                  "label": "2\u2665 - 7-10(11) HCP, 4 hearts",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.2.4.1.1",
+                      "label": "2NT - ask about\n                                                    shape",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "1.2.4.1.2",
+                      "label": "other - natural,\n                                                    probably without heart support",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "1.2.4.2",
+                  "label": "2\u2660 - (11)12\u002B HCP, 4 hearts",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.2.4.2.1",
+                      "label": "2NT - ask about\n                                                    shape",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "1.2.4.2.2",
+                      "label": "other - natural,\n                                                    probably without heart support",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "1.2.4.3",
+                  "label": "2NT - 7-10(11) HCP, 5\n                                            hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.4.4",
+                  "label": "3\u2663 - (11)12\u002B HCP, 5 hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.4.5",
+                  "label": "3\u2666 - 7-10 HCP, 6\u002B hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.4.6",
+                  "label": "3\u2665 - 11\u002B HCP, 6\u002B hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.4.7",
+                  "label": "???3\u2660 - 6 hearts, splinter",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.2.5",
+              "label": "2\u2665 - 4 hearts, 12-14 HCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.2.6",
+              "label": "2\u2660 - 4 spades, 5\u002B diamonds, 18\u002B HCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.2.7",
+              "label": "2NT - 18\u002B HCP, wo 3 Hearts, may be 4\n                                    spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.2.8",
+              "label": "3\u2663 - 18\u002B HCP, 4 clubs, 5\u002B diamonds, 18\u002B HCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.2.9",
+              "label": "3\u2666 - 18\u002B HCP, 6\u002B diamonds, 18\u002B HCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.2.10",
+              "label": "3\u2665 - (14)15-17\u002B HCP, 5(4)\u002B clubs, 4hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.2.11",
+              "label": "3NT - gambling, but with\n                                    stoppers",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.2.12",
+              "label": "other - splinter",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "1.3",
+          "label": "1\u2660 - 4\u002B spades, 7\u002BHCP",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "1.3.1",
+              "label": "1NT - 12-14 wo 4M",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.3.1.1",
+                  "label": "2\u2663 - invitational two-way checkback (other hands than 55!)",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.3.1.1.1",
+                      "label": "2\u2666 - automatic with 12-14",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "1.3.1.1.1.1",
+                          "label": "2\u2665 - 4\u002B hearts, 5\u002Bspades",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.3.1.1.1.2",
+                          "label": "2\u2660 - 5\u002Bspades",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.3.1.1.1.3",
+                          "label": "2NT - Balanced\n                                                            hand",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.3.1.1.1.4",
+                          "label": "3\u2663 - 5\u002B Clubs, unbalanced",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.3.1.1.1.5",
+                          "label": "3\u2666 - 5\u002B Diamonds, unbalanced",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.3.1.1.1.6",
+                          "label": "3\u2665 - 5\u002B Hearts, 5\u002Bspades",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.3.1.1.1.7",
+                          "label": "3\u2660 - 6\u002B spades",
+                          "isLeaf": true,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "1.3.1.2",
+                  "label": "2\u2666 - GF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.3.1.3",
+                  "label": "!!!2\u2665 - ???",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.3.1.4",
+                  "label": "2\u2660 - 5\u002Bspades, end",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.3.1.5",
+                  "label": "2NT - 6\u002B clubs SO or any\n                                            55 GF",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.3.1.5.1",
+                      "label": "3\u2663 - automatic",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "1.3.1.5.1.1",
+                          "label": "3\u2666 - 5\u002B diamonds, 5\u002B spades, GF",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.3.1.5.1.2",
+                          "label": "3\u2665 - 5\u002B hearts, 5\u002B spades, GF",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.3.1.5.1.3",
+                          "label": "3\u2660 - 5\u002B clubs, 5\u002B hearts, GF",
+                          "isLeaf": false,
+                          "children": [
+                            {
+                              "id": "1.3.1.5.1.3.1",
+                              "label": "3NT -\n                                                                    choose of contract",
+                              "isLeaf": true,
+                              "children": []
+                            },
+                            {
+                              "id": "1.3.1.5.1.3.2",
+                              "label": "4\u2663 - set the clubs as trump",
+                              "isLeaf": true,
+                              "children": []
+                            },
+                            {
+                              "id": "1.3.1.5.1.3.3",
+                              "label": "other\n                                                                    - set the spades as trump, cuebid",
+                              "isLeaf": true,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "1.3.1.6",
+                  "label": "3\u2663 - 5\u002B clubs, 5\u002B spades, invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.3.1.7",
+                  "label": "3\u2666 - 5\u002B diamonds, 5\u002B spades, invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.3.1.8",
+                  "label": "3\u2665 - 5\u002B hearts, 5\u002B spades, invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.3.1.9",
+                  "label": "3\u2660 - inv. based on shape",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.3.2",
+              "label": "2\u2663 - 5\u002B clubs, 15\u002B HCP F1",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.3.3",
+              "label": "2\u2666 - odwrotka",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.3.3.1",
+                  "label": "2\u2665 - 7-10(11) HCP, 4 spades",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.3.3.1.1",
+                      "label": "2NT - ask about\n                                                    shape",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "1.3.3.1.2",
+                      "label": "other - natural,\n                                                    probably without spades support",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "1.3.3.2",
+                  "label": "2\u2660 - (11)12\u002BHCP, 4 spades",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.3.3.2.1",
+                      "label": "2NT - ask about\n                                                    shape",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "1.3.3.2.2",
+                      "label": "other - natural,\n                                                    probably without spades support",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "1.3.3.3",
+                  "label": "2NT - 7-10(11)HCP, 5\n                                            spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.3.3.4",
+                  "label": "3\u2663 - (11)12\u002B HCP, 5 spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.3.3.5",
+                  "label": "3\u2666 - 7-10 HCP, 6\u002B spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.3.3.6",
+                  "label": "3\u2665 - 11\u002B HCP, 6\u002B spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.3.3.7",
+                  "label": "???3\u2660 - 6 spades, splinter",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.3.4",
+              "label": "2\u2665 - 5\u002B hearts, 18\u002B",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.3.5",
+              "label": "2\u2660 - 4 spades, 12-14 HCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.3.6",
+              "label": "2NT - 18\u002BHCP, wo 3 spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.3.7",
+              "label": "3\u2663 - 18\u002BHCP, 4 clubs, 5\u002B diamonds, 18\u002BHCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.3.8",
+              "label": "3\u2666 - 18\u002BHCP, 6\u002B diamonds, 18\u002BHCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.3.9",
+              "label": "3\u2665 - 5\u002B diamomnds, 4hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.3.10",
+              "label": "3\u2660 - (14)15-17\u002BHCP, 5(4)\u002B clubs, 4 spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.3.11",
+              "label": "3NT - gambling, but with\n                                    stoppers",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.3.12",
+              "label": "other - splinter",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "1.4",
+          "label": "1NT - 7-10 HCP, balanced wo 4M",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "1.4.1",
+              "label": "2\u2663 - 5\u002B Clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.4.2",
+              "label": "2\u2666 - relay",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.4.2.1",
+                  "label": "2\u2665 - 2\u26603\u26654\u26664\u2663",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.4.2.2",
+                  "label": "2\u2660 - 3\u26602\u26654\u26664\u2663",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.4.2.3",
+                  "label": "2NT - 3343",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.4.2.4",
+                  "label": "3\u2663 - 5 clubs",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.4.2.4.1",
+                      "label": "3\u2666 - ask about dubleton",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "1.4.2.4.1.1",
+                          "label": "!!!3\u2665 - dubleton of heart",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.4.2.4.1.2",
+                          "label": "!!!3\u2660 - dubleton of spades",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "1.4.2.4.1.3",
+                          "label": "!!!3NT -\n                                                            dubleton of diamond",
+                          "isLeaf": true,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "1.4.2.5",
+                  "label": "3\u2666 - 5 diamond, dubleton of clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.4.2.6",
+                  "label": "3\u2665 - 5 diamond, dubleton of hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.4.2.7",
+                  "label": "3\u2660 - 5 diamond, dubleton of spades",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.4.3",
+              "label": "2\u2665 - 3\u2666natural",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.4.4",
+              "label": "3\u2665 - 4\u2666two colours, like after 1\u2663 -1\u2666",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "1.5",
+          "label": "2\u2663 - 5\u002B Clubs, GF wo 4m",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "1.5.1",
+              "label": "2\u2666 - any 12-14HCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.5.2",
+              "label": "2\u2665 - 18\u002BHCP, 5\u002Bhearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.5.3",
+              "label": "2\u2660 - 18\u002BHCP, 5\u002Bspades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.5.4",
+              "label": "2NT - balanced, may be singleton in\n                                    clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.5.5",
+              "label": "3\u2663 - 5\u002Bclubs, 15\u002BHCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.5.6",
+              "label": "3\u2666 - 6\u002Bdiamond, 18\u002BHCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.5.7",
+              "label": "3\u2665 - Splinter",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.5.8",
+              "label": "3\u2660 - Splinter",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.5.9",
+              "label": "3NT - bad hand",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "1.6",
+          "label": "2\u2666 - 5\u002B Diamonds, GF wo 4m",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "1.6.1",
+              "label": "2\u2665 - all 12-14HCP hands",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.6.2",
+              "label": "2\u2660 - 18\u002B HCP, 5\u002B spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.6.3",
+              "label": "2NT - balanced, good hand to NT",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.6.4",
+              "label": "3\u2663 - 5\u002Bclubs, 15\u002BHCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.6.5",
+              "label": "3\u2666 - 15\u002B HCP, 4\u002Bdiamond",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.6.6",
+              "label": "3\u2665 - Splinter",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.6.7",
+              "label": "3\u2660 - Splinter",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.6.8",
+              "label": "3NT - bad hand",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "1.7",
+          "label": "???2\u2665 - 6-9(10) HCP, 5\u002B spades, 4\u002B hearts",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "1.7.1",
+              "label": "2\u2660 - choose of contract",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.7.2",
+              "label": "2NT - relay",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.7.2.1",
+                  "label": "3\u2663 - 3 clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.7.2.2",
+                  "label": "3\u2665 - 3 diamond",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.7.2.3",
+                  "label": "3\u2660 - 5 hearts",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.7.2.3.1",
+                      "label": "!!!3\u2660 - we playing spades",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "1.7.2.3.2",
+                      "label": "4\u2663 - we playing hearts",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "1.7.2.4",
+                  "label": "3NT - 5422",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.7.3",
+              "label": "3\u2663 - 5\u002B clubs, GF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.7.4",
+              "label": "3\u2666 - 6\u002B diamons, 18\u002BHCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.7.5",
+              "label": "3\u2665 - invitational with heart support",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.7.6",
+              "label": "3\u2660 - invitational with spade support",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.7.7",
+              "label": "3NT - choose of contract",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "1.8",
+          "label": "2\u2660 - 10-11(12) HCP, balanced wo 4M",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "1.9",
+          "label": "2NT - 10-11(12) HCP, balanced wo 4M",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "1.10",
+          "label": "3\u2663 - invitational, 6\u002B good clubs",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "1.11",
+          "label": "3\u2666 - invitational, 6\u002B good diamonds",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "1.12",
+          "label": "3\u2665 - 7\u002B good hearts, nothing else",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "1.13",
+          "label": "3\u2660 - 7\u002B good spades, nothing else",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "1.14",
+          "label": "3NT - 12-14(15) HCP, not a beatiful\n                            hand",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "label": "1\u2666 - 5\u002B diamonds, 4 diamonds in any 4441 and with 5 clubs",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "2.1",
+          "label": "1\u2665 - 4\u002B hearts, 6\u002BHCP",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.1.1",
+              "label": "1\u2660 - 4\u002B spades",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "2.1.1.1",
+                  "label": "1NT - 7-10(11) HCP",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.1.2",
+                  "label": "2\u2663 - invitational two-way checkback, without 55 shape",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "2.1.1.2.1",
+                      "label": "2\u2666 - automatic with 12-14",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "2.1.1.2.1.1",
+                          "label": "2\u2665 - 5 hearts",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "2.1.1.2.1.2",
+                          "label": "2\u2660 - 4 spades",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "2.1.1.2.1.3",
+                          "label": "2NT - Balanced\n                                                            hand",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "2.1.1.2.1.4",
+                          "label": "3\u2663 - 5\u002B Clubs, unbalanced",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "2.1.1.2.1.5",
+                          "label": "3\u2666 - diamond support, unbalanced or 4\u002B",
+                          "isLeaf": true,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "2.1.1.2.2",
+                      "label": "2\u2665 - 15-17 HCP, 3 hearts",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "2.1.1.2.2.1",
+                          "label": "3\u2666 - choice of contract",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "2.1.1.2.2.2",
+                          "label": "3\u2665 - invitational",
+                          "isLeaf": true,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "2.1.1.2.3",
+                      "label": "2\u2660 - 16-17, 5 weak spades, invitational",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.1.2.4",
+                      "label": "2NT - 16-17,\n                                                    invitational",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.1.2.5",
+                      "label": "3\u2663 - 4144, invitational",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.1.2.6",
+                      "label": "3\u2666 - 6\u002B diamonds, invitational",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "2.1.1.3",
+                  "label": "2\u2666 - GF, other than 55",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "2.1.1.3.1",
+                      "label": "2\u2665 - support in hearts, 12-14 HCP",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.1.3.2",
+                      "label": "2\u2660 - no club stoper",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.1.3.3",
+                      "label": "2NT - club\n                                                    stoper",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.1.3.4",
+                      "label": "3\u2663 - 4144",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.1.3.5",
+                      "label": "3\u2666 - 6 diamonds",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.1.3.6",
+                      "label": "3\u2665 - support in heart, 15\u002BHCP",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "2.1.1.4",
+                  "label": "2\u2665 - 5\u002B Hearts, NF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.1.5",
+                  "label": "2\u2660 - 4\u002B spades, NF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.1.6",
+                  "label": "2NT - 6\u002B clubs, SO or GF\n                                            55",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "2.1.1.6.1",
+                      "label": "3\u2663 - automatic",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "2.1.1.6.1.1",
+                          "label": "3\u2666 - 5\u002B clubs, 5\u002B hearts, GF",
+                          "isLeaf": true,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "2.1.1.7",
+                  "label": "3\u2663 - 5\u002B clubs, 5\u002B hearts, invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.1.8",
+                  "label": "3\u2666 - diamonds support, inv. based on shape",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.1.9",
+                  "label": "3\u2665 - inv. based on shape",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.1.10",
+                  "label": "3\u2660 - inv. based on shape",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "2.1.2",
+              "label": "1NT - 11-14 5 diamonds",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "2.1.2.1",
+                  "label": "2\u2663 - invitational two-way checkback",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.2.2",
+                  "label": "2\u2666 - GF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.2.3",
+                  "label": "2NT - 6\u002B clubs, SO or 55\n                                            GF",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "2.1.2.3.1",
+                      "label": "3\u2663 - automatic",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "2.1.2.3.1.1",
+                          "label": "3\u2666 - 5\u002B clubs, 5\u002B hearts, GF",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "2.1.2.3.1.2",
+                          "label": "3\u2665 - 5\u002B spades, 5\u002B hearts, GF",
+                          "isLeaf": true,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2.1.3",
+              "label": "2\u2663 - 11-17 5 diamonds 4 clubs or 4 diamonds 5 clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.1.4",
+              "label": "2\u2666 - 11-14 HCP, 6\u002B diamonds",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "2.1.4.1",
+                  "label": "2\u2665 - 6\u002B heart, SO",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.4.2",
+                  "label": "2\u2660 - GF, values in spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.4.3",
+                  "label": "!!!2NT - GF, relay",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.4.4",
+                  "label": "3\u2663 - GF, values in clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.4.5",
+                  "label": "3\u2666 - invitational",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "2.1.5",
+              "label": "2\u2665 - 11-14 HCP, 4 hearts",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "2.1.5.1",
+                  "label": "2\u2660 - invitational, need support in spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.5.2",
+                  "label": "2NT - GF, relay",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "2.1.5.2.1",
+                      "label": "3\u2663 - 3\u002B clubs",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.5.2.2",
+                      "label": "3\u2666 - 6\u002B Diamonds",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.5.2.3",
+                      "label": "3\u2665 - 2452, good hand",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.5.2.4",
+                      "label": "3\u2660 - 3\u002B spades",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "2.1.5.2.4.1",
+                          "label": "3NT\u2660 - waiting, show cuebid or revoke",
+                          "isLeaf": true,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "2.1.5.2.5",
+                      "label": "3NT - 2452, good\n                                                    hand",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "2.1.5.3",
+                  "label": "3\u2663 - invitational, need support in clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.5.4",
+                  "label": "3\u2666 - invitational, support in diamonds",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.5.5",
+                  "label": "3\u2665 - NF, good shape, preemptive",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.5.6",
+                  "label": "3NT - sugestion of\n                                            contract",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.5.7",
+                  "label": "other - splinter, (including\n                                            splinter in diamonds!)",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "2.1.6",
+              "label": "2\u2660 - 15-17 HCP, 6 diamonds, 3 hearts",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "2.1.6.1",
+                  "label": "2NT - relay, GF",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "2.1.6.1.1",
+                      "label": "3\u2663 - shortness in clubs",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.6.1.2",
+                      "label": "3\u2666 - 7 diamonds, no revoke",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.6.1.3",
+                      "label": "3\u2665 - shortness in spades",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.6.1.4",
+                      "label": "3\u2660 - 2362, good hand",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.1.6.1.5",
+                      "label": "3NT - 2362, honours in\n                                                    short colours",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "2.1.6.2",
+                  "label": "3\u2663 - GF, values in clubs, suggest weak spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.6.3",
+                  "label": "3\u2666 - NF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.6.4",
+                  "label": "3\u2665 - NF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.6.5",
+                  "label": "3\u2660 - GF, values in spades, weak clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.1.6.6",
+                  "label": "3NT - choose of\n                                            contract",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "2.1.7",
+              "label": "2NT - 15-17 HCP, 6 diamonds, good hand\n                                    to NT",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.1.8",
+              "label": "3\u2663 - 15-17 HCP, 5 diamonds 5 clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.1.9",
+              "label": "3\u2666 - 15-17 HCP, 6 diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.1.10",
+              "label": "3\u2665 - (14)15-17 HCP, 4 hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.1.11",
+              "label": "3\u2660 - shortness, (14)15-17 HCP, 4 hearts, very good hand",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.1.12",
+              "label": "4\u2663 - shortness, (14)15-17 HCP, 4 hearts, very good hand",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.1.13",
+              "label": "4\u2665 - 6\u002B diam, 4 hearts, weaker than splinter",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2.2",
+          "label": "1\u2660 - 4\u002B spades, 6\u002BHCP",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.2.1",
+              "label": "1NT - 11-14 HCP, 4\u002B diam (may be\n                                    4441)",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "2.2.1.1",
+                  "label": "2\u2663 - invitational two-way checkback",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.1.2",
+                  "label": "2\u2666 - GF",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "2.2.1.2.1",
+                      "label": "2\u2665 - 4 hearts, may be 3 spades",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.2.1.2.2",
+                      "label": "2\u2660 - 3 spades, no hearts",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.2.1.2.3",
+                      "label": "2NT - other\n                                                    hands",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.2.1.2.4",
+                      "label": "3\u2663 - 4 clubs, honours in short colors",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "2.2.1.3",
+                  "label": "2\u2665 - 5\u002B spades, 4 hearts, invitaional",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.1.4",
+                  "label": "2\u2660 - 6(5) spades, SO",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.1.5",
+                  "label": "2NT - SO with 6\u002B clubs\n                                            or GF with 55",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "2.2.1.5.1",
+                      "label": "3\u2663 - automatic",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "2.2.1.5.1.1",
+                          "label": "3\u2666 - GF, 5\u002B spades, 5\u002B diamonds",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "2.2.1.5.1.2",
+                          "label": "3\u2665 - GF, 5\u002B spades, 5\u002B hearts",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "2.2.1.5.1.3",
+                          "label": "3\u2666 - GF, 5\u002B spades, 5\u002B clubs",
+                          "isLeaf": true,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "2.2.1.6",
+                  "label": "3\u2663 - 5\u002B clubs, 5\u002B spades, invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.1.7",
+                  "label": "3\u2666 - 5\u002B clubs, 5\u002B spades, invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.1.8",
+                  "label": "3\u2665 - 5\u002B hearts, 5\u002B spades, invitational",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "2.2.2",
+              "label": "2\u2663 - 11-17 HCP, 5 diamonds 4 clubs or 4 diamonds 5 clubs",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "2.2.2.1",
+                  "label": "2\u2665 - bid 2?SO with spades or any GF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.2.2",
+                  "label": "2\u2660 - Invitational with 6 spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.2.3",
+                  "label": "3\u2660 - Invitational based on shape",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "2.2.3",
+              "label": "2\u2666 - 11-14 6\u002B diamonds",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "2.2.3.1",
+                  "label": "2\u2665 - bid 2?SO with spades or any (!) GF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.3.2",
+                  "label": "2\u2660 - Invitational with 6 spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.3.3",
+                  "label": "3\u2663 - Invitational with 6 clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.3.4",
+                  "label": "3\u2660 - Invitational based on shape",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "2.2.4",
+              "label": "2\u2665 - 15-17 HCP, 4 hearts or 6 diamonds and 3 spades",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "2.2.4.1",
+                  "label": "2\u2660 - 6\u002B spades, NF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.4.2",
+                  "label": "2NT - relay",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "2.2.4.2.1",
+                      "label": "3\u2663 - 1453",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.2.4.2.2",
+                      "label": "3\u2666 - 6 diamonds, 4 hearts",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.2.4.2.3",
+                      "label": "3\u2665 - 6 diamonds, 3 spades",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.2.4.2.4",
+                      "label": "!!!3\u2660 - 3451 - jak uzgodni\u0107 kiery?",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.2.4.2.5",
+                      "label": "3NT - 2452",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "2.2.4.3",
+                  "label": "3\u2663 - values in clubs, suggest weak hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.4.4",
+                  "label": "3\u2666 - NF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.4.5",
+                  "label": "!!!3\u2665 - ??",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.4.6",
+                  "label": "!!!3\u2660 - 6\u002B good spades, we playing spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.2.4.7",
+                  "label": "3NT - choose of\n                                            contract",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "2.2.5",
+              "label": "2\u2660 - 12-14 4 spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.2.6",
+              "label": "2NT - 15-17 6 diamonds, good hand to\n                                    NT",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.2.7",
+              "label": "3\u2663 - 15-17 5 diamonds 5 clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.2.8",
+              "label": "3\u2666 - 15-17 6 diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.2.9",
+              "label": "3\u2665 - shortness, (14)15-17 4 spades, very good hand",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.2.10",
+              "label": "3\u2660 - (14)15-17 4 spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.2.11",
+              "label": "4\u2663 - shortness, (14)15-17 4 spades, very good hand",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.2.12",
+              "label": "4\u2665 - revoke in hearts, 6\u002B diam, 4 spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.2.13",
+              "label": "4\u2660 - 6\u002B diam, 4 spades, weaker than splinter",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2.3",
+          "label": "1NT - 7-10(11)HCP, wo 4M",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.3.1",
+              "label": "2\u2663 - 11-17 HCP 5 diamonds 4 clubs or 4 diamonds 5 clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.3.2",
+              "label": "2\u2666 - 11-14 HCP 6\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.3.3",
+              "label": "2\u2665 - 15-17 HCP, 4(3\u002B) hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.3.4",
+              "label": "2\u2660 - 15-17 HCP, 4(3\u002B) spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.3.5",
+              "label": "2NT - 15-17 HCP, good hand to\n                                    NT",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.3.6",
+              "label": "3\u2663 - 15-17 HCP, 5 diamonds 5 clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.3.7",
+              "label": "3\u2666 - 15-17 HCP,6 diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.3.8",
+              "label": "3\u2665 - (14)15-17 HCP, 5 weak hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.3.9",
+              "label": "3\u2660 - (14)15-17 HCP, 5 weak spades",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2.4",
+          "label": "2\u2663 - GF, 5\u002B clubs, wo 4M",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.4.1",
+              "label": "!!2\u2666 - any 11-14, excluding 4 card support in clubs and shortness",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.4.2",
+              "label": "2\u2665 - 15-17 4 hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.4.3",
+              "label": "2\u2660 - 15-17 4 spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.4.4",
+              "label": "!!!2NT - 15-17 HCP, 4441",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.4.5",
+              "label": "!!!3\u2663 - 15-17 HCP, 4\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.4.6",
+              "label": "3\u2666 - 15-17 HCP, 6\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.4.7",
+              "label": "3\u2665 - 12-14, 4\u002B clubs, shortness in hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.4.8",
+              "label": "3\u2660 - 12-14, 4\u002B clubs, shortness in spades",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2.5",
+          "label": "2\u2666 - 10\u002BHCP, 4\u002B diamonds, wo 4M",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.5.1",
+              "label": "2\u2665 - GF, values in hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.5.2",
+              "label": "2\u2660 - GF, values in spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.5.3",
+              "label": "2NT - GF, good hand to NT",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.5.4",
+              "label": "3\u2663 - GF, 4\u002Bclubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.5.5",
+              "label": "3\u2666 - 11-12(13), NF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.5.6",
+              "label": "3NT - choose of contract",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.5.7",
+              "label": "other - shortness, good hand",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2.6",
+          "label": "2\u2665 - 5-9 HCP, 5\u002B spades, 4\u002B hearts",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.6.1",
+              "label": "2\u2660 - choose of contract",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.6.2",
+              "label": "2NT - relay",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "2.6.2.1",
+                  "label": "3\u2663 - 3 clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.6.2.2",
+                  "label": "3\u2665 - 3 diamond",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.6.2.3",
+                  "label": "3\u2660 - 5 hearts",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "2.6.2.3.1",
+                      "label": "!!!3\u2660 - we playing spades",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "2.6.2.3.2",
+                      "label": "4\u2663 - we playing hearts",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "2.6.2.4",
+                  "label": "3NT - 5422",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "2.6.3",
+              "label": "3\u2663 - 5\u002B clubs, NF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.6.4",
+              "label": "3\u2666 - 6\u002B diamons, NF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.6.5",
+              "label": "3\u2665 - invitational with heart support",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.6.6",
+              "label": "3\u2660 - invitational with spade support",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.6.7",
+              "label": "3NT - choose of contract",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.6.8",
+              "label": "4\u2663 - shortness",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.6.9",
+              "label": "4\u2666 - GF, we playing diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.6.10",
+              "label": "5\u2663 - GF, big hand with mm",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2.7",
+          "label": "2\u2660 - invitational to NT wo 4 major",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.7.1",
+              "label": "2NT - weak hand",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.7.2",
+              "label": "3\u2663 - weak hand, want to play clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.7.3",
+              "label": "3\u2666 - weak hand, want to play diamonds",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2.8",
+          "label": "2NT - 10-11(12) HCP, balanced wo 4M",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "2.9",
+          "label": "3\u2663 - invitational with 6\u002B clubs",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "2.10",
+          "label": "3\u2666 - preemptive 4\u002B diam",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "2.11",
+          "label": "3NT - to play",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.11.1",
+              "label": "4\u2666 - slam interest, nice hand on 6\u002B diamonds",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "2.11.1.1",
+                  "label": "cuebid - better hand",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.11.1.2",
+                  "label": "4NT - worse hand, let play\n                                            NT",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.11.1.3",
+                  "label": "5\u2666 - worse hand, let play diamonds",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "label": "1\u2665 - 5\u002B hearts, 11-17",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "3.1",
+          "label": "1\u2660 - 4\u002B spades, 7\u002B HCP",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "3.1.1",
+              "label": "1NT - 12-14 HCP, 5332 or\n                                    similar",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.1.2",
+              "label": "2\u2663 - 11-17 HCP, 4\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.1.3",
+              "label": "2\u2666 - 11-17 HCP, 4\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.1.4",
+              "label": "2\u2665 - 11-14 HCP, 6\u002B hearts",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "3.1.4.1",
+                  "label": "2NT - GF relay",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "3.1.4.1.1",
+                      "label": "!!!3\u2663 - shortness",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "3.1.4.1.2",
+                      "label": "!!!3\u2666 - shortness",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "3.1.4.1.3",
+                      "label": "!!!3\u2665 - no shortness, 3 spades",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "3.1.4.1.4",
+                      "label": "!!!3\u2660 - no shortness, no 3 spades, better hand",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "3.1.4.1.5",
+                      "label": "!!!3NT - no shortness,\n                                                    no 3 spades, minimum hand",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "3.1.5",
+              "label": "2\u2660 - 11-14 HCP, 4 spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.1.6",
+              "label": "2NT - 15-17 HCP, around 2533",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.1.7",
+              "label": "3\u2663 - 15-17 HCP, 5\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.1.8",
+              "label": "3\u2666 - 15-17 HCP, 5\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.1.9",
+              "label": "3\u2665 - 15-17 HCP, 6\u002B hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.1.10",
+              "label": "3\u2660 - 15-17 HCP, 4 spades",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "3.2",
+          "label": "1NT - 7-11 HCP, no support in heart, no\n                            4 spades",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "3.2.1",
+              "label": "2\u2663 - 11-17 HCP, 4\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.2.2",
+              "label": "2\u2666 - 11-17 HCP, 4\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.2.3",
+              "label": "2\u2665 - 11-14 HCP, 6\u002B hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.2.4",
+              "label": "2\u2660 - 15-17 HCP, 4 spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.2.5",
+              "label": "2NT - 15-17 HCP, around 2533",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.2.6",
+              "label": "3\u2663 - 15-17 HCP, 5\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.2.7",
+              "label": "3\u2666 - 15-17 HCP, 5\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.2.8",
+              "label": "3\u2665 - 15-17 HCP, 6\u002B hearts",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "3.3",
+          "label": "2\u2663 - GF, clubs or balanced or 4\u002B support in hearts",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "3.3.1",
+              "label": "2\u2666 - 4\u002B diamonds",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "3.3.1.1",
+                  "label": "2\u2665 - support in hearts, relay about distribution",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "3.3.1.2",
+                  "label": "2\u2660 - 4th colur",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "3.3.1.3",
+                  "label": "2NT - relay about\n                                            distribution",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "3.3.1.4",
+                  "label": "3\u2663 - 6\u002B clubs, better hand",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "3.3.1.5",
+                  "label": "3\u2666 - 4\u002B diamond, better hand, show shortness with better hand",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "3.3.1.5.1",
+                      "label": "3 - to be\n                                                    continued",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "3.3.1.6",
+                  "label": "3\u2665 - heart support, better hand, show shortness with better hand",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "3.3.1.6.1",
+                      "label": "3\u2660 - spade shortness",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "3.3.1.6.2",
+                      "label": "3NT - no shortness,\n                                                    better hand",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "3.3.1.6.3",
+                      "label": "4\u2663 - club shortness",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "3.3.1.6.4",
+                      "label": "4\u2666 - both club and spade shortness",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "3.3.1.6.5",
+                      "label": "4\u2665 - minimum hand",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "3.3.2",
+              "label": "2\u2665 - 12-14 HCP, various hand",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.3.3",
+              "label": "2\u2660 - 15-17 HCP, 4 spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.3.4",
+              "label": "2NT - 15-17 HCP, balanced or weak 6\n                                    hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.3.5",
+              "label": "3\u2663 - 15-17 HCP, 4\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.3.6",
+              "label": "3\u2666 - 15-17 HCP, 5\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.3.7",
+              "label": "3\u2665 - 15-17 HCP, 6\u002B hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.3.8",
+              "label": "3\u2660 - 15-17 HCP, shortness, 4\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.3.9",
+              "label": "4\u2663 - 15-17 HCP, shortness, 4\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "3.4",
+          "label": "2\u2666 - GF, 5\u002B diamonds",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "3.4.1",
+              "label": "2\u2665 - all hands with 12-14 HCP",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "3.4.1.1",
+                  "label": "2\u2660 - values in spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "3.4.1.2",
+                  "label": "2NT - relay about\n                                            distribution",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "3.4.1.3",
+                  "label": "3\u2663 - values in clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "3.4.1.4",
+                  "label": "3\u2666 - 6\u002B diamons, better hand",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "3.4.1.5",
+                  "label": "3\u2665 - heart support, better hand,(???) show shortness with better\n                                            hand",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "3.4.1.5.1",
+                      "label": "??3\u2660 - spade shortness",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "3.4.1.5.2",
+                      "label": "3NT - no shortness,\n                                                    better hand",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "3.4.1.5.3",
+                      "label": "??4\u2663 - club shortness",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "3.4.1.5.4",
+                      "label": "4\u2666 - diamond shortness",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "3.4.1.5.5",
+                      "label": "4\u2665 - minimum hand",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "3.4.2",
+              "label": "2\u2660 - 15-17 HCP, 4 spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.4.3",
+              "label": "2NT - 15-17 HCP, balanced or weak 6\n                                    hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.4.4",
+              "label": "3\u2663 - 15-17 HCP, 4\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.4.5",
+              "label": "3\u2666 - 15-17 HCP, 4\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.4.6",
+              "label": "3\u2665 - 15-17 HCP, 6\u002B good hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.4.7",
+              "label": "3\u2660 - 15-17 HCP, shortness, 4\u002B diamond",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.4.8",
+              "label": "4\u2663 - 15-17 HCP, shortness, 4\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "3.5",
+          "label": "2\u2665 - (5)6-9(10), 3\u002B hearts",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "3.6",
+          "label": "2\u2660 - 5-9 HCP, 6\u002B spades",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "3.7",
+          "label": "2NT - invitational with heart\n                            support",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "3.7.1",
+              "label": "3\u2663 - relay",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "3.7.1.1",
+                  "label": "3\u2666 - 3 heart support",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "3.7.1.2",
+                  "label": "3\u2665 - 7-9, 4 heart support",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "3.7.1.3",
+                  "label": "3\u2660 - 4 heart support, strong invitational, without shortness",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "3.7.1.4",
+                  "label": "higher - 4 heart support,\n                                            shortness",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "3.7.2",
+              "label": "3\u2665 - weak hands",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "3.8",
+          "label": "3\u2663 - 9-11 HCP, 6\u002B good clubs",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "3.9",
+          "label": "3\u2666 - 9-11 HCP, 6\u002B good diamonds",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "3.10",
+          "label": "3\u2665 - 4\u002B hearts preemptive",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "3.11",
+          "label": "3\u2660 - splinter",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "3.12",
+          "label": "3NT - diamond splinter",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "3.13",
+          "label": "4\u2663 - splinter",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "3.14",
+          "label": "4\u2666 - 12-14 HCP, with heart support, no slam aspiration",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "label": "1\u2660 - 5\u002B spades, 11-17 HCP",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "4.1",
+          "label": "1NT - 6-11 HCP, without spade\n                            support",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "4.1.1",
+              "label": "2\u2663 - 11-17 HCP, 4\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.1.2",
+              "label": "2\u2666 - 11-17 HCP, 4\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.1.3",
+              "label": "2\u2665 - 11-17 HCP, 44\u002B hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.1.4",
+              "label": "2\u2660 - 11-14 HCP, 6\u002B spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.1.5",
+              "label": "2NT - 15-17 HCP, around 2533",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.1.6",
+              "label": "3\u2663 - 15-17 HCP, 5\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.1.7",
+              "label": "3\u2666 - 15-17 HCP, 5\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.1.8",
+              "label": "3\u2665 - 15-17 HCP, 6\u002B hearts",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "4.2",
+          "label": "2\u2663 - GF, clubs or balanced or 4 card support",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "4.2.1",
+              "label": "2\u2666 - 4\u002B diamonds",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "4.2.1.1",
+                  "label": "2\u2665 - 4th colour",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.2.1.2",
+                  "label": "2\u2660 - support in spades, relay about distribution",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.2.1.3",
+                  "label": "2NT - relay about\n                                            distribution",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.2.1.4",
+                  "label": "3\u2663 - 6\u002B clubs, better hand",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.2.1.5",
+                  "label": "3\u2666 - 4\u002B diamond, better hand, show shortness with better hand",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "4.2.1.5.1",
+                      "label": "3 - to be\n                                                    continued",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "4.2.1.6",
+                  "label": "3\u2665 - shortness, good diamond support",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.2.1.7",
+                  "label": "3\u2660 - spade support, better hand, show shortness with better hand",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "4.2.1.7.1",
+                      "label": "3NT - no shortness,\n                                                    better hand",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "4.2.1.7.2",
+                      "label": "4\u2663 - club shortness",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "4.2.1.7.3",
+                      "label": "4\u2666 - both club and heart shortness",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "4.2.1.7.4",
+                      "label": "4\u2665 - heart support",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "4.2.1.7.5",
+                      "label": "5\u2660 - minimum, no shortness",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "4.2.2",
+              "label": "2\u2665 - 12-17 HCP, 4\u002B hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.2.3",
+              "label": "2\u2660 - 12-14 HCP, various hand",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.2.4",
+              "label": "2NT - 15-17 HCP, balanced or weak 6\n                                    spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.2.5",
+              "label": "3\u2663 - 15-17 HCP, 4\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.2.6",
+              "label": "3\u2666 - 15-17 HCP, 5\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.2.7",
+              "label": "3\u2665 - 15-17 HCP, 5\u002B hearts",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "4.2.7.1",
+                  "label": "3\u2660 - set spades as trump",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.2.7.2",
+                  "label": "3NT - choose off\n                                            contract",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.2.7.3",
+                  "label": "4 other - cuebid - set heart\n                                            as trump",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "4.2.8",
+              "label": "3\u2660 - 15-17 HCP, 6\u002B good spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.2.9",
+              "label": "4\u2663 - 15-17 HCP, shortness, 4\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "4.3",
+          "label": "2\u2666 - GF, 5\u002B Diamonds",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "4.3.1",
+              "label": "2\u2665 - 12-17 HCP, 4\u002B hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.3.2",
+              "label": "2\u2660 - 12-14 HCP, various hand",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.3.3",
+              "label": "2NT - 15-17 HCP, balanced or weak 6\n                                    spades, may be singleton diamond",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.3.4",
+              "label": "3\u2663 - 15-17 HCP, 5\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.3.5",
+              "label": "3\u2666 - 15-17 HCP, 4\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.3.6",
+              "label": "3\u2665 - 15-17 HCP, 5\u002B hearts",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "4.3.6.1",
+                  "label": "3\u2660 - set spades as trump",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.3.6.2",
+                  "label": "3NT - choose off\n                                            contract",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.3.6.3",
+                  "label": "4 other - cuebid - set heart\n                                            as trump",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "4.3.7",
+              "label": "3\u2660 - 15-17 HCP, 6\u002B good spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.3.8",
+              "label": "4\u2663 - 15-17 HCP, shortness, 4\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "4.4",
+          "label": "2\u2665 - GF, 5\u002B Hearts",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "4.4.1",
+              "label": "2\u2660 - 12-14 HCP, various hand",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.4.2",
+              "label": "2NT - 15-17 HCP, balanced or weak 6\n                                    spades, may be singleton diamond",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.4.3",
+              "label": "3\u2663 - 15-17 HCP, 5\u002B clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.4.4",
+              "label": "3\u2666 - 15-17 HCP, 4\u002B diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.4.5",
+              "label": "3\u2665 - 15-17 HCP, 5\u002B hearts",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "4.4.5.1",
+                  "label": "3\u2660 - set spades as trump",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.4.5.2",
+                  "label": "3NT - choose off\n                                            contract",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.4.5.3",
+                  "label": "4 other - cuebid - set heart\n                                            as trump",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "4.4.6",
+              "label": "3\u2660 - 15-17 HCP, 6\u002B good spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.4.7",
+              "label": "4\u2663 - 15-17 HCP, shortness, 4\u002B hearts",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "4.5",
+          "label": "2\u2660 - 6-9(10) HCP, 3\u002B spades",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "4.6",
+          "label": "2NT - invitational with spade\n                            support",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "4.6.1",
+              "label": "3\u2663 - relay",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "4.6.1.1",
+                  "label": "3\u2666 - 3 spade support",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.6.1.2",
+                  "label": "3\u2665 - 4 spades support, strong invitational, without shortness",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.6.1.3",
+                  "label": "3\u2660 - 7-9, 4 spade support",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "4.6.1.4",
+                  "label": "higher - 4 heart support,\n                                            shortness",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "4.6.2",
+              "label": "3\u2660 - weak hands",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "label": "1NT - (14)15-16(17) HCP, balanced, may be 5\n                    mayor, 6 minor",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "5.1",
+          "label": "2\u2663 - stayman",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "5.1.1",
+              "label": "2\u2666 - no 4M",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "5.1.1.1",
+                  "label": "2\u2665 - both 4M, weak",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.1.2",
+                  "label": "2\u2660 - 5 spades NF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.1.3",
+                  "label": "2NT - invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.1.4",
+                  "label": "3\u2663 - GF, 5\u002B clubs, slam interest or very unbalanced hand",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.1.5",
+                  "label": "3\u2666 - GF, 5\u002B diamond, slam interest or very unbalanced hand",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.1.6",
+                  "label": "3\u2665 - GF, 5 spades, 4 hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.1.7",
+                  "label": "3\u2660 - GF, 5 hearts, 4 spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.1.8",
+                  "label": "3NT - choose of\n                                            contract",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.1.9",
+                  "label": "4\u2666 - 6\u002B hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.1.10",
+                  "label": "4\u2665 - 6\u002B spades",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "5.1.2",
+              "label": "2\u2665 - 4 hearts, may be 4 spades",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "5.1.2.1",
+                  "label": "2\u2660 - pass or correct",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.2.2",
+                  "label": "2NT - invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.2.3",
+                  "label": "3\u2663 - GF, 5\u002B clubs, little slam interest",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.2.4",
+                  "label": "3\u2666 - heart support, slam interest",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.2.5",
+                  "label": "3\u2665 - invitational with 4\u002B hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.2.6",
+                  "label": "3\u2660 - splinter",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.2.7",
+                  "label": "3NT - choose of\n                                            contract",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.2.8",
+                  "label": "4\u2663 - splinter",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.2.9",
+                  "label": "4\u2666 - splinter",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "5.1.3",
+              "label": "2\u2660 - 4 spades, no 4 hearts",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "5.1.3.1",
+                  "label": "2NT - invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.3.2",
+                  "label": "3\u2663 - GF, 5\u002B clubs, little slam interest",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.3.3",
+                  "label": "3\u2666 - spade support, slam interest",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.3.4",
+                  "label": "???3\u2665 - ????",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.3.5",
+                  "label": "3\u2660 - invitational with 4\u002B hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.3.6",
+                  "label": "3NT - choose of\n                                            contract",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.3.7",
+                  "label": "4\u2663 - splinter",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.3.8",
+                  "label": "4\u2666 - splinter",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.1.3.9",
+                  "label": "4\u2665 - splinter",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.2",
+          "label": "2\u2666 - 5\u002B hearts",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "5.2.1",
+              "label": "2\u2665 - automatic",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "5.2.1.1",
+                  "label": "2\u2660 - 4 spades, invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.2.1.2",
+                  "label": "2NT - invitational, no 6\n                                            hearts or 55",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.2.1.3",
+                  "label": "3\u2663 - GF, 4\u002B clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.2.1.4",
+                  "label": "3\u2666 - GF, 4\u002B diamonds",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.2.1.5",
+                  "label": "3\u2665 - invitational, 6\u002B hearts or 55",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.2.1.6",
+                  "label": "3\u2660 - splinter",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.2.1.7",
+                  "label": "3NT - choose between 3NT and\n                                            4h",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.2.1.8",
+                  "label": "4\u2663 - splinter",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.2.1.9",
+                  "label": "4\u2666 - splinter",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.2.1.10",
+                  "label": "4\u2665 - 6\u002B hearts, light slam invitation without shortness",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.2.1.11",
+                  "label": "4NT - 5 hearts, slam\n                                            invitation",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "5.2.2",
+              "label": "2NT - 3 good hearts, maximum",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.2.3",
+              "label": "3\u2663 - maximum with 4 hearts",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.2.4",
+              "label": "3\u2665 - 4\u002B hearts, worse hand",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "5.3",
+          "label": "2\u2665 - 5\u002B spades",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "5.3.1",
+              "label": "2\u2660 - automatic",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "5.3.1.1",
+                  "label": "2NT - invitational, no 6\n                                            spades or 55",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.3.1.2",
+                  "label": "3\u2663 - GF, 4\u002B clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.3.1.3",
+                  "label": "3\u2666 - GF, 4\u002B diamonds",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.3.1.4",
+                  "label": "3\u2665 - GF, 5 hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.3.1.5",
+                  "label": "3\u2660 - invitational, 5\u002B spades or 55",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.3.1.6",
+                  "label": "3NT - choose of\n                                            contract",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.3.1.7",
+                  "label": "4\u2663 - splinter",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.3.1.8",
+                  "label": "4\u2666 - splinter",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.3.1.9",
+                  "label": "4\u2660 - 6\u002B spades, light slam invitation without shortness",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.3.1.10",
+                  "label": "4NT - 5 hearts, slam\n                                            invitation",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "5.3.2",
+              "label": "2NT - 3 good spades, maximum",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.3.3",
+              "label": "3\u2663 - maximum, 4 spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.3.4",
+              "label": "3\u2666 - ???",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.3.5",
+              "label": "3\u2660 - 4\u002B spades, worse",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "5.4",
+          "label": "2\u2660 - 6\u002B clubs",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "5.4.1",
+              "label": "2NT - better hand",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "5.4.1.1",
+                  "label": "3\u2663 - SO",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.4.1.2",
+                  "label": "3\u2666 - shortness, 6\u002B clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.4.1.3",
+                  "label": "3\u2665 - shortness, 6\u002B clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.4.1.4",
+                  "label": "3\u2660 - shortness, 6\u002B clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.4.1.5",
+                  "label": "3NT - light slam invitation,\n                                            without shortness",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.4.1.6",
+                  "label": "4\u2663 - slam interest, without shortness",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "5.4.1.6.1",
+                      "label": "4NT - bad hand, may be\n                                                    passed out",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "5.4.1.6.2",
+                      "label": "other - cuebid, better\n                                                    hand",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "5.4.2",
+              "label": "3\u2663 - worse hand",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "5.4.2.1",
+                  "label": "3\u2666 - shortness, 6\u002B clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.4.2.2",
+                  "label": "3\u2665 - shortness, 6\u002B clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.4.2.3",
+                  "label": "3\u2660 - shortness, 6\u002B clubs",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.4.2.4",
+                  "label": "3NT - i\u0027ve got only\n                                            invitational hand",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "5.4.2.5",
+                  "label": "4\u2663 - slam interest, without shortness",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "5.4.2.5.1",
+                      "label": "4NT - bad hand, may be\n                                                    passed out",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "5.4.2.5.2",
+                      "label": "other - cuebid, better\n                                                    hand",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.5",
+          "label": "2NT - invitational",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "5.6",
+          "label": "3\u2663 - 6\u002B diamonds",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "5.7",
+          "label": "3\u2666 - ask about 5 in major",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "5.8",
+          "label": "3\u2665 - shortness, 45 in minors",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "5.9",
+          "label": "3\u2660 - shortness, 45 in minors",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "5.10",
+          "label": "3NT - choose of contract",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "5.11",
+          "label": "4\u2663 - both mayors, at least 65",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "5.12",
+          "label": "4\u2666 - 6\u002B hearts, SO or strong hand we want to ask about keykards",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "5.13",
+          "label": "4\u2665 - 6\u002B spades, SO or strong hand we want to ask about keykards",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "label": "2\u2663 - 10-14HCP, 6\u002B clubs or 5\u002Bclubs and 4M",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "6.1",
+          "label": "2\u2666 - relay",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "6.1.1",
+              "label": "2\u2665 - 4 hearts",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "6.1.1.1",
+                  "label": "2\u2660 - relay",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "6.1.1.1.1",
+                      "label": "2NT - revoke in\n                                                    diamonds",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "6.1.1.1.1.1",
+                          "label": "3\u2663 - set clubs as trump",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "6.1.1.1.1.2",
+                          "label": "3\u2666 - set hearts as trump",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "6.1.1.1.1.3",
+                          "label": "3\u2660 - set spades as trump",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "6.1.1.1.1.4",
+                          "label": "3NT - choose\n                                                            of contract",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "6.1.1.1.1.5",
+                          "label": "4\u2663 - set diamonds as trump",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "6.1.1.1.1.6",
+                          "label": "4\u2666 - bid hearts and pass",
+                          "isLeaf": true,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "6.1.1.1.2",
+                      "label": "3\u2663 - 6 clubs",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "6.1.1.1.2.1",
+                          "label": "3\u2666 - ask about shortness",
+                          "isLeaf": false,
+                          "children": [
+                            {
+                              "id": "6.1.1.1.2.1.1",
+                              "label": "3\u2665 - diamond shortness",
+                              "isLeaf": true,
+                              "children": []
+                            },
+                            {
+                              "id": "6.1.1.1.2.1.2",
+                              "label": "3? - spade shortness",
+                              "isLeaf": true,
+                              "children": []
+                            },
+                            {
+                              "id": "6.1.1.1.2.1.3",
+                              "label": "3NT -\n                                                                    both shortness (1417)",
+                              "isLeaf": true,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "6.1.1.1.3",
+                      "label": "3\u2666 - 3 diamonds",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "6.1.1.1.3.1",
+                          "label": "3\u2660 - set clubs as trump",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "6.1.1.1.3.2",
+                          "label": "3NT - choose\n                                                            of contract",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "6.1.1.1.3.3",
+                          "label": "4\u2663 - set hearts as trump",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "6.1.1.1.3.4",
+                          "label": "4\u2666 - bid hearts and pass",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "6.1.1.1.3.5",
+                          "label": "4\u2665 - set diamond as trump",
+                          "isLeaf": true,
+                          "children": []
+                        },
+                        {
+                          "id": "6.1.1.1.3.6",
+                          "label": "4\u2660 - set spades as trump, forcing!",
+                          "isLeaf": true,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "6.1.1.1.4",
+                      "label": "3\u2665 - 2425",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "6.1.1.1.5",
+                      "label": "3\u2660 - 3 spades",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "6.1.1.2",
+                  "label": "2NT - invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "6.1.1.3",
+                  "label": "3\u2663 - generally a SO",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "6.1.1.4",
+                  "label": "3\u2666 - GF, 5\u002B diamonds",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "6.1.1.5",
+                  "label": "3\u2665 - invitational, 4 \u002B hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "6.1.1.6",
+                  "label": "3\u2660 - GF, 6\u002B spades",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "6.1.2",
+              "label": "2\u2660 - 4 spades",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "6.1.2.1",
+                  "label": "2NT - relay",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "6.1.2.1.1",
+                      "label": "3\u2663 - 6 clubs",
+                      "isLeaf": false,
+                      "children": [
+                        {
+                          "id": "6.1.2.1.1.1",
+                          "label": "3\u2666 - ask about shortness",
+                          "isLeaf": false,
+                          "children": [
+                            {
+                              "id": "6.1.2.1.1.1.1",
+                              "label": "3\u2665 - heart shortness",
+                              "isLeaf": true,
+                              "children": []
+                            },
+                            {
+                              "id": "6.1.2.1.1.1.2",
+                              "label": "3? - diamond shortness",
+                              "isLeaf": true,
+                              "children": []
+                            },
+                            {
+                              "id": "6.1.2.1.1.1.3",
+                              "label": "3NT -\n                                                                    both shortness (1417)",
+                              "isLeaf": true,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "6.1.2.1.2",
+                      "label": "3\u2666 - 3 diamonds",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "6.1.2.1.3",
+                      "label": "3\u2665 - 3 hearts",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "6.1.2.1.4",
+                      "label": "3\u2660 - 4225",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "6.1.2.1.5",
+                      "label": "3NT - revoke in\n                                                    hearts, 4045",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "6.1.2.2",
+                  "label": "2NT - invitational",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "6.1.2.3",
+                  "label": "3\u2663 - generally a SO",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "6.1.2.4",
+                  "label": "3\u2666 - GF, 5\u002B diamonds",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "6.1.2.5",
+                  "label": "3\u2665 - GF, 6\u002B hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "6.1.2.6",
+                  "label": "3\u2660 - invitational, 4\u002B spades",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "6.1.3",
+              "label": "2NT - 6 clubs, no\n                                    shortness",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "6.1.3.1",
+                  "label": "3\u2663 - NF, generally SO",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "6.1.3.2",
+                  "label": "???3\u2666 - ask about minor triplet",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "6.1.4",
+              "label": "3\u2663 - 6 clubs, shortness",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "6.1.4.1",
+                  "label": "3\u2666 - ask about shortness",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "6.1.4.1.1",
+                      "label": "3\u2665 - heart shortness",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "6.1.4.1.2",
+                      "label": "3\u2660 - spade shortness",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "6.1.4.1.3",
+                      "label": "3NT - diamond\n                                                    shortness",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "6.1.5",
+              "label": "3\u2666 - 6 clubs, 4 diamonds, maximum",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.1.6",
+              "label": "3\u2665 - 6 clubs, 4 hearts, maximum",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.1.7",
+              "label": "3\u2660 - 6 clubs, 4 spades, maximum",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.1.8",
+              "label": "3NT - AKQxxxx in clubs",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "6.2",
+          "label": "2\u2665 - 5\u002B hearts, NF",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "6.2.1",
+              "label": "2\u2660 - 4 spades, suggest shortness in hearts, NF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.2.2",
+              "label": "2NT - 6 clubs, suggest shortness in\n                                    hearts, NF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.2.3",
+              "label": "3\u2663 - 6 clubs, suggest shortness in hearts, good hand to play colour, NF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.2.4",
+              "label": "3\u2666 - invitational with hearts support",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.2.5",
+              "label": "3\u2665 - 4 hearts, preemptive",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "6.3",
+          "label": "2\u2660 - 5\u002B spades, NF",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "6.3.1",
+              "label": "2NT - 6 clubs, suggest shortness in\n                                    spades, NF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.3.2",
+              "label": "3\u2663 - 6 clubs, suggest shortness in spades, good hand to play colour, NF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.3.3",
+              "label": "3\u2666 - invitational with spade support",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.3.4",
+              "label": "3\u2665 - 4 spades, preemptive",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "6.4",
+          "label": "2NT - weak with club support or\n                            invitational 55 mayor or GF on 6M or light slam invitation with club support",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "6.4.1",
+              "label": "3\u2663 - automatic",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "6.4.1.1",
+                  "label": "3\u2666 - invitational with both majors",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "6.4.1.2",
+                  "label": "3\u2665 - GF 6\u002B hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "6.4.1.3",
+                  "label": "3\u2660 - GF 6\u002B spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "6.4.1.4",
+                  "label": "3NT - light slam interest with\n                                            club support",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.5",
+          "label": "3\u2663 - invitational with club support",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "6.6",
+          "label": "3\u2666 - invitational, 6\u002B diamond",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "6.7",
+          "label": "3\u2665 - 6\u002B good hearts, invitational",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "6.8",
+          "label": "3\u2660 - 6\u002B good spades, invitational",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "6.9",
+          "label": "3NT - choose of contract",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "6.10",
+          "label": "4\u2663 - preemtive",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "6.11",
+          "label": "4\u2666 - splinter",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "6.12",
+          "label": "4\u2665 - SO",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "6.13",
+          "label": "4\u2660 - SO",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "label": "2\u2666 - 6 card in major, preemptive",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "7.1",
+          "label": "2\u2665 - pass or correct (or so on hearts)",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "7.2",
+          "label": "2\u2660 - pass with spades (or so on spades)",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "7.3",
+          "label": "2NT - GF relay",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "7.3.1",
+              "label": "3\u2663 - minimum hand",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "7.3.1.1",
+                  "label": "3\u2666 - show your color in reverse",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "7.3.1.1.1",
+                      "label": "3\u2665 - spades",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "7.3.1.1.2",
+                      "label": "3\u2660 - hearts",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "7.3.2",
+              "label": "3\u2666 - better hand with hearts",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "7.3.2.1",
+                  "label": "3\u2665 - set hearts as trump, show shortness",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "7.3.3",
+              "label": "3\u2665 - better hand with spades",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "7.3.3.1",
+                  "label": "3\u2660 - set spades as trump, show shortness",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.4",
+          "label": "3\u2663 - GF on own suit",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "7.5",
+          "label": "3\u2666 - invitational with support in both major suits",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "7.6",
+          "label": "3\u2665 - preemptive with support in both major suits",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "7.7",
+          "label": "3\u2660 - preemptive with spade, bid 4 hearts if you have",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "7.8",
+          "label": "3NT - choose of contract",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "7.9",
+          "label": "4\u2663 - show your color by transfer",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "7.10",
+          "label": "4\u2666 - show your",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "7.11",
+          "label": "4\u2665 - SO",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "7.12",
+          "label": "4\u2660 - SO",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "label": "2\u2665 - 5 hearts, 5\u002B in minor (4\u002B non vurnerable)",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "8.1",
+          "label": "2\u2660 - 6\u002B spades, generally SO",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "8.2",
+          "label": "2NT - GF relay",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "8.2.1",
+              "label": "3\u2663 - 5\u002B clubs minimum, or only 4 clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "8.2.2",
+              "label": "3\u2666 - 5\u002B diamonds minimum, or only 4 diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "8.2.3",
+              "label": "3\u2665 - 5\u002B clubs maximum",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "8.2.4",
+              "label": "3\u2660 - 5\u002B diamonds maximum",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "8.3",
+          "label": "3\u2663 - pass or correct",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "8.4",
+          "label": "3\u2666 - invitational with heart support",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "8.5",
+          "label": "3\u2665 - preemptive with heart support",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "8.6",
+          "label": "3\u2660 - GF, 6\u002B spades",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "8.7",
+          "label": "3NT - choose of contract",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "8.8",
+          "label": "4\u2663 - pass or correct",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "8.9",
+          "label": "!!4NT - show your minor color",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "8.10",
+          "label": "!!!5\u2663 - choose of contract",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "label": "2\u2660 - 5 spades, 5\u002B in minor (4\u002B non vurnerable)",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "9.1",
+          "label": "2NT - GF relay",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "9.1.1",
+              "label": "3\u2663 - 5\u002B clubs minimum, or only 4 clubs",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.1.2",
+              "label": "3\u2666 - 5\u002B diamonds minimum, or only 4 diamonds",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.1.3",
+              "label": "3\u2665 - 5\u002B clubs maximum",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.1.4",
+              "label": "3\u2660 - 5\u002B diamonds maximum",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "9.2",
+          "label": "3\u2663 - pass or correct",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "9.3",
+          "label": "3\u2666 - invitational with spade support",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "9.4",
+          "label": "3\u2665 - GF, 6\u002B spades,",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "9.5",
+          "label": "3\u2660 - preemptive with heart support",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "9.6",
+          "label": "3NT - choose of contract",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "9.7",
+          "label": "4\u2663 - pass or correct",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "9.8",
+          "label": "!!4NT - show your minor color",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "9.9",
+          "label": "!!!5\u2663 - choose of contract",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "label": "2NT - 21-22 balanced",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "10.1",
+          "label": "3\u2663 - muppet stayman",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "10.1.1",
+              "label": "3\u2666 - have 4M",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "10.1.1.1",
+                  "label": "3\u2665 - 4 spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "10.1.1.2",
+                  "label": "3\u2660 - 4 hearts",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "10.1.1.3",
+                  "label": "3NT - choose of\n                                            contract",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "10.1.1.4",
+                  "label": "4\u2666 - both 4M",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "10.1.2",
+              "label": "3\u2665 - no 4M",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "10.1.2.1",
+                  "label": "3\u2660 - transfer to 3NT",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "10.1.2.2",
+                  "label": "3NT - 5 spades and 4\n                                            hearts",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "10.1.3",
+              "label": "3\u2660 - 5 spades",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "10.1.4",
+              "label": "3NT - 5 hearts",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "10.1.4.1",
+                  "label": "4\u2666 - bid 4 heart",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "10.2",
+          "label": "3\u2666 - 5\u002B hearts",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "10.2.1",
+              "label": "3\u2665 - no support",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "10.2.1.1",
+                  "label": "3\u2660 - transfer to 3NT without spades",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "10.2.1.2",
+                  "label": "3NT - transfer to 3NT with 4\n                                            spades",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "10.2.2",
+              "label": "3NT - with heart support",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "10.2.2.1",
+                  "label": "4\u2666 - bid 4 heart",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "10.2.2.2",
+                  "label": "other - cuebid, slam\n                                            interest",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "10.3",
+          "label": "3\u2665 - 5\u002B spades",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "10.3.1",
+              "label": "3\u2660 - no support",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "10.3.1.1",
+                  "label": "3NT - choose of\n                                            contract",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "10.3.1.2",
+                  "label": "others - shortness, slam\n                                            interest",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "10.3.2",
+              "label": "3NT - with spade support",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "10.3.2.1",
+                  "label": "4\u2665 - bid 4 heart",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "10.3.2.2",
+                  "label": "other - cuebid, slam\n                                            interest",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "10.4",
+          "label": "3\u2660 - minors",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "10.5",
+          "label": "3NT - 5 spades, 4 hearts",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "10.6",
+          "label": "4\u2663 - 6\u002B clubs, slam interest",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "10.7",
+          "label": "4\u2666 - 6\u002B diamond, slam interest",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "label": "4rd hand",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "11.1",
+          "label": "1\u2663 to 2\u2663- without changes",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "11.2",
+          "label": "2\u2666 to 2\u2660- 6 card suit, 13-15 HCP",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

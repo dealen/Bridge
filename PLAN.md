@@ -119,6 +119,27 @@ Bridge.sln
 6. `Program.cs` CLI: parse args `--input <file>` `--output <file>` `[--suit-map suits.json]` `[--pretty]`; print summary (node counts per level) after conversion.
 7. Run converter on both files → `Bridge.App/wwwroot/data/system.json` and `dwustronny.json`. Verify: 11 and 20 top-level nodes respectively.
 
+---
+
+**Phase 2 Status: ✅ DONE**
+
+**Files created:**
+- `Bridge.Converter/suits.json` — suit SVG path mappings (♥♠♦♣), arrow class skip rule
+- `Bridge.Converter/Models/BidNode.cs` — data model
+- `Bridge.Converter/Models/BridgeDocument.cs` — document wrapper
+- `Bridge.Converter/SvgResolver.cs` — SVG → Unicode symbol resolution
+- `Bridge.Converter/AriaTreeParser.cs` — ARIA tree HTML → `List<BidNode>` parser
+- `Bridge.Converter/Program.cs` — CLI with `--input`, `--output`, `[--suit-map]`, `[--pretty]`
+- `Bridge.App/wwwroot/data/system.json` — generated (11 top-level nodes)
+- `Bridge.App/wwwroot/data/dwustronny.json` — generated (20 top-level nodes)
+
+**Verification results:**
+- `system.json`: 11 top-level nodes ✓, 660 leaf nodes = `grep -c "tree-leaf-list-item" System_ania.html` ✓
+- `dwustronny.json`: 20 top-level nodes ✓
+- Suit symbols: `"1♣ - 12+ bal, 15+ clubs or 18 any"`, `"1♦ - 5+ diamonds"`, `"1♥ - 5+ hearts"` ✓
+- Known sequences: `"kontry otwierającego"`, `"Po 2♦ - Multi"` present ✓
+- Level breakdown (system.json): L1=11, L2=111, L3=253, L4=277, L5=99, L6=55, L7=15
+
 **Output JSON shape:**
 ```json
 {

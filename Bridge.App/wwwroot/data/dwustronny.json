@@ -1,0 +1,2674 @@
+{
+  "sourceFile": "dwustronny_ania.html",
+  "convertedAt": "2026-05-09T10:30:32.3652142Z",
+  "topLevelCount": 20,
+  "nodes": [
+    {
+      "id": "1",
+      "label": "kontry otwieraj\u0105cego",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "1.1",
+          "label": "wywo\u0142awcza - zawsze, chyba \u017Ce wskazany wyj\u0105tek\n                            poni\u017Cej, b\u0105d\u017A konwencyjna",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "1.2",
+          "label": "nadwy\u017Ckowa - Co do zasady gdy nie mamy\n                            jeszcze znalezionego fitu kontra - nadwy\u017Cki si\u0142owe, licytacja koloru - nadwy\u017Cki\n                            uk\u0142adowe",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "1.2.1",
+              "label": "Gdy partner spasowa\u0142 - r\u0119ka\n                                    oko\u0142o wywo\u0142awcza; przyklady",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.2.1.1",
+                  "label": "1\u2665 - (1\u2660) - pas - (2\u2660) - x",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.1.2",
+                  "label": "1\u2665 - (2\u2663) - pas - (pas) - x; - na wzn\u00F3wce mo\u017Ce by\u0107 dwukolorowa, je\u017Celi z du\u017C\u0105\n                                            si\u0142\u0105 honorow\u0105",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.1.3",
+                  "label": "1\u2663 - (1\u2660) - pas - (2\u2660) - x; mo\u017Ce by\u0107 15\u002B na treflach",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.2.2",
+              "label": "Gdy partner licytowa\u0142 - je\u017Celi\n                                    to nie jest pozycja na kontr\u0119 fit",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.2.2.1",
+                  "label": "1\u2666 - (pas) - 1\u2665 - (2\u2660) - x",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.2.2",
+                  "label": "1\u2665 - (1\u2660) - 2\u2665 - (2\u2660) - x; inwit, sk\u0142ad zr\u00F3wnowa\u017Cony",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.2.3",
+                  "label": "1\u2665 - (2\u2666) - 2\u2665 - (3\u2666) - x; ka\u017Cdy inwit",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.2.4",
+                  "label": "1\u2663 - (pas)1\u2665 - (2\u2660) - x; GF na r\u00F3wnym, albo 15\u002B na treflach w sk\u0142adzie\n                                            wywo\u0142awczym",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.2.2.5",
+                  "label": "1\u2666 - (1\u2665) - 1\u2660 - (2\u2665) - x; nadwyzka - to nie jest kontra fit!",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.3",
+          "label": "fit - po pasie LHO i nieskacz\u0105cej\n                            licytacji RHO. Nie jest obligatoryjna - mo\u017Cemy nie da\u0107, z r\u0119k\u0105 wyra\u017Anie defensywn\u0105 lub\n                            bardzo cienkim otwarciem",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "1.3.1",
+              "label": "1\u2666 - (pas) - 1\u2665 - (2\u2663) - x",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "1.4",
+          "label": "karniawe/karne",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "1.4.1",
+              "label": "Na bloki od 4\u2660 w g\u00F3r\u0119",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.4.2",
+              "label": "Po otwarciu 1NT, pasie LHO i\n                                    dowolnej licytacji partnera",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.4.2.1",
+                  "label": "1NT - (pas) - 2\u2660 - (3\u2665) - x; karna",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.4.3",
+              "label": "Gdy mo\u017Cna by\u0142o da\u0107 kontr\u0119 o\n                                    charakterze wywo\u0142awczym b\u0105d\u017A nadwy\u017Ckowym wcze\u015Bniej",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.4.4",
+              "label": "Po wcze\u015Bniejszej rekontrze\n                                    partnera",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "1.5",
+          "label": "propozycyjne",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "1.5.1",
+              "label": "Gdy nie wiemy czy trzeba broni\u0107,\n                                    czy obk\u0142ada\u0107",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.5.1.1",
+                  "label": "1\u2665 - (1\u2660) - 2\u2665 - (4\u2660) -x",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.5.1.2",
+                  "label": "1\u2666 - (1\u2660) - 3\u2666 - (4\u2660) -x",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.5.2",
+              "label": "Gdy ju\u017C zrobili\u015Bmy bilans, a\n                                    przeciwnik dalej licytuje. Stopie\u0144 karno\u015Bci zale\u017Cy od poziomu licytacji i czy kontra\n                                    jest pod czy za r\u0119czna",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.5.2.1",
+                  "label": "1\u2666 - (1\u2660) - 2\u2663 - (pas) - 3\u2663 - (3\u2660) - pas - (pas)-x",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.5.2.1.1",
+                      "label": "kontra jest\n                                                    propozycyjna (karna na ~50%) - wysoki poziom licytacji, ale pod\n                                                    r\u0119k\u0105",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "1.5.2.1.2",
+                      "label": "gdyby to odpowiadaj\u0105cy\n                                                    da\u0142 kontr\u0119, to by\u0142aby kontra w zasadzie karna",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "1.5.2.2",
+                  "label": "1\u2665 - (pas) - 2\u2665 - (pas) - pas - 3\u2663 - pas - (pas) -x",
+                  "isLeaf": false,
+                  "children": [
+                    {
+                      "id": "1.5.2.2.1",
+                      "label": "kontra wywo\u0142awcza (pod\n                                                    r\u0119k\u0105, niski poziom licytacji), ale z walorami defensywnymi do\n                                                    ewentualnej obrony",
+                      "isLeaf": true,
+                      "children": []
+                    },
+                    {
+                      "id": "1.5.2.2.2",
+                      "label": "ponownie, gdyby\n                                                    odpowiadaj\u0105cy da\u0142 kontr\u0119, to by\u0142aby kontra karniawa",
+                      "isLeaf": true,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.6",
+          "label": "kontry wistowe",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "1.6.1",
+              "label": "Na kolor kt\u00F3ry licytowali\u015Bmy - mocno\n                                    sugeruje inny wist",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.6.2",
+              "label": "Na kolor kt\u00F3ry licytowa\u0142 partner -\n                                    obiecuje figur\u0119",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.6.3",
+              "label": "Na splintera",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.6.3.1",
+                  "label": "Je\u017Celi dwa kolory maj\u0105 sens\n                                            (poza atutowym i kolorem kr\u00F3tko\u015Bci) - wistuj w starszy",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.6.3.2",
+                  "label": "Je\u017Celi tylko jeden - wistuj w\n                                            niego",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "1.6.4",
+              "label": "Na szlemika - zasadniczo wistuj w\n                                    pierwszy kolor dziadka, lub w sw\u00F3j najd\u0142u\u017Cszy kolor do przebitki",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "1.6.5",
+              "label": "Po nieprzymuszonym zalicytowaniu\n                                    3NT przez przeciwnika",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "1.6.5.1",
+                  "label": "Je\u017Celi dziadek licytowa\u0142 kolor\n                                            - wistuj w kolor dziadka",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "1.6.5.2",
+                  "label": "Je\u017Celi dziadek nie licytowa\u0142\n                                            koloru (np. 1BA-3BA) - mam dobry kolor, trafiaj",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "label": "kontry odpowiadaj\u0105cego",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "2.1",
+          "label": "wywo\u0142awcze - chyba, \u017Ce jest wskazane\n                            inaczej poni\u017Cej",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.1.1",
+              "label": "Poni\u017Cej koloru otwarcia na poziomie\n                                    dw\u00F3ch - od 7(6) punkt\u00F3w, szczeg\u00F3lnie przed parti\u0105",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.1.2",
+              "label": "Po blokach na poziomie dw\u00F3ch - od\n                                    10(9) punkt\u00F3w",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.1.3",
+              "label": "Po blokach na poziomie trzech - GF, po\n                                    pasie - \u0142adna karta i g\u00F3ra",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2.2",
+          "label": "kontry konwencyjne",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.2.1",
+              "label": "1\u2663 - (1\u2666) - x: - obie starsze czw\u00F3rki",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.2.2",
+              "label": "1\u2663 - (1\u2665) - x: - dok\u0142adnie 4 piki czw\u00F3rki",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.2.3",
+              "label": "1NT - (2\u2663) *(monokolor lub jaka\u015B forma naturalnego) - x: stayman",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.2.4",
+              "label": "1NT - (2\u2666) *(multi) - x: wywo\u0142awcza do pik\u00F3w, (4)5 HCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.2.5",
+              "label": "1x - (2NT) - xkontruj\u0119 jeden m\u0142ody,\n                                    GF",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2.3",
+          "label": "kontry propozycyjne",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.3.1",
+              "label": "Po blokach od 4\u2660 w g\u00F3r\u0119 - w zasadzie karne, ale do wyniesienia z ekstremalnie uk\u0142adow\u0105\n                                    kart\u0105",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.3.2",
+              "label": "Po otwarciu na trzecim r\u0119ku i wej\u015Bciu\n                                    1NT naturalne",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2.4",
+          "label": "kontry karne",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.4.1",
+              "label": "Po bloku partnera i wej\u015Bciu\n                                    przeciwnika na poziomie trzech",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.4.2",
+              "label": "2\u2665 - (2\u2660) - x: karna",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.4.3",
+              "label": "Po owarciu partnera i wej\u015Bciu BA\n                                    naturalne",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.4.4",
+              "label": "Je\u017Celi mogli\u015Bmy da\u0107 kontr\u0119\n                                    wywo\u0142awcz\u0105 wcze\u015Bniej",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "2.4.4.1",
+                  "label": "1\u2666 - (1\u2665) - pas - (2\u2665) - pas - (pas) - x; - kontra karna",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "2.4.4.2",
+                  "label": "1\u2666 - (1\u2660) - pas - (2\u2665) - pas - (pas) - x; - mia\u0142em trapa na pikach, zr\u00F3b z tym co\u015B m\u0105drego",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.5",
+          "label": "kontry wistowe",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.5.1",
+              "label": "Na pytanie o trzymanie/inn\u0105 licytacje\n                                    w nasz kolor - wskazuje figur\u0119 w kolorze partnera",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "2.5.2",
+              "label": "Na inne sztuczne odzywki - zgrupowanie\n                                    w tym kolorze",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2.6",
+          "label": "kontra BI",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "2.6.1",
+              "label": "Po naszym pasie, gdy jeste\u015Bmy na\n                                    wzn\u00F3wce",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "label": "licytacja po niskich, naturalnych\n                    wej\u015Bciach",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "3.1",
+          "label": "nowy kolor na poziomie jednego forsuje, na\n                            poziomie dw\u00F3ch NF",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "3.2",
+          "label": "1\u2665/\u2660 - (2X)",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "3.2.1",
+              "label": "Bli\u017Csza z (3X)/2NT - GF z fitem",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.2.2",
+              "label": "Dalsza z (3X)/2NT - inwit z\n                                    fitem",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.2.3",
+              "label": "Splintery - tylko w kolor\n                                    przeciwnika",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.2.4",
+              "label": "Inne na wysokim poziomie - kolor \u002B\n                                    fit, GF",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "3.3",
+          "label": "1\u2663/\u2666 - (1NT) - 2\u2663 - stare",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "3.4",
+          "label": "Po otwarciu na trzecim r\u0119ku w stary kolor i\n                            interwencji przeciwnika - 2NT - g\u00F3ra pasa z czterokrotnym fitem",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "3.5",
+          "label": "1NT - (2\u2666/\u2665/\u2660) - 2NT - Lebensohl",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "3.6",
+          "label": "Po naturalnym wej\u015Bciu BA",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "3.6.1",
+              "label": "x - karna, z nastawieniem na\n                                    kontrowanie przeciwnik\u00F3w. Dalsze pasy forsuj\u0105ce, ale nie GF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.6.2",
+              "label": "2\u2663 - stare, (o ile pad\u0142o otwarcie w m\u0142ody)",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "3.6.3",
+              "label": "2NT - uk\u0142adowy inwit z fitem, (o ile\n                                    pad\u0142o otwarcie w stary)",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "label": "Po kontrze wywo\u0142awczej przeciwnika",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "4.1",
+          "label": "Na 1\u2663",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "4.1.1",
+              "label": "Pas - dowolne 0-6",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.1.2",
+              "label": "1\u2666 - konstruktywne",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.1.3",
+              "label": "Inne - system on",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "4.2",
+          "label": "Na 1\u2666 - system on",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "4.3",
+          "label": "Na 1\u2665",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "4.3.1",
+              "label": "Pas - nic ciekawego",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.3.2",
+              "label": "xx - 10\u002B z ch\u0119cia kontrowania, je\u017Celi\n                                    z fitem to zr\u00F3wnowa\u017Cony",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.3.3",
+              "label": "1\u2660 - naturalne",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.3.4",
+              "label": "1NT - 5\u002B trefli, konstruktywne,\n                                    nielimitowane",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.3.5",
+              "label": "2\u26635\u002B kar, konstruktywne, nielimitowane",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.3.6",
+              "label": "2\u2666fit kier, 4-6(7)HCP lub GF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.3.7",
+              "label": "2\u2665fit kier, (7)8-9(10)HCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.3.8",
+              "label": "2NT - inwit z fitem, raczej 4\u002B, je\u017Celi\n                                    3 kartowy to z kr\u00F3tko\u015Bci\u0105",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "4.4",
+          "label": "Na 1\u2660",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "4.4.1",
+              "label": "xx - 10\u002B z ch\u0119cia kontrowania, je\u017Celi\n                                    z fitem to zr\u00F3wnowa\u017Cony",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.4.2",
+              "label": "1NT - 5\u002B trefli, konstruktywne,\n                                    nielimitowane",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.4.3",
+              "label": "2\u26635\u002B kar, konstruktywne, nielimitowane",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.4.4",
+              "label": "2\u26665\u002B kier\u00F3w, konstruktywne, nielimitowane",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.4.5",
+              "label": "2\u2665fit pik, 4-6(7)HCP lub GF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.4.6",
+              "label": "2\u2665fit pik, (7)8-9(10)HCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "4.4.7",
+              "label": "2NT - inwit z fitem, raczej 4\u002B, je\u017Celi\n                                    3 kartowy to z kr\u00F3tko\u015Bci\u0105",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "label": "Po wej\u015Bciach sztucznych i dwukolorowych",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "5.1",
+          "label": "Po 2\u2666Multi",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "5.1.1",
+              "label": "x - wywo\u0142awcza do pik\u00F3w",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.1.2",
+              "label": "2\u2665/\u2660Nat, NF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.1.3",
+              "label": "2NT - nat, inwit",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.1.4",
+              "label": "2NT poprzedzone wcze\u015Bniejszym pasem -\n                                    m\u0142ode",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "5.2",
+          "label": "Po 2\u2666 Stare",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "5.2.1",
+              "label": "pas a potem kontra - karna,\n                                    kontrowa\u0142em oba stare",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.2.2",
+              "label": "x - kontruj\u0119 jeden stary, forsuje do\n                                    2NT",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.2.3",
+              "label": "2\u2665/\u2660 - z warto\u015Bci, GF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.2.4",
+              "label": "2NT - naturalny inwit",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "5.3",
+          "label": "Po 2\u2666Wilkosz",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "5.3.1",
+              "label": "Identycznie jak po multi",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "5.4",
+          "label": "1\u2663 - (2NT) - m\u0142ode",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "5.4.1",
+              "label": "pas a potem kontra - karna,\n                                    kontrowa\u0142em oba stare",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.4.2",
+              "label": "x - kontruj\u0119 jeden m\u0142ody, (ewentualnie\n                                    trzymanie tylko w jednym kolorze)",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.4.3",
+              "label": "3\u2663 - Oba stare kolory, d\u0142u\u017Csze kiery GF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.4.4",
+              "label": "3\u2666 - Oba stare kolory, d\u0142u\u017Csze piki GF",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "5.5",
+          "label": "1\u2665/\u2660 - (2NT) - m\u0142ode",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "5.5.1",
+              "label": "pas a potem kontra - karna,\n                                    kontrowa\u0142em oba stare",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.5.2",
+              "label": "x - kontruj\u0119 jeden m\u0142ody, (ewentualnie\n                                    trzymanie tylko w jednym kolorze)",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.5.3",
+              "label": "3\u2663 - GF z fitem",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.5.4",
+              "label": "3\u2666 - inwit z fitem",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.5.5",
+              "label": "Drugi stary - Nat, GF",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "5.6",
+          "label": "1\u2660 - (2\u2660) - Micheals",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "5.6.1",
+              "label": "pas - mo\u017Ce by\u0107 trap",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.6.2",
+              "label": "x - punkty, bez fitu",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.6.3",
+              "label": "2NT - GF z fitem",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.6.4",
+              "label": "3\u2665 - inwit z fitem",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "5.7",
+          "label": "Po wej\u015Bciu BA 54",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "5.7.1",
+              "label": "pas - mo\u017Ce by\u0107 trap na kolorze\n                                    starszym",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.7.2",
+              "label": "x - punkty, bez fitu",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.7.3",
+              "label": "2 w stary - GF z fitem",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "5.7.4",
+              "label": "2NT - inwit z fitem",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "label": "Po wy\u017Cszych blokach",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "6.1",
+          "label": "x - GF, bez fitu. Nie obiecuje obu starszych\n                            czw\u00F3rek, po niej z dowoln\u0105 nadwy\u017Ck\u0105 (w tym silnym treflem) licytujemy powoli",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "6.2",
+          "label": "Po otwarciu w stary i bloku w\n                            m\u0142ody",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "6.2.1",
+              "label": "4 w kolor bloku - GF z fitem i\n                                    kr\u00F3tko\u015Bci\u0105 w licytowanym kolorze",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.2.2",
+              "label": "4 w drugi kolor m\u0142odszy - GF z fitem,\n                                    bez kr\u00F3tko\u015Bci w kolorze bloku",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.2.3",
+              "label": "4 w kolor otwarcia - do gry, nie\n                                    tworzy pozycji pasa forsuj\u0105cego",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.2.4",
+              "label": "5 w drugi kolor m\u0142odszy - do\n                                    gry",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "6.2.5",
+              "label": "Powy\u017Csze tyczy si\u0119 te\u017C sekwecji\u2660 - (3\u2665)",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "6.3",
+          "label": "Po blokach na poziomie 4",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "6.3.1",
+              "label": "4NT - inwit do szlemika z fitem",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "label": "Licytacja po multi i interwencji kontr\u0105",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "7.1",
+          "label": "xx - zalicytuj 2\u2665 a potem pasuj",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "7.2",
+          "label": "pas - sugestia gry w kara",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "7.3",
+          "label": "Inne - jak bez interwencji",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "label": "Obrona po 1BA przeciwnika",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "8.1",
+          "label": "Na pozycji bezpo\u015Bredniej",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "8.1.1",
+              "label": "x - 5 m\u0142odsza, 4 starsza",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "8.1.1.1",
+                  "label": "2\u2663 - do koloru m\u0142odszego",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.1.1.2",
+                  "label": "2\u2666 - nie chc\u0119 gra\u0107 w trefle",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.1.1.3",
+                  "label": "2\u2665 - fity w starych",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.1.1.4",
+                  "label": "2\u2660 - z w\u0142asnego",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "8.1.2",
+              "label": "2\u2663 - stare",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "8.1.2.1",
+                  "label": "2\u2666 - poka\u017C d\u0142u\u017Cszy kolor",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.1.2.2",
+                  "label": "2\u2665 - wyb\u00F3r koloru",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.1.2.3",
+                  "label": "2\u2660 - wyb\u00F3r koloru",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.1.2.4",
+                  "label": "2NT - silny inwit z\n                                            fitami",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "8.1.3",
+              "label": "2\u2666 - starsza sz\u00F3stka",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "8.1.3.1",
+                  "label": "jak po multi w\n                                            jednostronnej",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "8.1.4",
+              "label": "2\u2665 - 5 kier\u00F3w, m\u0142odsza czw\u00F3rka",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "8.1.4.1",
+                  "label": "2\u2660 - z w\u0142asnego",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.1.4.2",
+                  "label": "2NT - silny inwit",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.1.4.3",
+                  "label": "3\u2663 - do koloru m\u0142odszego",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.1.4.4",
+                  "label": "3\u2665 - lekki inwit z fitem",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "8.1.5",
+              "label": "2\u2660 - 5 kier\u00F3w, m\u0142odsza czw\u00F3rka",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "8.1.5.1",
+                  "label": "2NT - pytanie o sk\u0142ad, silny\n                                            inwit z fitem lub na m\u0142odym",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.1.5.2",
+                  "label": "3\u2663 - do koloru m\u0142odszego",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.1.5.3",
+                  "label": "3\u2660 - lekki inwit z fitem",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.2",
+          "label": "Na pozycji wygasaj\u0105cej",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "8.2.1",
+              "label": "x - dwukolor\u00F3wka m\u0142ody \u002B stary,\n                                    4\u002B 4\u002B",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "8.2.1.1",
+                  "label": "2\u2663 - do koloru",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.2.1.2",
+                  "label": "2\u2666 - z w\u0142asnego",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.2.1.3",
+                  "label": "2\u2665 - do koloru",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.2.1.4",
+                  "label": "2\u2660 - z w\u0142asnego",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "8.2.2",
+              "label": "2\u2663 - stare",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "8.2.2.1",
+                  "label": "2\u2666 - poka\u017C d\u0142u\u017Cszy kolor",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.2.2.2",
+                  "label": "2\u2665 - wyb\u00F3r koloru",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.2.2.3",
+                  "label": "2\u2660 - wyb\u00F3r koloru",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.2.2.4",
+                  "label": "3\u2666 - silny inwit z fitami",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "8.2.3",
+              "label": "2\u2666 - jeden stary 5\u002B, lepsza karta",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "8.2.3.1",
+                  "label": "2\u2665 - do koloru",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.2.3.2",
+                  "label": "2\u2660 - lepsza karta do kier\u00F3w",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "8.2.3.3",
+                  "label": "3\u2666 - inwit z fitami",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "8.2.4",
+              "label": "2\u2665 - 5\u002B, s\u0142aba uk\u0142adowa karta",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "8.2.5",
+              "label": "2\u2660 - 5\u002B, s\u0142aba uk\u0142adowa karta",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "label": "Po naturalnych otwarciach przeciwnika",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "9.1",
+          "label": "Je\u017Celi nie jest wskazane inaczej - wej\u015Bcie\n                            naturalne, poni\u017Cej kontry obja\u015Bniaj\u0105cej, po otwarciach konstruktywnych skoki blokuj\u0105ce",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "9.2",
+          "label": "1\u2663",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "9.2.1",
+              "label": "2\u2666 - obie starsze, raczej 5",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.2.2",
+              "label": "2NT - 55 m\u0142ode, blokuj\u0105ce lub\n                                    silne",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.2.3",
+              "label": "3NT - do gry na w\u0142asnym kolorze",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "9.3",
+          "label": "1\u2666",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "9.3.1",
+              "label": "2\u2666 - obie starsze, raczej 5",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.3.2",
+              "label": "2NT - 55 trefle i kiery",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.3.3",
+              "label": "3NT - do gry na w\u0142asnym kolorze",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "9.4",
+          "label": "1\u2665",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "9.4.1",
+              "label": "2\u2665 - dwukolor\u00F3wka piki z m\u0142odszym",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.4.2",
+              "label": "3\u2665 - (??) pe\u0142ny m\u0142odszy, kontruktywne, pyta o trzymanie",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.4.3",
+              "label": "4NT - du\u017Ca dwuoklor\u00F3wka na m\u0142odych,\n                                    ofensywna karta",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "9.5",
+          "label": "1\u2660",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "9.5.1",
+              "label": "2\u2660 - dwukolor\u00F3wka kiery z m\u0142odszym",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.5.2",
+              "label": "3\u2660 - (??) pe\u0142ny m\u0142odszy, kontruktywne, pyta o trzymanie",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.5.3",
+              "label": "4NT - du\u017Ca dwukolor\u00F3wka na m\u0142odych,\n                                    ofensywna karta",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "9.6",
+          "label": "2\u2663",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "9.6.1",
+              "label": "3\u2663 - dwukolor\u00F3wka na starych",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.6.2",
+              "label": "Po pytaniu 2\u2666 - x wywo\u0142awcza do trefli",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "9.7",
+          "label": "2\u2665",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "9.7.1",
+              "label": "3\u2665 - dwukolor\u00F3wka z pikami, nie forsuje do ko\u0144c\u00F3wki",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.7.2",
+              "label": "3\u2660 - kostruktywne, 6\u002B pik\u00F3w, oko\u0142o 15 HCP",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.7.3",
+              "label": "4\u2663 - dwukolor\u00F3wka trefle i piki, GF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.7.4",
+              "label": "4\u2666 - dwukolor\u00F3wka kara i piki, GF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.7.5",
+              "label": "4\u2665 - ??",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.7.6",
+              "label": "4NT - dwukolor\u00F3wka na m\u0142odych",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "9.8",
+          "label": "2\u2660",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "9.8.1",
+              "label": "3\u2660 - ??",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.8.2",
+              "label": "4\u2663 - dwukolor\u00F3wka trefle i kiery, GF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.8.3",
+              "label": "4\u2666 - dwukolor\u00F3wka kara i kiery, GF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.8.4",
+              "label": "4\u2660 - ??",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.8.5",
+              "label": "4NT - dwukolor\u00F3wka na m\u0142odych",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "9.9",
+          "label": "3\u2663",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "9.9.1",
+              "label": "4\u2663 - dwukolor\u00F3wka na starych, GF",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "9.9.2",
+              "label": "4\u2666 - dwukolor\u00F3wka kara \u002B stary, GF",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "9.9.2.1",
+                  "label": "4\u2665 - Pass or correct",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "9.9.2.2",
+                  "label": "4\u2660 - do pasa z pikami, mo\u017Ce by\u0107 lekki inwit z fitem kierowym lub\n                                            karowym",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "9.9.2.3",
+                  "label": "4NT - inwituj\u0105ca karta z\n                                            nieznamy fitem",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "9.9.2.4",
+                  "label": "5\u2663- cuebid",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.10",
+          "label": "3\u2666",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "9.10.1",
+              "label": "4\u2663 - dwukolor\u00F3wka trefle \u002B stary, GF",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "9.10.1.1",
+                  "label": "4\u2665 - Pass or correct",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "9.10.1.2",
+                  "label": "4\u2660 - do pasa z pikami, mo\u017Ce by\u0107 lekki inwit z fitem kierowym lub\n                                            karowym",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "9.10.1.3",
+                  "label": "4NT - inwituj\u0105ca karta z\n                                            nieznamy fitem",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "9.10.2",
+              "label": "4\u2666 - dwukolor\u00F3wka kara \u002B stary, GF",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "9.10.2.1",
+                  "label": "4\u2665 - Pass or correct",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "9.10.2.2",
+                  "label": "4\u2660 - do pasa z pikami, mo\u017Ce by\u0107 lekki inwit z fitem kierowym lub\n                                            karowym",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "9.10.2.3",
+                  "label": "4NT - inwituj\u0105ca karta z\n                                            nieznamy fitem",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "9.10.2.4",
+                  "label": "5\u2663 - cuebid",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.11",
+          "label": "3\u2665/3\u2660",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "9.11.1",
+              "label": "4\u2663 - dwukolor\u00F3wka trefle \u002B drugi stary, GF",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "9.11.1.1",
+                  "label": "4\u2665 - Pass or correct",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "9.11.1.2",
+                  "label": "4\u2660 - do pasa z pikami, mo\u017Ce by\u0107 lekki inwit z fitem kierowym lub\n                                            treflowym",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "9.11.1.3",
+                  "label": "4NT - inwituj\u0105ca karta z\n                                            nieznamy fitem",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "9.11.2",
+              "label": "4\u2666 - dwukolor\u00F3wka kara \u002B stary, GF",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "9.11.2.1",
+                  "label": "4\u2665 - Pass or correct",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "9.11.2.2",
+                  "label": "4\u2660 - do pasa z pikami, mo\u017Ce by\u0107 lekki inwit z fitem kierowym lub\n                                            karowym",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "9.11.2.3",
+                  "label": "4NT - inwituj\u0105ca karta z\n                                            nieznamy fitem",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "9.11.2.4",
+                  "label": "5\u2663 - cuebid",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "label": "Po 2\u2663 - stare, blokuj\u0105ce",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "10.1",
+          "label": "x - punkty, sk\u0142ad oko\u0142o zr\u00F3wnowa\u017Cony z\n                            tolerancj\u0105 do gry w oba m\u0142ode",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "10.2",
+          "label": "2\u2666 - naturalne, kara",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "10.3",
+          "label": "2\u2665 - naturalne, raczej z 6-ciu kier\u00F3w",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "10.4",
+          "label": "2\u2660 - naturalne, raczej z 6-ciu pik\u00F3w",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "10.5",
+          "label": "2NT - (15)16-18",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "label": "Po 2\u2666 - Multi",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "11.1",
+          "label": "x - wywo\u0142awcza do pik\u00F3w lub\n                            obja\u015Bniaj\u0105ca",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "11.1.1",
+              "label": "je\u017Celi nast\u0105pi\u0142 pas - sugestia\n                                    gry w kara",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "11.1.1.1",
+                  "label": "pas - mog\u0119 gra\u0107 2dx",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.1.2",
+                  "label": "2\u2665- s\u0142aba karta z kierami",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.1.3",
+                  "label": "2\u2660- GF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.1.4",
+                  "label": "2NT - Lebensohl",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.1.5",
+                  "label": "3\u2663inwituj\u0105ce na treflach",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.1.6",
+                  "label": "3\u2666pytanie o trzymanie w karach",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.1.7",
+                  "label": "3\u2665bilansowe z kierami",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.1.8",
+                  "label": "3\u2660bilansowe z 6\u002B pikami",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "11.1.2",
+              "label": "je\u017Celi nast\u0105pi\u0142a xx - poka\u017C\n                                    kolor",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "11.1.2.1",
+                  "label": "pas - nic ciekawego",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.2.2",
+                  "label": "2\u2665 - 4\u002B kiery, konstruktywne NF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.2.3",
+                  "label": "2\u2660 - ??",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.2.4",
+                  "label": "2NT - bilansowe,\n                                            naturalne",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.2.5",
+                  "label": "3\u2663 - bilansowe, naturalne",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.2.6",
+                  "label": "3\u2666 - bilansowe, naturalne",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.2.7",
+                  "label": "3\u2665 - bilansowe, naturalne",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.2.8",
+                  "label": "3\u2660 - ??",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "11.1.3",
+              "label": "je\u017Celi nast\u0105pi\u0142o 2 kier - do\n                                    koloru",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "11.1.3.1",
+                  "label": "x - 4kiery,\n                                            konstruktywe",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.3.2",
+                  "label": "2\u2660 - ??",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.3.3",
+                  "label": "2NT - bilansowe,\n                                            naturalne",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.3.4",
+                  "label": "3\u2663 - bilansowe, naturalne",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.3.5",
+                  "label": "3\u2666 - bilansowe, naturalne",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.3.6",
+                  "label": "3\u2665 - bilansowe, naturalne",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.3.7",
+                  "label": "3\u2660 - ??",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "11.1.4",
+              "label": "je\u017Celi nast\u0105pi\u0142o 2 pik - do\n                                    koloru",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "11.1.4.1",
+                  "label": "x - 4kiery,\n                                            konstruktywe",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.4.2",
+                  "label": "2NT - bilansowe,\n                                            naturalne",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.4.3",
+                  "label": "3\u2663 - bilansowe, naturalne",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.4.4",
+                  "label": "3\u2666 - bilansowe, naturalne",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.4.5",
+                  "label": "3\u2665 - bilansowe, naturalne",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.4.6",
+                  "label": "3\u2660 - ??",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "11.1.5",
+              "label": "je\u017Celi nast\u0105pi\u0142o 3 kier -\n                                    blokuj\u0105ce",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "11.1.5.1",
+                  "label": "x - 4kiery, konstruktywe,\n                                            inwituj\u0105ce do ko\u0144c\u00F3wki",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "11.1.5.2",
+                  "label": "3\u2660silna karta bez trzymania pik",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "11.2",
+          "label": "Wej\u015Bcia w kolor - naturalne",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "11.2.1",
+              "label": "Drugi kolor starszy po naszym wej\u015Bciu\n                                    w stary - GF, pytanie o trzymanie w podstawowym wariancie",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "11.2.2",
+              "label": "Kolor starszy po naszym wej\u015Bciu w\n                                    m\u0142ody - naturalne",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "11.3",
+          "label": "2NT - (15)16-18, Bal",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "11.3.1",
+              "label": "Licytujemy jak po otwarciu 2NT",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "11.4",
+          "label": "Na czwartym r\u0119ku po dw\u00F3ch pasach",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "11.4.1",
+              "label": "Przed parti\u0105 - oko\u0142o\n                                    zr\u00F3wnowa\u017Cony",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "11.4.2",
+              "label": "Po partii - wywo\u0142awcza do kar",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "label": "Po s\u0142abym 1NT - dowolne w przedziale od 8 do\n                    14",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "12.1",
+          "label": "Wszystkie wej\u015Bcia w sile konstruktywnej",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "12.2",
+          "label": "x - 15\u002B, sk\u0142ad oko\u0142o zr\u00F3wnowa\u017Cony",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "12.3",
+          "label": "2\u2663 - stare",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "12.4",
+          "label": "2NT - oba m\u0142ode",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "12.5",
+          "label": "Inne - naturalne",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "label": "Na silnego trefla (15\u002B dowolny) - tzw.\n                    CRUSH",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "13.1",
+          "label": "x - czarne lub czerwone, dwukolor\u00F3wka\n                            55",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "13.2",
+          "label": "1\u2666 - m\u0142ode lub stare, dwukolor\u00F3wka 55",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "13.3",
+          "label": "1\u2665- naturalne",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "13.4",
+          "label": "1\u2660naturalne",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "13.5",
+          "label": "1NTokr\u0105g\u0142e lub szpiczaste",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "label": "Na 1\u2666 przygotowawcze",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "14.1",
+          "label": "x - na kolory starsze",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "14.2",
+          "label": "Inne wej\u015Bcia - naturalne",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "label": "Po 2BA - m\u0142ode",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "15.1",
+          "label": "x - si\u0142owa, z fitami w starych kolorach",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "15.2",
+          "label": "3\u2663dwukolor\u00F3wka na starych, lepsze kiery",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "15.3",
+          "label": "3\u2666dwukolor\u00F3wka na starych, lepsze piki",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "15.4",
+          "label": "3\u2665naturalne",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "15.5",
+          "label": "3\u2660naturalne",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "label": "Po 3BA - gambling",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "16.1",
+          "label": "x - si\u0142owa, z fitami w starych kolorach",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "16.2",
+          "label": "4\u2663dwukolor\u00F3wka na starych, lepsze kiery",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "16.3",
+          "label": "4\u2666dwukolor\u00F3wka na starych, lepsze piki",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "16.4",
+          "label": "4\u2665naturalne",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "16.5",
+          "label": "4\u2660naturalne",
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "label": "Po kontrze wywo\u0142awczej",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "17.1",
+          "label": "Na 1\u2663",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "17.1.1",
+              "label": "1\u2666Dowolne 0-6",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "17.1.2",
+              "label": "1\u26654 kiery, F1 przed pasem",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "17.1.3",
+              "label": "1\u26604 piki, F1 przed pasem",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "17.1.4",
+              "label": "1NTBez starszych czw\u00F3rek,\n                                    oko\u0142ozr\u00F3wnowa\u017Cona, 7-10(11)",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "17.1.5",
+              "label": "2\u2663niezr\u00F3wnowa\u017Cona z 5\u002B trefli, 7-9(10)",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "17.1.6",
+              "label": "2\u2666niezr\u00F3wnowa\u017Cona z 5\u002B karami, 7-9(10)",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "17.1.7",
+              "label": "2\u2665bilansowe z 5\u002B kierami",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "17.1.8",
+              "label": "2\u2660bilansowe z 5\u002B pikami",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "17.1.9",
+              "label": "2NTBilansowe, bez starszych\n                                    czw\u00F3rek",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "17.2",
+          "label": "Na 1\u2666",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "17.2.1",
+              "label": "Generalnie - naturalne,\n                                    bilansowe",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "17.2.2",
+              "label": "2\u2666",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "17.2.2.1",
+                  "label": "Przed pasem - co najmniej\n                                            jedna starsza czw\u00F3rka inwit\u002B (F1) lub GF na m\u0142odym",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "17.2.2.2",
+                  "label": "Po pasie - co najmniej jedna\n                                            starsza czw\u00F3rka w sile inwitu (F1) lub inwit na obu m\u0142odych",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "17.2.3",
+              "label": "3\u2666Pytanie o trzymanie, GF, bez aspiracji do szlemika",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "17.3",
+          "label": "Na stary",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "17.3.1",
+              "label": "Generalnie - naturalne,\n                                    bilansowe",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "17.3.2",
+              "label": "2 w kontrowany stary",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "17.3.2.1",
+                  "label": "Przed pasem - druga starsza\n                                            czw\u00F3rka inwit\u002B (F1) lub GF",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "17.3.2.2",
+                  "label": "Po pasie - druga starsza\n                                            czw\u00F3rka w sile inwitu (F1) lub inwit na obu m\u0142odych",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "17.3.3",
+              "label": "3\u2666Pytanie o trzymanie, GF, bez aspiracji do szlemika",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "17.4",
+          "label": "Je\u017Celi nast\u0119puje licytacja drugiego\n                            obro\u0144cy",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "17.4.1",
+              "label": "Generalnie - naturalne, bilansowe,\n                                    kolor starszy mo\u017Ce by\u0107 z czw\u00F3rki",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "17.4.2",
+              "label": "Kontra na kolor wskazany tylko z\n                                    czw\u00F3rki - na wprost",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "17.4.3",
+              "label": "Kontra na kolor wskazany z pi\u0105tki -\n                                    wywo\u0142awcza, pozosta\u0142e kolory",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "17.4.4",
+              "label": "Kontra na podniesienie starego koloru\n                                    - dok\u0142adnie czw\u00F3rka w drugim starym (?)",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "label": "Po naszym wej\u015Bciu BA",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "18.1",
+          "label": "Je\u017Celi zosta\u0142o skontrowane",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "18.1.1",
+              "label": "pas - nic ciekawego",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "18.1.2",
+              "label": "xx - trefle albo dwukolor\u00F3wka bez\n                                    trefli",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "18.1.3",
+              "label": "2c - dwukolor\u00F3wka z treflami",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "18.1.4",
+              "label": "Inne - naturalne",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "18.2",
+          "label": "Po otwarciu w m\u0142ody, je\u017Celi pad\u0142 pas - w pe\u0142ni\n                            system on",
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "id": "18.3",
+          "label": "Po otwarciu w m\u0142ody, je\u017Celi pad\u0142 pas -\n                            transfery na okr\u0105\u0142o",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "18.3.1",
+              "label": "2\u2663 - Transfer na kara",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "18.3.2",
+              "label": "Transfer na kolor przeciwnika -\n                                    odpowiednik Staymana",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "18.3.3",
+              "label": "Inne - system ON",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "label": "Po wej\u015Bciu 3BA bez przeskoku",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "19.1",
+          "label": "Je\u017Celi wej\u015Bcie nast\u0105pi\u0142o po bloku na\n                            kolorze m\u0142odszym",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "19.1.1",
+              "label": "4\u2663 - oba stare",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "19.1.2",
+              "label": "4\u2666 - transfer na kiery",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "19.1.3",
+              "label": "4\u2665 - transfer na piki",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "19.1.4",
+              "label": "4\u2660 - inwit z d\u0142ugo\u015Bci\u0105 w drugim m\u0142odym",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "19.2",
+          "label": "Je\u017Celi wej\u015Bcie nast\u0105pi\u0142o po bloku na\n                            kolorze m\u0142odszym",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "19.2.1",
+              "label": "4\u2663 - inwit do szlemika z czw\u00F3rk\u0105 w drugim starym",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "19.2.2",
+              "label": "4\u2666 - transfer na kiery",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "19.2.3",
+              "label": "4\u2665 - transfer na piki",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "19.2.4",
+              "label": "4\u2660 - inwit z d\u0142ugo\u015Bci\u0105 w drugim m\u0142odym",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "label": "Inne konwencje i sekwencje w licytacji\n                    dwustronnej",
+      "isLeaf": false,
+      "children": [
+        {
+          "id": "20.1",
+          "label": "2\u2663Drury - po otwarciu trzecior\u0119cznym lub wej\u015Bciu kolorem starszym i pasie przeciwnika.\n                            Obiecuje si\u0142\u0119 inwitu z fitem",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "20.1.1",
+              "label": "2\u2666 - si\u0142a w okolicy otwarcia",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "20.1.2",
+              "label": "2 w kolor wej\u015Bcia - s\u0142aba karta",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "20.1.3",
+              "label": "Inne poni\u017Cej 3 w kolor - warunkowe\n                                    przyj\u0119cie",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "20.2",
+          "label": "2NT po wej\u015Bciu partnera do\n                            licytacji",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "20.2.1",
+              "label": "Je\u017Celi dwaj przeciwnicy licytowali -\n                                    lepsza (ni\u017C na pojedyncze podniesienie) karta z fitem, przewa\u017Cnie czterokartowym",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "20.2.2",
+              "label": "Je\u017Celi jeste\u015Bmy po pasie - lepsza (ni\u017C\n                                    na pojedyncze podniesienie) karta z fitem czterokartowym",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "20.2.3",
+              "label": "W pozosta\u0142ych przypadkach - naturalne,\n                                    inwituj\u0105ce z trzymanie w kolorze przeciwnika",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "20.3",
+          "label": "2NT Lebensohl - wskazanie bardzo s\u0142abej\n                            karty na nieznanym kolorze, w nast\u0119puj\u0105cych sekwencjach",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "20.3.1",
+              "label": "1NT - (2Y) - 2NT",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "20.3.2",
+              "label": "(2Y) - x - (pas) - 2NT",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "20.3.3",
+              "label": "1\u2663 - (2Y) - pas - (pas) - x- (pas) - 2NT",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "20.4",
+          "label": "Interwencja po otwarciu 2\u2663 i pytaniu 2\u2666",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "20.4.1",
+              "label": "pas - mo\u017Ce by\u0107 trap lub kiepska\n                                    karta",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "20.4.2",
+              "label": "x - wywo\u0142awcza z drugim\n                                    starym",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "20.4.2.1",
+                  "label": "3\u2663 - do pasa",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "20.4.2.2",
+                  "label": "3 w kolor przeciwnika -\n                                            cuebid, ustala drugi stary",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "20.4.2.3",
+                  "label": "4\u2663 - ustalenie szlemikowe trefli",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "20.4.3",
+              "label": "xx - lepsza karta, raczej na treflach.\n                                    Ewentualne p\u00F3\u017Aniejsze kontry s\u0105 karne",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "20.5",
+          "label": "Licytacja po interwencji, kt\u00F3ra\n                            nast\u0105pi\u0142a po otwarciu i inwicie do koloru starszego",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "20.5.1",
+              "label": "Poni\u017Csze obowi\u0105zuj\u0105 do wysoko\u015Bci 3 w\n                                    nasz kolor. Je\u017Celi przeciwnicy zalicytowali wy\u017Cej pasy s\u0105 NF, licytacja wskazuje\n                                    pewne nadwy\u017Cki, kontry karne",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "20.5.2",
+              "label": "pas - forsuje, waham si\u0119 nad\n                                    przyj\u0119ciem",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "20.5.2.1",
+                  "label": "x - propozycyjna, wybieraj\n                                            pomi\u0119dzy ukarnieniem a 3 w stary",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "20.5.3",
+              "label": "x - karna",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "20.5.4",
+              "label": "3 kolor - najs\u0142absza licytacja",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "20.6",
+          "label": "Je\u017Celi dw\u00F3ch przeciwnik\u00F3w licytowa\u0142o a\n                            my dali\u015Bmy inwit",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "20.6.1",
+              "label": "Poni\u017Csze obowi\u0105zuj\u0105 do wysoko\u015Bci 3 w\n                                    nasz kolor. Je\u017Celi przeciwnicy zalicytowali wy\u017Cej pasy s\u0105 NF, licytacja wskazuje\n                                    pewne nadwy\u017Cki, kontry karne",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "20.6.2",
+              "label": "To my otwierali\u015Bmy",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "20.6.2.1",
+                  "label": "pas - forsuje, waham si\u0119 nad\n                                            przyj\u0119ciem",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "20.6.2.2",
+                  "label": "x - nie mam na przyj\u0119cie, ale\n                                            mam troch\u0119 defensywy, zr\u00F3b z tym co\u015B m\u0105drego",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "20.6.2.3",
+                  "label": "3 kolor - najs\u0142absza\n                                            licytacja",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "20.6.3",
+              "label": "To oni otwierali, a my\n                                    wchodzili\u015Bmy",
+              "isLeaf": false,
+              "children": [
+                {
+                  "id": "20.6.3.1",
+                  "label": "pas - uwa\u017Caj, mam kompletne\n                                            minumum",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "20.6.3.2",
+                  "label": "x - jestem bliski przyj\u0119cia\n                                            inwitu, w pe\u0142ni wywo\u0142awcza!",
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "id": "20.6.3.3",
+                  "label": "3 kolor - normalne wej\u015Bcie,\n                                            nie przyjmuj\u0119 inwitu",
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "20.7",
+          "label": "4BA w dynamicznej licytacji\n                            dwustonnej",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "20.7.1",
+              "label": "Je\u017Celi mieli\u015Bmy forsuj\u0105co uzgodniony\n                                    kolor - karta inwituj\u0105ca do szlemika",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "20.7.2",
+              "label": "Je\u017Celi tylko jedno z nas licytowa\u0142o -\n                                    6 we wcze\u015Bniej licytowanym kolorze, czw\u00F3rka bokiem",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "20.8",
+          "label": "2BA wcze\u015Bniej wchodz\u0105cego",
+          "isLeaf": false,
+          "children": [
+            {
+              "id": "20.8.1",
+              "label": "Je\u017Celi by\u0142 jeden kolor wskazany przez\n                                    preciwnik\u00F3w - 6 w kolorze wej\u015Bcia i czw\u00F3rka nieznana",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "20.8.2",
+              "label": "Przyk\u0142ad: (1\u2660) - 2\u2665 - (2\u2660) - pas - (pas) - 2NT",
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "id": "20.8.3",
+              "label": "Je\u017Celi dwa kolor by\u0142y wskazane 64 jest\n                                    wskazane jednoznacznie",
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
