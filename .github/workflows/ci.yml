@@ -65,7 +65,9 @@ jobs:
         shell: pwsh
         run: |
           $file = "publish/wwwroot/index.html"
-          (Get-Content $file) -replace '<base href="/" />', '<base href="/Bridge/" />' | Set-Content $file
+          $repoName = "${{ github.event.repository.name }}"
+          $baseHref = "<base href=""/$repoName/"" />"
+          (Get-Content $file) -replace '<base href="/" />', $baseHref | Set-Content $file
 
       - name: Add .nojekyll
         shell: pwsh
