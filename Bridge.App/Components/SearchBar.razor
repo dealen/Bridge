@@ -1,0 +1,61 @@
+@implements IDisposable
+
+<div class="search-bar">
+    <div class="search-input-wrapper">
+        <input type="search"
+               class="search-input"
+               placeholder="Szukaj..."
+               value="@_searchText"
+               @oninput="HandleInput"
+               autocomplete="off" />
+        @if (!string.IsNullOrEmpty(_searchText))
+        {
+            <button class="search-clear" @onclick="ClearSearch" title="Wyczyść">&#x2715;</button>
+        }
+    </div>
+    @if (!string.IsNullOrEmpty(_searchText))
+    {
+        <span class="search-count">Znaleziono: @MatchCount</span>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public EventCallback<string> OnSearch { get; set; }
+
+    [Parameter]
+    public int MatchCount { get; set; }
+
+    private string _searchText = "";
+    private CancellationTokenSource? _debounceTokenSource;
+
+    private async Task HandleInput(ChangeEventArgs changeEvent)
+    {
+        _searchText = changeEvent.Value?.ToString() ?? "";
+
+        _debounceTokenSource?.Cancel();
+        _debounceTokenSource?.Dispose();
+        _debounceTokenSource = new CancellationTokenSource();
+        CancellationToken debounceToken = _debounceTokenSource.Token;
+
+        try
+        {
+            await Task.Delay(300, debounceToken);
+            await OnSearch.InvokeAsync(_searchText);
+        }
+        catch (TaskCanceledException) { }
+    }
+
+    private async Task ClearSearch()
+    {
+        _searchText = "";
+        _debounceTokenSource?.Cancel();
+        await OnSearch.InvokeAsync("");
+    }
+
+    public void Dispose()
+    {
+        _debounceTokenSource?.Cancel();
+        _debounceTokenSource?.Dispose();
+    }
+}

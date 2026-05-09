@@ -11,4 +11,7 @@ public class BidNode
 
     [JsonIgnore]
     public bool IsExpanded { get; set; } = true;
+
+    [JsonIgnore]
+    public bool IsVisible { get; set; } = true;
 }

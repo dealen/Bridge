@@ -1,15 +1,20 @@
 @using Bridge.App.Models
+@using Bridge.App.Services
 
-<ul class="tree-root">
-    @foreach (BidNode topLevelNode in Nodes)
-    {
-        <TreeNode @key="topLevelNode.Id" Node="topLevelNode" />
-    }
-</ul>
+<CascadingValue Value="_searchQuery" Name="SearchQuery">
+    <ul class="tree-root">
+        @foreach (BidNode topLevelNode in Nodes)
+        {
+            <TreeNode @key="topLevelNode.Id" Node="topLevelNode" />
+        }
+    </ul>
+</CascadingValue>
 
 @code {
     [Parameter, EditorRequired]
     public List<BidNode> Nodes { get; set; } = [];
+
+    private string _searchQuery = "";
 
     public void ExpandAll()
     {
@@ -21,6 +26,15 @@
     {
         SetExpandedRecursive(Nodes, expanded: false);
         StateHasChanged();
+    }
+
+    /// <summary>Applies a case-insensitive filter to the tree and returns the match count.</summary>
+    public int ApplyFilter(string query)
+    {
+        _searchQuery = query;
+        int matchCount = TreeFilterHelper.ApplyFilter(Nodes, query);
+        StateHasChanged();
+        return matchCount;
     }
 
     private static void SetExpandedRecursive(List<BidNode> nodes, bool expanded)

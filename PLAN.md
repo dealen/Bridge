@@ -229,6 +229,21 @@ Bridge.sln
 
 ---
 
+**Phase 6 Status: ✅ DONE**
+
+**Files created/changed:**
+- `Bridge.App/Models/BidNode.cs` — added `[JsonIgnore] bool IsVisible` runtime property (defaults to `true`)
+- `Bridge.App/Components/SearchBar.razor` — new component: `<input type="search">` with 300 ms debounce (CancellationToken pattern), `×` clear button, "Znaleziono: N" match count; implements `IDisposable` for clean CTS teardown
+- `Bridge.App/Components/TreeNode.razor` — `@if (Node.IsVisible)` guard renders nothing when filtered out; `[CascadingParameter(Name = "SearchQuery")]` receives active query; `GetColoredLabel` extended with `ApplyHighlight` — splits each text run on the query (case-insensitive) and wraps matches in `<mark class="search-highlight">`
+- `Bridge.App/Components/TreeView.razor` — wraps content in `<CascadingValue Value="_searchQuery" Name="SearchQuery">`; new public `int ApplyFilter(string)` method — walks tree bottom-up via `FilterNode`, sets `IsVisible` on each node, auto-sets `IsExpanded = true` on any branch with matching descendants, counts and returns total matched nodes; `ResetVisibility` restores all nodes to visible+expanded when query is cleared
+- `Bridge.App/Pages/SystemPage.razor` — added `<div class="page-toolbar">` containing `<SearchBar>` + "Rozwiń wszystko" / "Zwiń wszystko" buttons; `HandleSearch` calls `_treeView.ApplyFilter()` and feeds returned count back to `SearchBar.MatchCount`
+- `Bridge.App/Pages/DwustronnyPage.razor` — identical pattern
+- `Bridge.App/wwwroot/css/app.css` — added `.page-toolbar`, `.toolbar-buttons`, `.btn-tree-action`, `.search-bar`, `.search-input-wrapper`, `.search-input`, `.search-clear`, `.search-count`, `mark.search-highlight` (yellow `#ffe066` background)
+
+**Verification:** `dotnet build Bridge.App/Bridge.App.csproj` → **0 errors, 0 warnings**.
+
+---
+
 ## Verification
 
 1. Run converter → summary shows 11 nodes for `system.json`, 20 for `dwustronny.json`.

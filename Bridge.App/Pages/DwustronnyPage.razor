@@ -16,6 +16,15 @@ else if (_errorMessage is not null)
 else
 {
     <p class="doc-meta">Sekcji najwyższego poziomu: @_document!.TopLevelCount</p>
+
+    <div class="page-toolbar">
+        <SearchBar OnSearch="HandleSearch" MatchCount="_matchCount" />
+        <div class="toolbar-buttons">
+            <button class="btn-tree-action" @onclick="() => _treeView?.ExpandAll()">Rozwiń wszystko</button>
+            <button class="btn-tree-action" @onclick="() => _treeView?.CollapseAll()">Zwiń wszystko</button>
+        </div>
+    </div>
+
     <TreeView Nodes="_document!.Nodes" @ref="_treeView" />
 }
 
@@ -23,6 +32,7 @@ else
     private BridgeDocument? _document;
     private string? _errorMessage;
     private TreeView? _treeView;
+    private int _matchCount;
 
     protected override async Task OnInitializedAsync()
     {
@@ -34,5 +44,12 @@ else
         {
             _errorMessage = ex.Message;
         }
+    }
+
+    private void HandleSearch(string searchQuery)
+    {
+        if (_treeView is not null)
+            _matchCount = _treeView.ApplyFilter(searchQuery);
+        StateHasChanged();
     }
 }
